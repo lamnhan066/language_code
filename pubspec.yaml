@@ -1,5 +1,5 @@
 name: language_code
-description: A new Flutter plugin project.
+description: This plugin helps you to get the current language code and Locale.
 version: 0.0.1
 homepage: https://github.com/vursin/language_code
 

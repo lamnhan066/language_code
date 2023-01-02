@@ -1,6 +1,6 @@
 # Language Code
 
-This plugin help you to get the current language code or locale.
+This plugin helps you to get the current language code and Locale.
 
 ## Usage
 
