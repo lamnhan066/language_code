@@ -3,7 +3,7 @@ import 'package:language_code/language_code.dart';
 
 void main() {
   test('getPlatformVersion', () async {
-    expect(LanguageCode.code, isNotEmpty);
-    expect(LanguageCode.locale.languageCode, equals(LanguageCode.code));
+    expect(LanguageCode.rawCode, isNotEmpty);
+    expect(LanguageCode.locale.languageCode, equals(LanguageCode.rawCode));
   });
 }

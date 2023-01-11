@@ -1,6 +1,6 @@
 name: language_code
 description: This plugin helps you to get the current language code and Locale.
-version: 0.0.1
+version: 0.1.0
 homepage: https://github.com/vursin/language_code
 
 environment:
