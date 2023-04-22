@@ -1,15 +1,14 @@
 name: language_code
 description: This plugin helps you to get the current language code and Locale.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/vursin/language_code
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
 
 dev_dependencies:
   flutter_test:

@@ -43,6 +43,16 @@ LanguageCodes.fromName('Vietnamese');
 LanguageCodes.fromNativeName('Tiếng Việt');
 ```
 
+## Testing
+
+Use this method if you want to set a test `LanguageCodes`:
+
+``` dart
+LanguageCode.setTestCode(LanguageCodes.vi);
+```
+
+Just set it to `null` if you want to stop testing.
+
 ## Contributions
 
 If your language is missing or incorrect, or you have any issues with the package, please file an issue or create a PR. Thank you!
