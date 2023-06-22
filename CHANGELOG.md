@@ -1,3 +1,8 @@
+## 0.2.0
+
+- Change from using `window` to `PlatformDispatcher`.
+- Using sdk: ">=2.18.0 <4.0.0" and flutter: ">=3.3.0".
+
 ## 0.1.1
 
 - Add `LanguageCode.setTestCode` to set a `LanguageCodes` for testing.

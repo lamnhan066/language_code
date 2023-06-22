@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'dart:ui';
 
 /// LanguageCodes(code, name in English, name in native)
 ///   - [code]: language code

@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+import 'dart:ui';
+
 import 'package:language_code/src/language_codes.dart';
 
 import 'language_code_stub.dart'
@@ -19,7 +20,7 @@ class LanguageCode {
 
   /// Get current language code of the device. This [rawCode] can contain the
   /// '-' or '_' character, you can use [locale] or [code] insteads.
-  static String get rawCode => _testCode?.code ?? languaeCodeImpl;
+  static String get rawCode => _testCode?.code ?? languageCodeImpl;
 
   /// Get current language locale of the device
   static Locale get locale {

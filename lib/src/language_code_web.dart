@@ -2,4 +2,4 @@
 
 import 'dart:html';
 
-String languaeCodeImpl = window.navigator.language;
+String languageCodeImpl = window.navigator.language;
