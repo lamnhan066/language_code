@@ -1,3 +1,3 @@
 import 'dart:ui';
 
-String languaeCodeImpl = window.locale.languageCode;
+String languageCodeImpl = PlatformDispatcher.instance.locale.languageCode;
