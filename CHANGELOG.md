@@ -1,3 +1,9 @@
+## 0.3.0-rc.1
+
+- Change from `name` to `englishNames` and returns a list of English names, the `name` was removed. Because it's a default value of `enum` so I have to change it to throw `UnimplementedError`.
+- Change from `nativeName` to `nativeNames` and returns a list of native names, `nativeName` was removed.
+- Change from `.fromName` to `.fromEnglishName`.
+
 ## 0.2.0
 
 - Change from using `window` to `PlatformDispatcher`.

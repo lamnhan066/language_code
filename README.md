@@ -1,6 +1,6 @@
 # Language Code
 
-This package help you get the current language code and locale of the device.
+This package help you get the current language code and Locale of the device. Also includes almost the language codes with English names and native names.
 
 ## Usage
 
@@ -26,20 +26,26 @@ This package includes almost the language code, name in English and name in Nati
 
 ``` dart
 var language = LanguageCodes.en;
-print(language.name); // => English
-print(language.nativeName); // => English
+print(language.englishNames); // => ['English']
+print(language.nativeNames); // => ['English']
 
 language = LanguageCodes.vi;
-print(language.name); // => Vietnamese
-print(language.nativeName); // => Tiếng Việt
+print(language.englishNames); // => ['Vietnamese']
+print(language.nativeNames); // => ['Tiếng Việt']
+
+language = LanguageCodes.kl;
+print(language.englishNames); // => ['Kalaallisut', 'Greenlandic']
+print(language.nativeNames); // => ['kalaallisut', 'kalaallit oqaasii']
 ```
 
-You can convert the language from locale, name or nativeName to `LanguageCodes` this way:
+Some language codes have multiple names in English or names in native, so the `englishNames` and `nativeNames` will return List<String>.
+
+You can convert the language from locale, englishName or nativeName to `LanguageCodes` this way:
 
 ``` dart
 LanguageCodes.fromLocale(Locale('vi'));
 LanguageCodes.fromCode('vi');
-LanguageCodes.fromName('Vietnamese');
+LanguageCodes.fromEnglishName('Vietnamese');
 LanguageCodes.fromNativeName('Tiếng Việt');
 ```
 

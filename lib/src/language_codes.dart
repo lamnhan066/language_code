@@ -2,8 +2,8 @@ import 'dart:ui';
 
 /// LanguageCodes(code, name in English, name in native)
 ///   - [code]: language code
-///   - [name]: name in English
-///   - [nativeName]: name in native
+///   - [englishNames]: List of names in English
+///   - [nativeNames]: List of names in native
 ///
 /// @Source https://stackoverflow.com/questions/3217492/list-of-language-codes-in-yaml-or-json
 enum LanguageCodes {
@@ -37,8 +37,8 @@ enum LanguageCodes {
   /// code: "as", name: "Assamese", nativeName "অসমীয়া"
   as("as", "Assamese", "অসমীয়া"),
 
-  /// code: "av", name: "Avaric", nativeName "авар мацӀ, магӀарул мацӀ"
-  av("av", "Avaric", "авар мацӀ, магӀарул мацӀ"),
+  /// code: "av", name: "Avaric", nativeName "авар мацӀ|магӀарул мацӀ"
+  av("av", "Avaric", "авар мацӀ|магӀарул мацӀ"),
 
   /// code: "ae", name: "Avestan", nativeName "avesta"
   ae("ae", "Avestan", "avesta"),
@@ -55,8 +55,8 @@ enum LanguageCodes {
   /// code: "ba", name: "Bashkir", nativeName "башҡорт теле"
   ba("ba", "Bashkir", "башҡорт теле"),
 
-  /// code: "eu", name: "Basque", nativeName "euskara, euskera"
-  eu("eu", "Basque", "euskara, euskera"),
+  /// code: "eu", name: "Basque", nativeName "euskara|euskera"
+  eu("eu", "Basque", "euskara|euskera"),
 
   /// code: "be", name: "Belarusian", nativeName "Беларуская"
   be("be", "Belarusian", "Беларуская"),
@@ -82,8 +82,8 @@ enum LanguageCodes {
   /// code: "my", name: "Burmese", nativeName "ဗမာစာ"
   my("my", "Burmese", "ဗမာစာ"),
 
-  /// code: "ca", name: "Catalan; Valencian", nativeName "Català"
-  ca("ca", "Catalan; Valencian", "Català"),
+  /// code: "ca", name: "Catalan|Valencian", nativeName "Català"
+  ca("ca", "Catalan|Valencian", "Català"),
 
   /// code: "ch", name: "Chamorro", nativeName "Chamoru"
   ch("ch", "Chamorro", "Chamoru"),
@@ -91,11 +91,11 @@ enum LanguageCodes {
   /// code: "ce", name: "Chechen", nativeName "нохчийн мотт"
   ce("ce", "Chechen", "нохчийн мотт"),
 
-  /// code: "ny", name: "Chichewa; Chewa; Nyanja", nativeName "chiCheŵa, chinyanja"
-  ny("ny", "Chichewa; Chewa; Nyanja", "chiCheŵa, chinyanja"),
+  /// code: "ny", name: "Chichewa|Chewa|Nyanja", nativeName "chiCheŵa|chinyanja"
+  ny("ny", "Chichewa|Chewa|Nyanja", "chiCheŵa|chinyanja"),
 
-  /// code: "zh", name: "Chinese", nativeName "中文 (Zhōngwén), 汉语, 漢語"
-  zh("zh", "Chinese", "中文 (Zhōngwén), 汉语, 漢語"),
+  /// code: "zh", name: "Chinese", nativeName "中文 (Zhōngwén)|汉语|漢語"
+  zh("zh", "Chinese", "中文 (Zhōngwén)|汉语|漢語"),
 
   /// code: "cv", name: "Chuvash", nativeName "чӑваш чӗлхи"
   cv("cv", "Chuvash", "чӑваш чӗлхи"),
@@ -103,8 +103,8 @@ enum LanguageCodes {
   /// code: "kw", name: "Cornish", nativeName "Kernewek"
   kw("kw", "Cornish", "Kernewek"),
 
-  /// code: "co", name: "Corsican", nativeName "corsu, lingua corsa"
-  co("co", "Corsican", "corsu, lingua corsa"),
+  /// code: "co", name: "Corsican", nativeName "corsu|lingua corsa"
+  co("co", "Corsican", "corsu|lingua corsa"),
 
   /// code: "cr", name: "Cree", nativeName "ᓀᐦᐃᔭᐍᐏᐣ"
   cr("cr", "Cree", "ᓀᐦᐃᔭᐍᐏᐣ"),
@@ -112,14 +112,14 @@ enum LanguageCodes {
   /// code: "hr", name: "Croatian", nativeName "hrvatski"
   hr("hr", "Croatian", "hrvatski"),
 
-  /// code: "cs", name: "Czech", nativeName "česky, čeština"
-  cs("cs", "Czech", "česky, čeština"),
+  /// code: "cs", name: "Czech", nativeName "česky|čeština"
+  cs("cs", "Czech", "česky|čeština"),
 
   /// code: "da", name: "Danish", nativeName "dansk"
   da("da", "Danish", "dansk"),
 
-  /// code: "dv", name: "Divehi; Dhivehi; Maldivian;", nativeName "ދިވެހި"
-  dv("dv", "Divehi; Dhivehi; Maldivian;", "ދިވެހި"),
+  /// code: "dv", name: "Divehi|Dhivehi|Maldivian;", nativeName "ދިވެހި"
+  dv("dv", "Divehi|Dhivehi|Maldivian", "ދިވެހި"),
 
   /// code: "nl", name: "Dutch", nativeName "Nederlands, Vlaams"
   nl("nl", "Dutch", "Nederlands, Vlaams"),
@@ -131,7 +131,7 @@ enum LanguageCodes {
   eo("eo", "Esperanto", "Esperanto"),
 
   /// code: "et", name: "Estonian", nativeName "eesti, eesti keel"
-  et("et", "Estonian", "eesti, eesti keel"),
+  et("et", "Estonian", "eesti|eesti keel"),
 
   /// code: "ee", name: "Ewe", nativeName "Eʋegbe"
   ee("ee", "Ewe", "Eʋegbe"),
@@ -142,14 +142,14 @@ enum LanguageCodes {
   /// code: "fj", name: "Fijian", nativeName "vosa Vakaviti"
   fj("fj", "Fijian", "vosa Vakaviti"),
 
-  /// code: "fi", name: "Finnish", nativeName "suomi, suomen kieli"
-  fi("fi", "Finnish", "suomi, suomen kieli"),
+  /// code: "fi", name: "Finnish", nativeName "suomi|suomen kieli"
+  fi("fi", "Finnish", "suomi|suomen kieli"),
 
-  /// code: "fr", name: "French", nativeName "français, langue française"
-  fr("fr", "French", "français, langue française"),
+  /// code: "fr", name: "French", nativeName "français|langue française"
+  fr("fr", "French", "français|langue française"),
 
-  /// code: "ff", name: "Fula; Fulah; Pulaar; Pular", nativeName "Fulfulde, Pulaar, Pular"
-  ff("ff", "Fula; Fulah; Pulaar; Pular", "Fulfulde, Pulaar, Pular"),
+  /// code: "ff", name: "Fula|Fulah|Pulaar|Pular", nativeName "Fulfulde|Pulaar|Pular"
+  ff("ff", "Fula|Fulah|Pulaar|Pular", "Fulfulde|Pulaar|Pular"),
 
   /// code: "gl", name: "Galician", nativeName "Galego"
   gl("gl", "Galician", "Galego"),
@@ -160,8 +160,8 @@ enum LanguageCodes {
   /// code: "de", name: "German", nativeName "Deutsch"
   de("de", "German", "Deutsch"),
 
-  /// code: "el", name: "Greek, Modern", nativeName "Ελληνικά"
-  el("el", "Greek, Modern", "Ελληνικά"),
+  /// code: "el", name: "Greek|Modern", nativeName "Ελληνικά"
+  el("el", "Greek|Modern", "Ελληνικά"),
 
   /// code: "gn", name: "Guaraní", nativeName "Avañeẽ"
   gn("gn", "Guaraní", "Avañeẽ"),
@@ -169,11 +169,11 @@ enum LanguageCodes {
   /// code: "gu", name: "Gujarati", nativeName "ગુજરાતી"
   gu("gu", "Gujarati", "ગુજરાતી"),
 
-  /// code: "ht", name: "Haitian; Haitian Creole", nativeName "Kreyòl ayisyen"
-  ht("ht", "Haitian; Haitian Creole", "Kreyòl ayisyen"),
+  /// code: "ht", name: "Haitian|Haitian Creole", nativeName "Kreyòl ayisyen"
+  ht("ht", "Haitian|Haitian Creole", "Kreyòl ayisyen"),
 
-  /// code: "ha", name: "Hausa", nativeName "Hausa, هَوُسَ"
-  ha("ha", "Hausa", "Hausa, هَوُسَ"),
+  /// code: "ha", name: "Hausa", nativeName "Hausa|هَوُسَ"
+  ha("ha", "Hausa", "Hausa|هَوُسَ"),
 
   /// code: "he", name: "Hebrew (modern)", nativeName "עברית"
   he("he", "Hebrew (modern)", "עברית"),
@@ -181,8 +181,8 @@ enum LanguageCodes {
   /// code: "hz", name: "Herero", nativeName "Otjiherero"
   hz("hz", "Herero", "Otjiherero"),
 
-  /// code: "hi", name: "Hindi", nativeName "हिन्दी, हिंदी"
-  hi("hi", "Hindi", "हिन्दी, हिंदी"),
+  /// code: "hi", name: "Hindi", nativeName "हिन्दी|हिंदी"
+  hi("hi", "Hindi", "हिन्दी|हिंदी"),
 
   /// code: "ho", name: "Hiri Motu", nativeName "Hiri Motu"
   ho("ho", "Hiri Motu", "Hiri Motu"),
@@ -196,9 +196,8 @@ enum LanguageCodes {
   /// code: "id", name: "Indonesian", nativeName "Bahasa Indonesia"
   id("id", "Indonesian", "Bahasa Indonesia"),
 
-  /// code: "ie", name: "Interlingue", nativeName "Originally called Occidental; then Interlingue after WWII"
-  ie("ie", "Interlingue",
-      "Originally called Occidental; then Interlingue after WWII"),
+  /// code: "ie", name: "Interlingue", nativeName "Originally called Occidental|then Interlingue after WWII"
+  ie("ie", "Interlingue", "Occidental|Interlingue"),
 
   /// code: "ga", name: "Irish", nativeName "Gaeilge"
   ga("ga", "Irish", "Gaeilge"),
@@ -206,8 +205,8 @@ enum LanguageCodes {
   /// code: "ig", name: "Igbo", nativeName "Asụsụ Igbo"
   ig("ig", "Igbo", "Asụsụ Igbo"),
 
-  /// code: "ik", name: "Inupiaq", nativeName "Iñupiaq, Iñupiatun"
-  ik("ik", "Inupiaq", "Iñupiaq, Iñupiatun"),
+  /// code: "ik", name: "Inupiaq", nativeName "Iñupiaq|Iñupiatun"
+  ik("ik", "Inupiaq", "Iñupiaq|Iñupiatun"),
 
   /// code: "io", name: "Ido", nativeName "Ido"
   io("io", "Ido", "Ido"),
@@ -229,8 +228,8 @@ enum LanguageCodes {
   /// code: "jv", name: "Javanese", nativeName "basa Jawa"
   jv("jv", "Javanese", "basa Jawa"),
 
-  /// code: "kl", name: "Kalaallisut, Greenlandic", nativeName "kalaallisut, kalaallit oqaasii"
-  kl("kl", "Kalaallisut, Greenlandic", "kalaallisut, kalaallit oqaasii"),
+  /// code: "kl", name: "Kalaallisut|Greenlandic", nativeName "kalaallisut|kalaallit oqaasii"
+  kl("kl", "Kalaallisut|Greenlandic", "kalaallisut|kalaallit oqaasii"),
 
   /// code: "kn", name: "Kannada", nativeName "ಕನ್ನಡ"
   kn("kn", "Kannada", "ಕನ್ನಡ"),
@@ -238,8 +237,8 @@ enum LanguageCodes {
   /// code: "kr", name: "Kanuri", nativeName "Kanuri"
   kr("kr", "Kanuri", "Kanuri"),
 
-  /// code: "ks", name: "Kashmiri", nativeName "कश्मीरी, كشميري‎"
-  ks("ks", "Kashmiri", "कश्मीरी, كشميري‎"),
+  /// code: "ks", name: "Kashmiri", nativeName "कश्मीरी|كشميري‎"
+  ks("ks", "Kashmiri", "कश्मीरी|كشميري‎"),
 
   /// code: "kk", name: "Kazakh", nativeName "Қазақ тілі"
   kk("kk", "Kazakh", "Қазақ тілі"),
@@ -247,14 +246,14 @@ enum LanguageCodes {
   /// code: "km", name: "Khmer", nativeName "ភាសាខ្មែរ"
   km("km", "Khmer", "ភាសាខ្មែរ"),
 
-  /// code: "ki", name: "Kikuyu, Gikuyu", nativeName "Gĩkũyũ"
-  ki("ki", "Kikuyu, Gikuyu", "Gĩkũyũ"),
+  /// code: "ki", name: "Kikuyu|Gikuyu", nativeName "Gĩkũyũ"
+  ki("ki", "Kikuyu|Gikuyu", "Gĩkũyũ"),
 
   /// code: "rw", name: "Kinyarwanda", nativeName "Ikinyarwanda"
   rw("rw", "Kinyarwanda", "Ikinyarwanda"),
 
-  /// code: "ky", name: "Kirghiz, Kyrgyz", nativeName "кыргыз тили"
-  ky("ky", "Kirghiz, Kyrgyz", "кыргыз тили"),
+  /// code: "ky", name: "Kirghiz|Kyrgyz", nativeName "кыргыз тили"
+  ky("ky", "Kirghiz|Kyrgyz", "кыргыз тили"),
 
   /// code: "kv", name: "Komi", nativeName "коми кыв"
   kv("kv", "Komi", "коми кыв"),
@@ -263,25 +262,25 @@ enum LanguageCodes {
   kg("kg", "Kongo", "KiKongo"),
 
   /// code: "ko", name: "Korean", nativeName "한국어 (韓國語), 조선말 (朝鮮語)"
-  ko("ko", "Korean", "한국어 (韓國語), 조선말 (朝鮮語)"),
+  ko("ko", "Korean", "한국어 (韓國語)|조선말 (朝鮮語)"),
 
-  /// code: "ku", name: "Kurdish", nativeName "Kurdî, كوردی‎"
-  ku("ku", "Kurdish", "Kurdî, كوردی‎"),
+  /// code: "ku", name: "Kurdish", nativeName "Kurdî|كوردی‎"
+  ku("ku", "Kurdish", "Kurdî|كوردی‎"),
 
-  /// code: "kj", name: "Kwanyama, Kuanyama", nativeName "Kuanyama"
-  kj("kj", "Kwanyama, Kuanyama", "Kuanyama"),
+  /// code: "kj", name: "Kwanyama|Kuanyama", nativeName "Kuanyama"
+  kj("kj", "Kwanyama|Kuanyama", "Kuanyama"),
 
-  /// code: "la", name: "Latin", nativeName "latine, lingua latina"
-  la("la", "Latin", "latine, lingua latina"),
+  /// code: "la", name: "Latin", nativeName "latine|lingua latina"
+  la("la", "Latin", "latine|lingua latina"),
 
-  /// code: "lb", name: "Luxembourgish, Letzeburgesch", nativeName "Lëtzebuergesch"
-  lb("lb", "Luxembourgish, Letzeburgesch", "Lëtzebuergesch"),
+  /// code: "lb", name: "Luxembourgish|Letzeburgesch", nativeName "Lëtzebuergesch"
+  lb("lb", "Luxembourgish|Letzeburgesch", "Lëtzebuergesch"),
 
   /// code: "lg", name: "Luganda", nativeName "Luganda"
   lg("lg", "Luganda", "Luganda"),
 
   /// code: "li", name: "Limburgish, Limburgan, Limburger", nativeName "Limburgs"
-  li("li", "Limburgish, Limburgan, Limburger", "Limburgs"),
+  li("li", "Limburgish|Limburgan|Limburger", "Limburgs"),
 
   /// code: "ln", name: "Lingala", nativeName "Lingála"
   ln("ln", "Lingala", "Lingála"),
@@ -292,14 +291,14 @@ enum LanguageCodes {
   /// code: "lt", name: "Lithuanian", nativeName "lietuvių kalba"
   lt("lt", "Lithuanian", "lietuvių kalba"),
 
-  /// code: "lu", name: "Luba-Katanga", nativeName ""
-  lu("lu", "Luba-Katanga", ""),
+  /// code: "lu", name: "Luba-Katanga", nativeName "Luba-Katanga"
+  lu("lu", "Luba-Katanga", "Luba-Katanga"),
 
   /// code: "lv", name: "Latvian", nativeName "latviešu valoda"
   lv("lv", "Latvian", "latviešu valoda"),
 
-  /// code: "gv", name: "Manx", nativeName "Gaelg, Gailck"
-  gv("gv", "Manx", "Gaelg, Gailck"),
+  /// code: "gv", name: "Manx", nativeName "Gaelg|Gailck"
+  gv("gv", "Manx", "Gaelg|Gailck"),
 
   /// code: "mk", name: "Macedonian", nativeName "македонски јазик"
   mk("mk", "Macedonian", "македонски јазик"),
@@ -307,8 +306,8 @@ enum LanguageCodes {
   /// code: "mg", name: "Malagasy", nativeName "Malagasy fiteny"
   mg("mg", "Malagasy", "Malagasy fiteny"),
 
-  /// code: "ms", name: "Malay", nativeName "bahasa Melayu, بهاس ملايو‎"
-  ms("ms", "Malay", "bahasa Melayu, بهاس ملايو‎"),
+  /// code: "ms", name: "Malay", nativeName "bahasa Melayu|بهاس ملايو‎"
+  ms("ms", "Malay", "bahasa Melayu|بهاس ملايو‎"),
 
   /// code: "ml", name: "Malayalam", nativeName "മലയാളം"
   ml("ml", "Malayalam", "മലയാളം"),
@@ -331,8 +330,8 @@ enum LanguageCodes {
   /// code: "na", name: "Nauru", nativeName "Ekakairũ Naoero"
   na("na", "Nauru", "Ekakairũ Naoero"),
 
-  /// code: "nv", name: "Navajo, Navaho", nativeName "Diné bizaad, Dinékʼehǰí"
-  nv("nv", "Navajo, Navaho", "Diné bizaad, Dinékʼehǰí"),
+  /// code: "nv", name: "Navajo|Navaho", nativeName "Diné bizaad|Dinékʼehǰí"
+  nv("nv", "Navajo|Navaho", "Diné bizaad|Dinékʼehǰí"),
 
   /// code: "nb", name: "Norwegian Bokmål", nativeName "Norsk bokmål"
   nb("nb", "Norwegian Bokmål", "Norsk bokmål"),
@@ -362,12 +361,12 @@ enum LanguageCodes {
   oc("oc", "Occitan", "Occitan"),
 
   /// code: "oj", name: "Ojibwe, Ojibwa", nativeName "ᐊᓂᔑᓈᐯᒧᐎᓐ"
-  oj("oj", "Ojibwe, Ojibwa", "ᐊᓂᔑᓈᐯᒧᐎᓐ"),
+  oj("oj", "Ojibwe|Ojibwa", "ᐊᓂᔑᓈᐯᒧᐎᓐ"),
 
-  /// code: "cu", name: "Old Church Slavonic, Church Slavic, Church Slavonic, Old Bulgarian, Old Slavonic", nativeName "ѩзыкъ словѣньскъ"
+  /// code: "cu", name: "Old Church Slavonic|Church Slavic|Church Slavonic|Old Bulgarian|Old Slavonic", nativeName "ѩзыкъ словѣньскъ"
   cu(
       "cu",
-      "Old Church Slavonic, Church Slavic, Church Slavonic, Old Bulgarian, Old Slavonic",
+      "Old Church Slavonic|Church Slavic|Church Slavonic|Old Bulgarian|Old Slavonic",
       "ѩзыкъ словѣньскъ"),
 
   /// code: "om", name: "Oromo", nativeName "Afaan Oromoo"
@@ -376,11 +375,11 @@ enum LanguageCodes {
   /// code: "or", name: "Oriya", nativeName "ଓଡ଼ିଆ"
   or("or", "Oriya", "ଓଡ଼ିଆ"),
 
-  /// code: "os", name: "Ossetian, Ossetic", nativeName "ирон æвзаг"
-  os("os", "Ossetian, Ossetic", "ирон æвзаг"),
+  /// code: "os", name: "Ossetian|Ossetic", nativeName "ирон æвзаг"
+  os("os", "Ossetian|Ossetic", "ирон æвзаг"),
 
-  /// code: "pa", name: "Panjabi, Punjabi", nativeName "ਪੰਜਾਬੀ, پنجابی‎"
-  pa("pa", "Panjabi, Punjabi", "ਪੰਜਾਬੀ, پنجابی‎"),
+  /// code: "pa", name: "Panjabi|Punjabi", nativeName "ਪੰਜਾਬੀ|پنجابی‎"
+  pa("pa", "Panjabi|Punjabi", "ਪੰਜਾਬੀ|پنجابی‎"),
 
   /// code: "pi", name: "Pāli", nativeName "पाऴि"
   pi("pi", "Pāli", "पाऴि"),
@@ -392,13 +391,13 @@ enum LanguageCodes {
   pl("pl", "Polish", "polski"),
 
   /// code: "ps", name: "Pashto, Pushto", nativeName "پښتو"
-  ps("ps", "Pashto, Pushto", "پښتو"),
+  ps("ps", "Pashto|Pushto", "پښتو"),
 
   /// code: "pt", name: "Portuguese", nativeName "Português"
   pt("pt", "Portuguese", "Português"),
 
-  /// code: "qu", name: "Quechua", nativeName "Runa Simi, Kichwa"
-  qu("qu", "Quechua", "Runa Simi, Kichwa"),
+  /// code: "qu", name: "Quechua", nativeName "Runa Simi|Kichwa"
+  qu("qu", "Quechua", "Runa Simi|Kichwa"),
 
   /// code: "rm", name: "Romansh", nativeName "rumantsch grischun"
   rm("rm", "Romansh", "rumantsch grischun"),
@@ -406,8 +405,8 @@ enum LanguageCodes {
   /// code: "rn", name: "Kirundi", nativeName "kiRundi"
   rn("rn", "Kirundi", "kiRundi"),
 
-  /// code: "ro", name: "Romanian, Moldavian, Moldovan", nativeName "română"
-  ro("ro", "Romanian, Moldavian, Moldovan", "română"),
+  /// code: "ro", name: "Romanian|Moldavian|Moldovan", nativeName "română"
+  ro("ro", "Romanian|Moldavian|Moldovan", "română"),
 
   /// code: "ru", name: "Russian", nativeName "русский язык"
   ru("ru", "Russian", "русский язык"),
@@ -418,8 +417,8 @@ enum LanguageCodes {
   /// code: "sc", name: "Sardinian", nativeName "sardu"
   sc("sc", "Sardinian", "sardu"),
 
-  /// code: "sd", name: "Sindhi", nativeName "सिन्धी, سنڌي، سندھی‎"
-  sd("sd", "Sindhi", "सिन्धी, سنڌي، سندھی‎"),
+  /// code: "sd", name: "Sindhi", nativeName "सिन्धी|سنڌي|سندھی‎"
+  sd("sd", "Sindhi", "सिन्धी|سنڌي|سندھی‎"),
 
   /// code: "se", name: "Northern Sami", nativeName "Davvisámegiella"
   se("se", "Northern Sami", "Davvisámegiella"),
@@ -433,14 +432,14 @@ enum LanguageCodes {
   /// code: "sr", name: "Serbian", nativeName "српски језик"
   sr("sr", "Serbian", "српски језик"),
 
-  /// code: "gd", name: "Scottish Gaelic; Gaelic", nativeName "Gàidhlig"
-  gd("gd", "Scottish Gaelic; Gaelic", "Gàidhlig"),
+  /// code: "gd", name: "Scottish Gaelic|Gaelic", nativeName "Gàidhlig"
+  gd("gd", "Scottish Gaelic|Gaelic", "Gàidhlig"),
 
   /// code: "sn", name: "Shona", nativeName "chiShona"
   sn("sn", "Shona", "chiShona"),
 
-  /// code: "si", name: "Sinhala, Sinhalese", nativeName "සිංහල"
-  si("si", "Sinhala, Sinhalese", "සිංහල"),
+  /// code: "si", name: "Sinhala|Sinhalese", nativeName "සිංහල"
+  si("si", "Sinhala|Sinhalese", "සිංහල"),
 
   /// code: "sk", name: "Slovak", nativeName "slovenčina"
   sk("sk", "Slovak", "slovenčina"),
@@ -448,14 +447,14 @@ enum LanguageCodes {
   /// code: "sl", name: "Slovene", nativeName "slovenščina"
   sl("sl", "Slovene", "slovenščina"),
 
-  /// code: "so", name: "Somali", nativeName "Soomaaliga, af Soomaali"
-  so("so", "Somali", "Soomaaliga, af Soomaali"),
+  /// code: "so", name: "Somali", nativeName "Soomaaliga|af Soomaali"
+  so("so", "Somali", "Soomaaliga|af Soomaali"),
 
   /// code: "st", name: "Southern Sotho", nativeName "Sesotho"
   st("st", "Southern Sotho", "Sesotho"),
 
-  /// code: "es", name: "Spanish; Castilian", nativeName "español, castellano"
-  es("es", "Spanish; Castilian", "español, castellano"),
+  /// code: "es", name: "Spanish|Castilian", nativeName "español|castellano"
+  es("es", "Spanish|Castilian", "español|castellano"),
 
   /// code: "su", name: "Sundanese", nativeName "Basa Sunda"
   su("su", "Sundanese", "Basa Sunda"),
@@ -475,8 +474,8 @@ enum LanguageCodes {
   /// code: "te", name: "Telugu", nativeName "తెలుగు"
   te("te", "Telugu", "తెలుగు"),
 
-  /// code: "tg", name: "Tajik", nativeName "тоҷикӣ, toğikī, تاجیکی‎"
-  tg("tg", "Tajik", "тоҷикӣ, toğikī, تاجیکی‎"),
+  /// code: "tg", name: "Tajik", nativeName "тоҷикӣ|toğikī|تاجیکی‎"
+  tg("tg", "Tajik", "тоҷикӣ|toğikī|تاجیکی‎"),
 
   /// code: "th", name: "Thai", nativeName "ไทย"
   th("th", "Thai", "ไทย"),
@@ -485,13 +484,13 @@ enum LanguageCodes {
   ti("ti", "Tigrinya", "ትግርኛ"),
 
   /// code: "bo", name: "Tibetan Standard, Tibetan, Central", nativeName "བོད་ཡིག"
-  bo("bo", "Tibetan Standard, Tibetan, Central", "བོད་ཡིག"),
+  bo("bo", "Tibetan Standard|Tibetan|Central", "བོད་ཡིག"),
 
   /// code: "tk", name: "Turkmen", nativeName "Türkmen, Түркмен"
-  tk("tk", "Turkmen", "Türkmen, Түркмен"),
+  tk("tk", "Turkmen", "Türkmen|Түркмен"),
 
-  /// code: "tl", name: "Tagalog", nativeName "Wikang Tagalog, ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔"
-  tl("tl", "Tagalog", "Wikang Tagalog, ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔"),
+  /// code: "tl", name: "Tagalog", nativeName "Wikang Tagalogᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔"
+  tl("tl", "Tagalog", "Wikang Tagalog|ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔"),
 
   /// code: "tn", name: "Tswana", nativeName "Setswana"
   tn("tn", "Tswana", "Setswana"),
@@ -505,8 +504,8 @@ enum LanguageCodes {
   /// code: "ts", name: "Tsonga", nativeName "Xitsonga"
   ts("ts", "Tsonga", "Xitsonga"),
 
-  /// code: "tt", name: "Tatar", nativeName "татарча, tatarça, تاتارچا‎"
-  tt("tt", "Tatar", "татарча, tatarça, تاتارچا‎"),
+  /// code: "tt", name: "Tatar", nativeName "татарча|tatarça|تاتارچا‎"
+  tt("tt", "Tatar", "татарча|tatarça|تاتارچا‎"),
 
   /// code: "tw", name: "Twi", nativeName "Twi"
   tw("tw", "Twi", "Twi"),
@@ -514,8 +513,8 @@ enum LanguageCodes {
   /// code: "ty", name: "Tahitian", nativeName "Reo Tahiti"
   ty("ty", "Tahitian", "Reo Tahiti"),
 
-  /// code: "ug", name: "Uighur, Uyghur", nativeName "Uyƣurqə, ئۇيغۇرچە‎"
-  ug("ug", "Uighur, Uyghur", "Uyƣurqə, ئۇيغۇرچە‎"),
+  /// code: "ug", name: "Uighur|Uyghur", nativeName "Uyƣurqə|ئۇيغۇرچە‎"
+  ug("ug", "Uighur|Uyghur", "Uyƣurqə|ئۇيغۇرچە‎"),
 
   /// code: "uk", name: "Ukrainian", nativeName "українська"
   uk("uk", "Ukrainian", "українська"),
@@ -523,8 +522,8 @@ enum LanguageCodes {
   /// code: "ur", name: "Urdu", nativeName "اردو"
   ur("ur", "Urdu", "اردو"),
 
-  /// code: "uz", name: "Uzbek", nativeName "zbek, Ўзбек, أۇزبېك‎"
-  uz("uz", "Uzbek", "zbek, Ўзбек, أۇزبېك‎"),
+  /// code: "uz", name: "Uzbek", nativeName "zbek, Ўзбек|أۇزبېك‎"
+  uz("uz", "Uzbek", "zbek|Ўзбек|أۇزبېك‎"),
 
   /// code: "ve", name: "Venda", nativeName "Tshivenḓa"
   ve("ve", "Venda", "Tshivenḓa"),
@@ -556,56 +555,96 @@ enum LanguageCodes {
   /// code: "yo", name: "Yoruba", nativeName "Yorùbá"
   yo("yo", "Yoruba", "Yorùbá"),
 
-  /// code: "za", name: "Zhuang, Chuang", nativeName "Saɯ cueŋƅ, Saw cuengh"
-  za("za", "Zhuang, Chuang", "Saɯ cueŋƅ, Saw cuengh");
+  /// code: "za", name: "Zhuang|Chuang", nativeName "Saɯ cueŋƅ|Saw cuengh"
+  za("za", "Zhuang|Chuang", "Saɯ cueŋƅ|Saw cuengh");
 
   /// Language code
   final String code;
 
+  /// List of language name in English
+  ///
+  /// One `code` maybe present for multiple `name`
+  List<String> get englishNames => _englishName.split('|');
+
   /// Language name in English
-  final String name;
+  final String _englishName;
+
+  /// List of language name in native
+  ///
+  /// One `code` maybe present for multiple `nativeName`
+  List<String> get nativeNames => _nativeName.split('|');
 
   /// Language name in native
-  final String nativeName;
+  final String _nativeName;
 
   /// Get current code as Locale
   Locale get locale => Locale(code);
 
+  /// This value will be removed to avoid confusing with older version.
+  ///
+  /// This value will throw UnimplementedError.
+  @Deprecated(
+      'Use `englishNames` instead. This value will throw UnimplementedError')
+  String get name => throw UnimplementedError();
+
   /// Get [LanguageCodes] from string [code]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static LanguageCodes fromCode(String code,
-          {LanguageCodes Function()? orElse}) =>
-      LanguageCodes.values
-          .singleWhere((element) => element.code == code, orElse: orElse);
+  static LanguageCodes fromCode(
+    String code, {
+    LanguageCodes Function()? orElse,
+  }) =>
+      LanguageCodes.values.singleWhere(
+        (element) => element.code == code,
+        orElse: orElse,
+      );
 
-  /// Get [LanguageCodes] from string [name]. If no matching element is found,
+  /// Get [LanguageCodes] from [name]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static LanguageCodes fromName(String name,
-          {LanguageCodes Function()? orElse}) =>
-      LanguageCodes.values
-          .singleWhere((element) => element.name == name, orElse: orElse);
+  @Deprecated('Use `fromEnglishName` instead')
+  static LanguageCodes fromName(
+    String name, {
+    LanguageCodes Function()? orElse,
+  }) =>
+      LanguageCodes.fromEnglishName(name, orElse: orElse);
+
+  /// Get [LanguageCodes] from [englishName]. If no matching element is found,
+  /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
+  /// throwing a [StateError]
+  static LanguageCodes fromEnglishName(
+    String englishName, {
+    LanguageCodes Function()? orElse,
+  }) =>
+      LanguageCodes.values.singleWhere(
+        (element) => element.englishNames.contains(englishName),
+        orElse: orElse,
+      );
 
   /// Get [LanguageCodes] from [nativeName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static LanguageCodes fromNativeName(String nativeName,
-          {LanguageCodes Function()? orElse}) =>
+  static LanguageCodes fromNativeName(
+    String nativeName, {
+    LanguageCodes Function()? orElse,
+  }) =>
       LanguageCodes.values.singleWhere(
-          (element) => element.nativeName == nativeName,
-          orElse: orElse);
+        (element) => element.nativeNames.contains(nativeName),
+        orElse: orElse,
+      );
 
   /// Get [LanguageCodes] from [Locale]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static LanguageCodes fromLocale(Locale locale,
-          {LanguageCodes Function()? orElse}) =>
+  static LanguageCodes fromLocale(
+    Locale locale, {
+    LanguageCodes Function()? orElse,
+  }) =>
       fromCode(locale.languageCode, orElse: orElse);
 
   /// LanguageCodes(code, name in English, name in native)
   ///   - [code]: language code
   ///   - [name]: name in English
   ///   - [nativeName]: name in native
-  const LanguageCodes(this.code, this.name, this.nativeName);
+  const LanguageCodes(this.code, this._englishName, this._nativeName);
 }
