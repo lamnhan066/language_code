@@ -40,6 +40,13 @@ print(language.nativeNames); // => ['kalaallisut', 'kalaallit oqaasii']
 
 Some language codes have multiple names in English or names in native, so the `englishNames` and `nativeNames` will return List<String>.
 
+You can get the first value from `englishNames` and `nativeNames` by using:
+
+``` dart
+final englishName = laguage.englishName;
+final nativeName = language.nativeName;
+```
+
 You can convert the language from locale, englishName or nativeName to `LanguageCodes` this way:
 
 ``` dart

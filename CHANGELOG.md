@@ -1,3 +1,8 @@
+## 0.3.0
+
+- Add `englishName` and `nativeName` to get the first value from `englishNames` and `nativeNames`.
+- Bring `name` back and returns `englishName`.
+
 ## 0.3.0-rc.1
 
 - Change from `name` to `englishNames` and returns a list of English names, the `name` was removed. Because it's a default value of `enum` so I have to change it to throw `UnimplementedError`.
