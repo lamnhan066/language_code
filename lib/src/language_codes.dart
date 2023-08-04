@@ -566,6 +566,9 @@ enum LanguageCodes {
   /// One `code` maybe present for multiple `name`
   List<String> get englishNames => _englishName.split('|');
 
+  /// Get the first value from [englishNames]
+  String get englishName => englishNames.first;
+
   /// Language name in English
   final String _englishName;
 
@@ -574,18 +577,17 @@ enum LanguageCodes {
   /// One `code` maybe present for multiple `nativeName`
   List<String> get nativeNames => _nativeName.split('|');
 
+  /// Get the first value from [nativeNames]
+  String get nativeName => nativeNames.first;
+
   /// Language name in native
   final String _nativeName;
 
   /// Get current code as Locale
   Locale get locale => Locale(code);
 
-  /// This value will be removed to avoid confusing with older version.
-  ///
-  /// This value will throw UnimplementedError.
-  @Deprecated(
-      'Use `englishNames` instead. This value will throw UnimplementedError')
-  String get name => throw UnimplementedError();
+  /// Get the first value from [englishNames]
+  String get name => englishName;
 
   /// Get [LanguageCodes] from string [code]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
