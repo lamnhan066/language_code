@@ -6,7 +6,7 @@ import 'language_code_stub.dart'
     if (dart.library.html) 'language_code_web.dart';
 
 /// This package help you get the current language code and locale of
-/// the device
+/// the device.
 class LanguageCode {
   LanguageCode._();
 

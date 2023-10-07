@@ -1,3 +1,8 @@
+## 0.3.1
+
+- Update comments.
+- Update homepage URL.
+
 ## 0.3.0
 
 - Add `englishName` and `nativeName` to get the first value from `englishNames` and `nativeNames`.

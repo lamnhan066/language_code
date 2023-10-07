@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-/// LanguageCodes(code, name in English, name in native)
-///   - [code]: language code
-///   - [englishNames]: List of names in English
-///   - [nativeNames]: List of names in native
+/// LanguageCodes(code, name in English, name in native).
+///   - [code]: language code.
+///   - [englishNames]: List of names in English.
+///   - [nativeNames]: List of names in native.
 ///
 /// @Source https://stackoverflow.com/questions/3217492/list-of-language-codes-in-yaml-or-json
 enum LanguageCodes {
