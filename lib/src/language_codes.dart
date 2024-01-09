@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'dart:ui';
 
 /// LanguageCodes(code, name in English, name in native).
@@ -94,9 +96,6 @@ enum LanguageCodes {
   /// code: "ny", name: "Chichewa|Chewa|Nyanja", nativeName "chiCheŵa|chinyanja"
   ny("ny", "Chichewa|Chewa|Nyanja", "chiCheŵa|chinyanja"),
 
-  /// code: "zh", name: "Chinese", nativeName "中文 (Zhōngwén)|汉语|漢語"
-  zh("zh", "Chinese", "中文 (Zhōngwén)|汉语|漢語"),
-
   /// code: "cv", name: "Chuvash", nativeName "чӑваш чӗлхи"
   cv("cv", "Chuvash", "чӑваш чӗлхи"),
 
@@ -121,11 +120,29 @@ enum LanguageCodes {
   /// code: "dv", name: "Divehi|Dhivehi|Maldivian;", nativeName "ދިވެހި"
   dv("dv", "Divehi|Dhivehi|Maldivian", "ދިވެހި"),
 
-  /// code: "nl", name: "Dutch", nativeName "Nederlands, Vlaams"
-  nl("nl", "Dutch", "Nederlands, Vlaams"),
+  /// code: "dz", name: "Dzongkha", nativeName "རྫོང་ཁ"
+  dz("dz", "Dzongkha", "རྫོང་ཁ"),
+
+  /// code: "nl", name: "Dutch", nativeName "Nederlands"
+  nl("nl", "Dutch", "Nederlands"),
+
+  /// code: "nl", name: "Flemish", nativeName "Vlaams"
+  nl_BE("nl_BE", "Flemish", "Vlaams"),
 
   /// code: "en", name: "English", nativeName "English"
   en("en", "English", "English"),
+
+  /// code: "en_AU", name: "Australian English", nativeName "Australian English"
+  en_AU("en_AU", "English (Australian)", "Australian English"),
+
+  /// code: "en_CA", name: "Canadian English", nativeName "Canadian English"
+  en_CA("en_CA", "English (Canadian)", "Canadian English"),
+
+  /// code: "en_GB", name: "British English", nativeName "British English"
+  en_GB("en_GB", "English (British)", "British English"),
+
+  /// code: "en_US", name: "American English", nativeName "American English"
+  en_US("en_US", "English (American)", "American English"),
 
   /// code: "eo", name: "Esperanto", nativeName "Esperanto"
   eo("eo", "Esperanto", "Esperanto"),
@@ -148,6 +165,12 @@ enum LanguageCodes {
   /// code: "fr", name: "French", nativeName "français|langue française"
   fr("fr", "French", "français|langue française"),
 
+  /// code: "fr", name: "French (Canadian)", nativeName "français canadien"
+  fr_CA("fr_CA", "French (Canadian)", "français canadien"),
+
+  /// code: "fr", name: "French (Swiss)", nativeName "français suisse"
+  fr_CH("fr_CH", "French (Swiss)", "français suisse"),
+
   /// code: "ff", name: "Fula|Fulah|Pulaar|Pular", nativeName "Fulfulde|Pulaar|Pular"
   ff("ff", "Fula|Fulah|Pulaar|Pular", "Fulfulde|Pulaar|Pular"),
 
@@ -160,8 +183,14 @@ enum LanguageCodes {
   /// code: "de", name: "German", nativeName "Deutsch"
   de("de", "German", "Deutsch"),
 
-  /// code: "el", name: "Greek|Modern", nativeName "Ελληνικά"
-  el("el", "Greek|Modern", "Ελληνικά"),
+  /// code: "de_AT", name: "Austrian German", nativeName "Österreichisches Deutsch"
+  de_AT("de_AT", "Austrian German", "Österreichisches Deutsch"),
+
+  /// code: "de_CH", name: "Swiss High German", nativeName "Schweizer Hochdeutsch"
+  de_CH("de_CH", "Swiss High German", "Schweizer Hochdeutsch"),
+
+  /// code: "el", name: "Greek", nativeName "Ελληνικά"
+  el("el", "Greek", "Ελληνικά"),
 
   /// code: "gn", name: "Guaraní", nativeName "Avañeẽ"
   gn("gn", "Guaraní", "Avañeẽ"),
@@ -175,8 +204,8 @@ enum LanguageCodes {
   /// code: "ha", name: "Hausa", nativeName "Hausa|هَوُسَ"
   ha("ha", "Hausa", "Hausa|هَوُسَ"),
 
-  /// code: "he", name: "Hebrew (modern)", nativeName "עברית"
-  he("he", "Hebrew (modern)", "עברית"),
+  /// code: "he", name: "Hebrew", nativeName "עברית"
+  he("he", "Hebrew", "עברית"),
 
   /// code: "hz", name: "Herero", nativeName "Otjiherero"
   hz("hz", "Herero", "Otjiherero"),
@@ -222,8 +251,8 @@ enum LanguageCodes {
   /// code: "iu", name: "Inuktitut", nativeName "ᐃᓄᒃᑎᑐᑦ"
   iu("iu", "Inuktitut", "ᐃᓄᒃᑎᑐᑦ"),
 
-  /// code: "ja", name: "Japanese", nativeName "日本語 (にほんご／にっぽんご)"
-  ja("ja", "Japanese", "日本語 (にほんご／にっぽんご)"),
+  /// code: "ja", name: "Japanese", nativeName "日本語|にほんご|にっぽんご"
+  ja("ja", "Japanese", "日本語|にほんご|にっぽんご"),
 
   /// code: "jv", name: "Javanese", nativeName "basa Jawa"
   jv("jv", "Javanese", "basa Jawa"),
@@ -261,8 +290,8 @@ enum LanguageCodes {
   /// code: "kg", name: "Kongo", nativeName "KiKongo"
   kg("kg", "Kongo", "KiKongo"),
 
-  /// code: "ko", name: "Korean", nativeName "한국어 (韓國語), 조선말 (朝鮮語)"
-  ko("ko", "Korean", "한국어 (韓國語)|조선말 (朝鮮語)"),
+  /// code: "ko", name: "Korean", nativeName "한국어|韓國語|조선말|朝鮮語"
+  ko("ko", "Korean", "한국어|韓國語|조선말|朝鮮語|"),
 
   /// code: "ku", name: "Kurdish", nativeName "Kurdî|كوردی‎"
   ku("ku", "Kurdish", "Kurdî|كوردی‎"),
@@ -318,8 +347,8 @@ enum LanguageCodes {
   /// code: "mi", name: "Māori", nativeName "te reo Māori"
   mi("mi", "Māori", "te reo Māori"),
 
-  /// code: "mr", name: "Marathi (Marāṭhī)", nativeName "मराठी"
-  mr("mr", "Marathi (Marāṭhī)", "मराठी"),
+  /// code: "mr", name: "Marathi", nativeName "मराठी|Marāṭhī"
+  mr("mr", "Marathi", "मराठी|Marāṭhī"),
 
   /// code: "mh", name: "Marshallese", nativeName "Kajin M̧ajeļ"
   mh("mh", "Marshallese", "Kajin M̧ajeļ"),
@@ -396,6 +425,12 @@ enum LanguageCodes {
   /// code: "pt", name: "Portuguese", nativeName "Português"
   pt("pt", "Portuguese", "Português"),
 
+  /// code: "pt", name: "Brazilian Portuguese", nativeName "português do Brasil"
+  pt_BR("pt_BR", "Brazilian Portuguese", "português do Brasil"),
+
+  /// code: "pt", name: "European Portuguese", nativeName "português europeu"
+  pt_PT("pt_PT", "European Portuguese", "português europeu"),
+
   /// code: "qu", name: "Quechua", nativeName "Runa Simi|Kichwa"
   qu("qu", "Quechua", "Runa Simi|Kichwa"),
 
@@ -405,14 +440,17 @@ enum LanguageCodes {
   /// code: "rn", name: "Kirundi", nativeName "kiRundi"
   rn("rn", "Kirundi", "kiRundi"),
 
-  /// code: "ro", name: "Romanian|Moldavian|Moldovan", nativeName "română"
-  ro("ro", "Romanian|Moldavian|Moldovan", "română"),
+  /// code: "ro", name: "Romanian", nativeName "română"
+  ro("ro", "Romanian", "română"),
+
+  /// code: "ro", name: "Moldavian|Moldovan", nativeName "moldovenească"
+  ro_MD("ro_MD", "Moldavian|Moldovan", "moldovenească"),
 
   /// code: "ru", name: "Russian", nativeName "русский язык"
   ru("ru", "Russian", "русский язык"),
 
-  /// code: "sa", name: "Sanskrit (Saṁskṛta)", nativeName "संस्कृतम्"
-  sa("sa", "Sanskrit (Saṁskṛta)", "संस्कृतम्"),
+  /// code: "sa", name: "Sanskrit", nativeName "संस्कृतम्|Saṁskṛta"
+  sa("sa", "Sanskrit", "संस्कृतम्|Saṁskṛta"),
 
   /// code: "sc", name: "Sardinian", nativeName "sardu"
   sc("sc", "Sardinian", "sardu"),
@@ -438,6 +476,9 @@ enum LanguageCodes {
   /// code: "sn", name: "Shona", nativeName "chiShona"
   sn("sn", "Shona", "chiShona"),
 
+  /// code: "sh", name: "Serbo-Croatian", nativeName "Srpskohrvatski"
+  sh("sh", "Serbo-Croatian", "Srpskohrvatski"),
+
   /// code: "si", name: "Sinhala|Sinhalese", nativeName "සිංහල"
   si("si", "Sinhala|Sinhalese", "සිංහල"),
 
@@ -455,6 +496,12 @@ enum LanguageCodes {
 
   /// code: "es", name: "Spanish|Castilian", nativeName "español|castellano"
   es("es", "Spanish|Castilian", "español|castellano"),
+
+  /// code: "es_ES", name: "Spanish (Spain)", nativeName "español de España"
+  es_ES("es_ES", "Spanish (Spain)", "español de España"),
+
+  /// code: "es_MX", name: "Spanish (Mexico)", nativeName "español de México"
+  es_MX("es_MX", "Spanish (Mexico)", "español de México"),
 
   /// code: "su", name: "Sundanese", nativeName "Basa Sunda"
   su("su", "Sundanese", "Basa Sunda"),
@@ -495,8 +542,8 @@ enum LanguageCodes {
   /// code: "tn", name: "Tswana", nativeName "Setswana"
   tn("tn", "Tswana", "Setswana"),
 
-  /// code: "to", name: "Tonga (Tonga Islands)", nativeName "faka Tonga"
-  to("to", "Tonga (Tonga Islands)", "faka Tonga"),
+  /// code: "to", name: "Tonga", nativeName "faka Tonga"
+  to("to", "Tonga", "faka Tonga"),
 
   /// code: "tr", name: "Turkish", nativeName "Türkçe"
   tr("tr", "Turkish", "Türkçe"),
@@ -556,9 +603,24 @@ enum LanguageCodes {
   yo("yo", "Yoruba", "Yorùbá"),
 
   /// code: "za", name: "Zhuang|Chuang", nativeName "Saɯ cueŋƅ|Saw cuengh"
-  za("za", "Zhuang|Chuang", "Saɯ cueŋƅ|Saw cuengh");
+  za("za", "Zhuang|Chuang", "Saɯ cueŋƅ|Saw cuengh"),
 
-  /// Language code
+  /// code: "zh", name: "Chinese", nativeName "中文|Zhōngwén"
+  zh("zh", "Chinese", "中文|Zhōngwén"),
+
+  /// code: "zh_CN", name: "Chinese (simplified)", nativeName "简体中文"
+  zh_CN("zh_CN", "Chinese (simplified)", "简体中文"),
+
+  /// code: "zh_TW", name: "Chinese (traditional)", nativeName "繁體中文"
+  zh_TW("zh_TW", "Chinese (traditional)", "繁體中文"),
+
+  /// code: "zu", name: "Zulu", nativeName "isiZulu"
+  zu("zu", "Zulu", "isiZulu");
+
+  /// Language code.
+  ///
+  /// Use [locale] if you want to get the current language as `Locale` because
+  /// this [code] may contains country code.
   final String code;
 
   /// List of language name in English
@@ -584,7 +646,14 @@ enum LanguageCodes {
   final String _nativeName;
 
   /// Get current code as Locale
-  Locale get locale => Locale(code);
+  Locale get locale {
+    final localeList = code.split('_');
+    if (localeList.length == 1) {
+      return Locale(localeList[0]);
+    }
+
+    return Locale(localeList[0], localeList[1]);
+  }
 
   /// Get the first value from [englishNames]
   String get name => englishName;
@@ -641,8 +710,15 @@ enum LanguageCodes {
   static LanguageCodes fromLocale(
     Locale locale, {
     LanguageCodes Function()? orElse,
-  }) =>
-      fromCode(locale.languageCode, orElse: orElse);
+  }) {
+    LanguageCodes? code;
+    if (locale.countryCode != null) {
+      try {
+        code = fromCode('${locale.languageCode}_${locale.countryCode}');
+      } catch (_) {}
+    }
+    return code ?? fromCode(locale.languageCode, orElse: orElse);
+  }
 
   /// LanguageCodes(code, name in English, name in native)
   ///   - [code]: language code
