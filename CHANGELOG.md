@@ -1,3 +1,40 @@
+## 0.4.0
+
+- Modify the `englishName` and `nativeName` to reduce the complexity:
+  - zh("zh", "Chinese", "中文 (Zhōngwén)|汉语|漢語") -> zh("zh", "Chinese", "中文|Zhōngwén")
+  - nl("nl", "Dutch", "Nederlands, Vlaams") -> nl("nl", "Dutch", "Nederlands")
+  - el("el", "Greek|Modern", "Ελληνικά") -> el("el", "Greek", "Ελληνικά")
+  - he("he", "Hebrew (modern)", "עברית") -> he("he", "Hebrew", "עברית")
+  - ja("ja", "Japanese", "日本語 (にほんご／にっぽんご)") -> ja("ja", "Japanese", "日本語|にほんご|にっぽんご")
+  - ko("ko", "Korean", "한국어 (韓國語)|조선말 (朝鮮語)") -> ko("ko", "Korean", "한국어|韓國語|조선말|朝鮮語|")
+  - mr("mr", "Marathi (Marāṭhī)", "मराठी") -> mr("mr", "Marathi", "मराठी|Marāṭhī")
+  - ro("ro", "Romanian|Moldavian|Moldovan", "română") -> ro("ro", "Romanian", "română")
+  - sa("sa", "Sanskrit (Saṁskṛta)", "संस्कृतम्") -> sa("sa", "Sanskrit", "संस्कृतम्|Saṁskṛta")
+  - to("to", "Tonga (Tonga Islands)", "faka Tonga") -> to("to", "Tonga", "faka Tonga")
+  - za("za", "Zhuang|Chuang", "Saɯ cueŋƅ|Saw cuengh") -> za("za", "Zhuang|Chuang", "Saɯ cueŋƅ|Saw cuengh")
+- Add more language codes:
+  - dz("dz", "Dzongkha", "རྫོང་ཁ")
+  - sh("sh", "Serbo-Croatian", "Srpskohrvatski")
+  - zu("zu", "Zulu", "isiZulu")
+- Add some common country codes:
+  - nl_BE("nl_BE", "Flemish", "Vlaams")
+  - en_AU("en_AU", "English (Australian)", "Australian English")
+  - en_CA("en_CA", "English (Canadian)", "Canadian English")
+  - en_GB("en_GB", "English (British)", "British English")
+  - en_US("en_US", "English (American)", "American English")
+  - fr_CA("fr_CA", "French (Canadian)", "français canadien")
+  - fr_CH("fr_CH", "French (Swiss)", "français suisse")
+  - de_AT("de_AT", "Austrian German", "Österreichisches Deutsch")
+  - de_CH("de_CH", "Swiss High German", "Schweizer Hochdeutsch")
+  - pt_BR("pt_BR", "Brazilian Portuguese", "português do Brasil")
+  - pt_PT("pt_PT", "European Portuguese", "português europeu")
+  - ro_MD("ro_MD", "Moldavian|Moldovan", "moldovenească")
+  - es_ES("es_ES", "Spanish (Spain)", "español de España")
+  - es_MX("es_MX", "Spanish (Mexico)", "español de México")
+  - zh_CN("zh_CN", "Chinese (simplified)", "简体中文")
+  - zh_TW("zh_TW", "Chinese (traditional)", "繁體中文")
+- **BREAKING CHANGE NOTE**: The method `.fromEnglishName` and `.fromNativeName` may be broken in this version because of those changes.
+
 ## 0.3.1
 
 - Update comments.
