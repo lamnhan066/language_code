@@ -38,7 +38,7 @@ print(language.englishNames); // => ['Kalaallisut', 'Greenlandic']
 print(language.nativeNames); // => ['kalaallisut', 'kalaallit oqaasii']
 ```
 
-Some language codes have multiple names in English or names in native, so the `englishNames` and `nativeNames` will return List<String>.
+Some language codes have multiple names in English or names in native, so the `englishNames` and `nativeNames` will return a List<String>.
 
 You can get the first value from `englishNames` and `nativeNames` by using:
 
