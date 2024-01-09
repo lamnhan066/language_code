@@ -1,6 +1,6 @@
 name: language_code
 description: Get the current language code and Locale of the device. Also includes almost the language codes with English names and native names.
-version: 0.3.1
+version: 0.4.0
 homepage: https://github.com/lamnhan066/language_code
 
 environment:
@@ -14,10 +14,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
-flutter:
+  flutter_lints: ^3.0.1
