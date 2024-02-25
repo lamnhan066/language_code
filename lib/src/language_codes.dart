@@ -160,7 +160,7 @@ enum LanguageCodes {
   fj("fj", "Fijian", "vosa Vakaviti"),
 
   /// code: "fl", name: "Filipino", nativeName "Wikang Filipino"
-  fl("fl", "Filipino", "Wikang Filipino"),
+  fil("fil", "Filipino", "Wikang Filipino"),
 
   /// code: "fi", name: "Finnish", nativeName "suomi|suomen kieli"
   fi("fi", "Finnish", "suomi|suomen kieli"),
