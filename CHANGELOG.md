@@ -1,3 +1,8 @@
+## 0.4.1
+
+- Add `Filipino` (Thanks @Ushie).
+- Add `:` to `nativeName` parameter in comments.
+
 ## 0.4.0
 
 - Modify the `englishName` and `nativeName` to reduce the complexity:
