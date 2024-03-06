@@ -141,6 +141,12 @@ enum LanguageCodes {
   /// code: "en_GB", name: "British English", nativeName: "British English"
   en_GB("en_GB", "English (British)", "British English"),
 
+  /// code: "en_IN", name: "Indian English", nativeName: "Indian English"
+  en_IN("en_IN", "English (India)", "Indian English"),
+
+  /// code: "en_NG", name: "Nigerian English", nativeName: "Nigerian English"
+  en_NG("en_NG", "English (Nigeria)", "Nigerian English"),
+
   /// code: "en_US", name: "American English", nativeName: "American English"
   en_US("en_US", "English (American)", "American English"),
 
