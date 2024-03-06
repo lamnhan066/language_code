@@ -605,6 +605,9 @@ enum LanguageCodes {
   /// code: "yo", name: "Yoruba", nativeName: "Yorùbá"
   yo("yo", "Yoruba", "Yorùbá"),
 
+  /// code: "yue", name: "Cantonese", nativeName: "廣東話"
+  yue("yue", "Cantonese", "廣東話"),
+
   /// code: "za", name: "Zhuang|Chuang", nativeName: "Saɯ cueŋƅ|Saw cuengh"
   za("za", "Zhuang|Chuang", "Saɯ cueŋƅ|Saw cuengh"),
 
