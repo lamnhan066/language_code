@@ -501,7 +501,7 @@ enum LanguageCodes {
   es("es", "Spanish|Castilian", "español|castellano"),
 
   /// code: "es_AR", name: "Spanish (Argentina)", nativeName: "español de Argentina"
-  es_AR("es_AR", "Spanish (Argentina)", "español de Argentina")
+  es_AR("es_AR", "Spanish (Argentina)", "español de Argentina"),
 
   /// code: "es_ES", name: "Spanish (Spain)", nativeName: "español de España"
   es_ES("es_ES", "Spanish (Spain)", "español de España"),
