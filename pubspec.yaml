@@ -1,6 +1,6 @@
 name: language_code
 description: Get the current language code and Locale of the device. Also includes almost the language codes with English names and native names.
-version: 0.4.1
+version: 0.4.2
 homepage: https://github.com/lamnhan066/language_code
 
 environment:

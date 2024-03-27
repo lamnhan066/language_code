@@ -1,3 +1,7 @@
+## 0.4.2
+
+- Add `Spanish Argentina` (Thanks @validcube).
+
 ## 0.4.1
 
 - Add `Filipino` (Thanks @Ushie).
