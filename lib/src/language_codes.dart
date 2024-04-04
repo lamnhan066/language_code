@@ -2681,16 +2681,6 @@ enum LanguageCodes {
         orElse: orElse,
       );
 
-  /// Get [LanguageCodes] from [name]. If no matching element is found,
-  /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
-  /// throwing a [StateError]
-  @Deprecated('Use `fromEnglishName` instead')
-  static LanguageCodes fromName(
-    String name, {
-    LanguageCodes Function()? orElse,
-  }) =>
-      LanguageCodes.fromEnglishName(name, orElse: orElse);
-
   /// Get [LanguageCodes] from [englishName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
