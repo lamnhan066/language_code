@@ -4,32 +4,35 @@ import 'package:language_code/language_code.dart';
 void main() {
   test('getPlatformVersion', () async {
     expect(LanguageCode.rawCode, isNotEmpty);
-    expect(LanguageCode.locale.languageCode, equals(LanguageCode.rawCode));
+    expect(LanguageCode.locale.toString(), equals(LanguageCode.code.code));
+    expect(LanguageCode.locale, equals(LanguageCode.code.locale));
   });
 
   group('LanguageCodes', () {
     test('set test LanguageCodes', () {
       LanguageCode.setTestCode(LanguageCodes.cu);
       const code = LanguageCodes.cu;
-      expect(LanguageCode.rawCode, code.code);
+
       expect(LanguageCode.locale, equals(code.locale));
       expect(LanguageCode.code, equals(code));
     });
 
-    test('multiple names and nativeNames', () {
-      const code = LanguageCodes.kl;
-      expect(code.englishNames, isA<List<String>>());
-      expect(code.nativeNames, isA<List<String>>());
+    test('fromLocale', () {
+      for (final code in LanguageCodes.values) {
+        expect(LanguageCodes.fromLocale(code.locale), equals(code));
+      }
+    });
 
-      expect(code.englishNames, ['Kalaallisut', 'Greenlandic']);
-      expect(code.nativeNames, ['kalaallisut', 'kalaallit oqaasii']);
+    test('fromEnglishName', () {
+      for (final code in LanguageCodes.values) {
+        expect(LanguageCodes.fromEnglishName(code.englishName), contains(code));
+      }
+    });
 
-      expect(LanguageCodes.fromCode(code.code), code);
-      expect(LanguageCodes.fromLocale(code.locale), code);
-      expect(LanguageCodes.fromEnglishName('Kalaallisut'), code);
-      expect(LanguageCodes.fromEnglishName('Greenlandic'), code);
-      expect(LanguageCodes.fromNativeName('kalaallisut'), code);
-      expect(LanguageCodes.fromNativeName('kalaallit oqaasii'), code);
+    test('fromNativeName', () {
+      for (final code in LanguageCodes.values) {
+        expect(LanguageCodes.fromNativeName(code.nativeName), contains(code));
+      }
     });
   });
 }
