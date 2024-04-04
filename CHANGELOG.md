@@ -1,3 +1,10 @@
+## 0.5.0
+
+- Add multiple language codes and country codes. Also add common ISO 639-3 language codes and country codes (851 in total).
+- **BREAKING CHANGE:** Remove `englishNames` and `nativeNames` to reduce the complexity. We only have `englishName` and `nativeName` from now.
+- **BREAKING CHANGE:** Method `fromEnglishName` and `fromNativeName` return as `Iterable` from this version.
+- Add `LanguageCode.rawLocale` to get the raw locale of the device.
+
 ## 0.4.2
 
 - Add `Spanish Argentina` (Thanks @validcube).
