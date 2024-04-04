@@ -1,3 +1,7 @@
+## 0.5.1
+
+- Add language codes: `pa_PK`, `sr_SP`.
+
 ## 0.5.0
 
 - Add multiple language codes and country codes. Also add common ISO 639-3 language codes and country codes (851 in total).
