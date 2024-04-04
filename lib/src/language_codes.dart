@@ -2652,7 +2652,7 @@ enum LanguageCodes {
       case 1:
         return Locale(localeList[0]);
       case 2:
-        // localeList[1] is country code if all characters are upper case.
+        // localeList[1] is the country code if all characters are upper cases.
         if (localeList[1] == localeList[1].toUpperCase()) {
           return Locale(localeList[0], localeList[1]);
         }
