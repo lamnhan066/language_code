@@ -2687,20 +2687,14 @@ enum LanguageCodes {
   /// Get [LanguageCodes] from [englishName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static Iterable<LanguageCodes> fromEnglishName(
-    String englishName, {
-    LanguageCodes Function()? orElse,
-  }) =>
+  static Iterable<LanguageCodes> fromEnglishName(String englishName) =>
       LanguageCodes.values
           .where((element) => element.englishName == englishName);
 
   /// Get [LanguageCodes] from [nativeName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static Iterable<LanguageCodes> fromNativeName(
-    String nativeName, {
-    LanguageCodes Function()? orElse,
-  }) =>
+  static Iterable<LanguageCodes> fromNativeName(String nativeName) =>
       LanguageCodes.values.where((element) => element.nativeName == nativeName);
 
   /// Get [LanguageCodes] from [Locale]. If no matching element is found,
