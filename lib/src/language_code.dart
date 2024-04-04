@@ -2,9 +2,6 @@ import 'dart:ui';
 
 import 'package:language_code/src/language_codes.dart';
 
-import 'language_code_stub.dart'
-    if (dart.library.html) 'language_code_web.dart';
-
 /// This package help you get the current language code and locale of
 /// the device.
 class LanguageCode {
@@ -18,39 +15,25 @@ class LanguageCode {
     _testCode = testCode;
   }
 
-  /// Get current language code of the device. This [rawCode] can contain the
-  /// '-' or '_' character, you can use [locale] or [code] insteads.
-  static String get rawCode => _testCode?.code ?? languageCodeImpl;
+  /// Get current language code of the device. This [rawCode] may contains the
+  /// '-' or '_' character, script code and country code.
+  ///
+  /// If you want to ensure that the code is supported by this package, you
+  /// need to use [code] or [locale].
+  static Locale get rawLocale =>
+      _testCode?.locale ?? PlatformDispatcher.instance.locale;
 
-  /// Get current language locale of the device
-  static Locale get locale {
-    if (_testCode != null) return _testCode!.locale;
-
-    final String token = rawCode.contains('-') ? '-' : '_';
-    List localeList = rawCode.split(token);
-
-    switch (localeList.length) {
-      case 1:
-        return Locale(localeList[0]);
-      case 2:
-        // localeList[1] is country code if all characters are upper case.
-        if (localeList[1] == localeList[1].toUpperCase()) {
-          return Locale(localeList[0], localeList[1]);
-        }
-        return Locale.fromSubtags(
-          languageCode: localeList[0],
-          scriptCode: localeList[1],
-        );
-      default:
-        return Locale.fromSubtags(
-          languageCode: localeList[0],
-          scriptCode: localeList[1],
-          countryCode: localeList[2],
-        );
-    }
-  }
+  /// Get current language code of the device. This [rawCode] may contains the
+  /// '-' or '_' character, script code and country code.
+  ///
+  /// If you want to ensure that the code is supported by this package, you
+  /// need to use [code] or [locale].
+  static String get rawCode => rawLocale.toString();
 
   /// Get the language code as [LanguageCodes].
   static LanguageCodes get code =>
-      _testCode ?? LanguageCodes.fromLocale(locale);
+      _testCode ?? LanguageCodes.fromLocale(rawLocale);
+
+  /// Get current language locale of the device
+  static Locale get locale => code.locale;
 }
