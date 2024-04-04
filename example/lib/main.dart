@@ -26,7 +26,13 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: ${LanguageCode.rawCode}'),
+          child: Column(
+            children: [
+              Text('Code: ${LanguageCode.code}'),
+              Text('Raw code: ${LanguageCode.rawCode}'),
+              Text('Locale: ${LanguageCode.locale}'),
+            ],
+          ),
         ),
       ),
     );
