@@ -2632,24 +2632,14 @@ enum LanguageCodes {
   /// this [code] may contains country code.
   final String code;
 
-  /// List of language name in English
-  ///
-  /// One `code` maybe present for multiple `name`
-  List<String> get englishNames => _englishName.split('|');
-
-  /// Get the first value from [englishNames]
-  String get englishName => englishNames.first;
+  /// Get the English name of this code.
+  String get englishName => _englishName;
 
   /// Language name in English
   final String _englishName;
 
-  /// List of language name in native
-  ///
-  /// One `code` maybe present for multiple `nativeName`
-  List<String> get nativeNames => _nativeName.split('|');
-
-  /// Get the first value from [nativeNames]
-  String get nativeName => nativeNames.first;
+  /// Get the native name of this code.
+  String get nativeName => _nativeName;
 
   /// Language name in native
   final String _nativeName;
@@ -2657,14 +2647,26 @@ enum LanguageCodes {
   /// Get current code as Locale
   Locale get locale {
     final localeList = code.split('_');
-    if (localeList.length == 1) {
-      return Locale(localeList[0]);
-    }
 
-    return Locale(localeList[0], localeList[1]);
+    switch (localeList.length) {
+      case 1:
+        return Locale(localeList[0]);
+      case 2:
+        // localeList[1] is country code if all characters are upper case.
+        if (localeList[1] == localeList[1].toUpperCase()) {
+          return Locale(localeList[0], localeList[1]);
+        }
+        return Locale(localeList[0]);
+      default:
+        return Locale.fromSubtags(
+          languageCode: localeList[0],
+          scriptCode: localeList[1],
+          countryCode: localeList[2],
+        );
+    }
   }
 
-  /// Get the first value from [englishNames]
+  /// Get the English name.
   String get name => englishName;
 
   /// Get [LanguageCodes] from string [code]. If no matching element is found,
@@ -2697,7 +2699,7 @@ enum LanguageCodes {
     LanguageCodes Function()? orElse,
   }) =>
       LanguageCodes.values.singleWhere(
-        (element) => element.englishNames.contains(englishName),
+        (element) => element.englishName == englishName,
         orElse: orElse,
       );
 
@@ -2709,7 +2711,7 @@ enum LanguageCodes {
     LanguageCodes Function()? orElse,
   }) =>
       LanguageCodes.values.singleWhere(
-        (element) => element.nativeNames.contains(nativeName),
+        (element) => element.nativeName == nativeName,
         orElse: orElse,
       );
 
@@ -2720,13 +2722,15 @@ enum LanguageCodes {
     Locale locale, {
     LanguageCodes Function()? orElse,
   }) {
-    LanguageCodes? code;
-    if (locale.countryCode != null) {
-      try {
-        code = fromCode('${locale.languageCode}_${locale.countryCode}');
-      } catch (_) {}
+    for (final value in LanguageCodes.values) {
+      if (locale == value.locale) {
+        return value;
+      }
     }
-    return code ?? fromCode(locale.languageCode, orElse: orElse);
+    if (orElse != null) {
+      return orElse();
+    }
+    throw StateError("No element");
   }
 
   /// LanguageCodes(code, name in English, name in native)

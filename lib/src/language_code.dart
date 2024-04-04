@@ -29,11 +29,22 @@ class LanguageCode {
     final String token = rawCode.contains('-') ? '-' : '_';
     List localeList = rawCode.split(token);
 
-    if (localeList.length < 2) {
-      return Locale(localeList[0]);
+    switch (localeList.length) {
+      case 1:
+        return Locale(localeList[0]);
+      case 2:
+        // localeList[1] is country code if all characters are upper case.
+        if (localeList[1] == localeList[1].toUpperCase()) {
+          return Locale(localeList[0], localeList[1]);
+        }
+        return Locale(localeList[0]);
+      default:
+        return Locale.fromSubtags(
+          languageCode: localeList[0],
+          scriptCode: localeList[1],
+          countryCode: localeList[2],
+        );
     }
-
-    return Locale(localeList[0], localeList[1]);
   }
 
   /// Get the language code as [LanguageCodes].
