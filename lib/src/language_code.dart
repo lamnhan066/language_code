@@ -37,7 +37,10 @@ class LanguageCode {
         if (localeList[1] == localeList[1].toUpperCase()) {
           return Locale(localeList[0], localeList[1]);
         }
-        return Locale(localeList[0]);
+        return Locale.fromSubtags(
+          languageCode: localeList[0],
+          scriptCode: localeList[1],
+        );
       default:
         return Locale.fromSubtags(
           languageCode: localeList[0],
