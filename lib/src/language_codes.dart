@@ -1555,6 +1555,9 @@ enum LanguageCodes {
   /// code: "pa_Guru_IN", name: "Panjabi (Gurmukhi, India)", nativeName: "ਪੰਜਾਬੀ (ਭਾਰਤ)"
   pa_Guru_IN("pa_Guru_IN", "Panjabi (Gurmukhi, India)", "ਪੰਜਾਬੀ (ਭਾਰਤ)"),
 
+  /// code: "pa_PK", name: "Punjabi (Pakistan)", nativeName: "ਪੰਜਾਬੀ (پاکستان)"
+  pa_PK("pa_PK", "Punjabi (Pakistan)", "ਪੰਜਾਬੀ (پاکستان)"),
+
   /// code: "pi", name: "Pali", nativeName: "पाऴि"
   pi("pi", "Pali", "पाऴि"),
 
@@ -1842,6 +1845,9 @@ enum LanguageCodes {
 
   /// code: "sr_RS", name: "Serbian (Serbia)", nativeName: "српски језик (Србија)"
   sr_RS("sr_RS", "Serbian (Serbia)", "српски језик (Србија)"),
+
+  /// code: "sr_SP", name: "Serbian (Serbia)", nativeName: "српски (Србија)"
+  sr_SP("sr_SP", "Serbian (Serbia)", "српски (Србија)"),
 
   /// code: "ss", name: "Swati", nativeName: "SiSwati"
   ss("ss", "Swati", "SiSwati"),
