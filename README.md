@@ -20,10 +20,9 @@ final locale = LanguageCode.code.locale;
 final locale = LanguageCode.locale;
 ```
 
-Get the current language as raw code of the device (may contains '-' and '_' character, script code and country code), so it may not supported by this package:
+Get the current language of the device as Locale, it may not supported by [LanguageCodes]:
 
 ``` dart
-final rawCode = LanguageCode.rawCode;
 final rawLocale = LanguageCode.rawLocale;
 ```
 
@@ -47,6 +46,8 @@ LanguageCodes.fromCode('vi'); // Returns as `LanguageCodes`
 LanguageCodes.fromEnglishName('Vietnamese'); // Returns as `Iterable`
 LanguageCodes.fromNativeName('Tiếng Việt'); // Returns as `Iterable`
 ```
+
+If no matching element is found, returns the result of [orElse]. If [orElse] is omitted, it defaults to throwing a [StateError].
 
 ## Testing
 

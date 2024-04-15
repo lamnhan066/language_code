@@ -1,3 +1,9 @@
+## 0.5.2
+
+- Better to handle the way to get the [LanguageCode.code] to make it more compatible with the older major version.
+- Improve comments.
+- Mark `LanguageCode.rawCode` as deprecated, use `LanguageCode.rawLocale.toString()` instead.
+
 ## 0.5.1
 
 - Add language codes: `pa_PK`, `sr_SP`.
