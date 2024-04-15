@@ -28,8 +28,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: [
-              Text('Raw Code: ${LanguageCode.rawCode}'),
-              Text('Raw Locale: ${LanguageCode.rawCode}'),
+              Text('Raw Locale: ${LanguageCode.rawLocale}'),
               Text('Code: ${LanguageCode.code}'),
               Text('Locale: ${LanguageCode.locale}'),
             ],
