@@ -1,9 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:language_code/language_code.dart';
 
 void main() {
   test('getPlatformVersion', () async {
-    expect(LanguageCode.rawCode, isNotEmpty);
+    expect(LanguageCode.rawLocale, isA<Locale>());
     expect(LanguageCode.locale.toString(), equals(LanguageCode.code.code));
     expect(LanguageCode.locale, equals(LanguageCode.code.locale));
   });
@@ -33,6 +35,30 @@ void main() {
       for (final code in LanguageCodes.values) {
         expect(LanguageCodes.fromNativeName(code.nativeName), contains(code));
       }
+    });
+
+    test('Test unavailable locale', () {
+      const locale = Locale('en', 'VN');
+
+      expect(
+        () {
+          LanguageCodes.fromLocale(locale);
+        },
+        throwsStateError,
+      );
+
+      expect(
+        LanguageCodes.fromCode(locale.languageCode),
+        equals(LanguageCodes.en),
+      );
+
+      expect(
+        LanguageCodes.fromLocale(
+          locale,
+          orElse: () => LanguageCodes.fromCode(locale.languageCode),
+        ),
+        equals(LanguageCodes.en),
+      );
     });
   });
 }
