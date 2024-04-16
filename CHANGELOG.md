@@ -1,3 +1,10 @@
+## 0.5.3
+
+- Able to set test by Locale.
+- Remove the version of Flutter environment.
+- Improve tests for Locale.
+- Improve tests for unavailable language.
+
 ## 0.5.2
 
 - Better to handle the way to get the [LanguageCode.code] to make it more compatible with the older major version.
