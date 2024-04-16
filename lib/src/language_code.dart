@@ -43,10 +43,7 @@ class LanguageCode {
   /// Use the [rawLocale] to get [LanguageCodes] first, then use [rawLocale.languageCode]
   /// if the [rawLocale] is unavailable. If there is no available [LanguageCodes], throw a [StateError].
   static LanguageCodes get code =>
-      LanguageCodes.fromLocale(
-        rawLocale,
-        orElse: () => LanguageCodes.fromCode(rawLocale.languageCode),
-      );
+      LanguageCodes.fromLocale(rawLocale, orElse: () => LanguageCodes.fromCode(rawLocale.languageCode));
 
   /// Get current language of the device as [Locale] that is supported by [LanguageCodes].
   ///

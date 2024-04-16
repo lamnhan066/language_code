@@ -2681,35 +2681,28 @@ enum LanguageCodes {
   /// Get [LanguageCodes] from string [code]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static LanguageCodes fromCode(
-    String code, {
-    LanguageCodes Function()? orElse,
-  }) =>
-      LanguageCodes.values.singleWhere(
-        (element) => element.code == code,
-        orElse: orElse,
-      );
+  static LanguageCodes fromCode(String code, {LanguageCodes Function()? orElse}) {
+    return LanguageCodes.values.singleWhere((element) => element.code == code, orElse: orElse);
+  }
 
   /// Get [LanguageCodes] from [englishName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static Iterable<LanguageCodes> fromEnglishName(String englishName) =>
-      LanguageCodes.values
-          .where((element) => element.englishName == englishName);
+  static Iterable<LanguageCodes> fromEnglishName(String englishName) {
+    return LanguageCodes.values.where((element) => element.englishName == englishName);
+  }
 
   /// Get [LanguageCodes] from [nativeName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static Iterable<LanguageCodes> fromNativeName(String nativeName) =>
-      LanguageCodes.values.where((element) => element.nativeName == nativeName);
+  static Iterable<LanguageCodes> fromNativeName(String nativeName) {
+    return LanguageCodes.values.where((element) => element.nativeName == nativeName);
+  }
 
   /// Get [LanguageCodes] from [Locale]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError]
-  static LanguageCodes fromLocale(
-    Locale locale, {
-    LanguageCodes Function()? orElse,
-  }) {
+  static LanguageCodes fromLocale(Locale locale, {LanguageCodes Function()? orElse}) {
     for (final value in LanguageCodes.values) {
       if (locale == value.locale) {
         return value;
@@ -2718,7 +2711,7 @@ enum LanguageCodes {
     if (orElse != null) {
       return orElse();
     }
-    throw StateError("No element");
+    return throw StateError("No element");
   }
 
   /// LanguageCodes(code, name in English, name in native)
