@@ -9,6 +9,15 @@ void main() {
     LanguageCode.setTestLocale();
   });
 
+  // TODO: This test should not be here because it's included in the other tests.
+  //       But it's still here to improve the coverage.
+  test('LanguageCodes.fromLocale (improve the coverage)', () {
+    expect(LanguageCodes.fromLocale(const Locale('en', 'US')), equals(LanguageCodes.en_US));
+    expect(LanguageCodes.fromLocale(const Locale('en', 'USS'), orElse: () => LanguageCodes.en), equals(LanguageCodes.en));
+    expect(() => LanguageCodes.fromLocale(const Locale('en', 'USS')), throwsStateError);
+    expect(() => LanguageCodes.fromLocale(const Locale('enn', 'USS'), orElse: () => LanguageCodes.fromCode('enn')), throwsStateError);
+  });
+
   test('getPlatformVersion', () async {
     expect(LanguageCode.rawLocale, isA<Locale>());
     expect(LanguageCode.locale.toString(), equals(LanguageCode.code.code));
