@@ -12,12 +12,18 @@ class LanguageCode {
   /// Using this method if you want to set a specific [LanguageCodes] for testing.
   /// Just set it to `null` if you want to use the real value.
   static void setTestCode([LanguageCodes? testCode]) {
-    assert(testCode == null || _testLocale == null, 'Only `setTestCode` or `setTestLocale` can be used at the same time');
+    assert(
+      testCode == null || _testLocale == null,
+      'Only `setTestCode` or `setTestLocale` can be used at the same time',
+    );
     _testCode = testCode;
   }
 
   static void setTestLocale([Locale? testLocale]) {
-     assert(testLocale == null || _testCode == null, 'Only `setTestCode` or `setTestLocale` can be used at the same time');
+    assert(
+      testLocale == null || _testCode == null,
+      'Only `setTestCode` or `setTestLocale` can be used at the same time',
+    );
     _testLocale = testLocale;
   }
 
@@ -25,7 +31,8 @@ class LanguageCode {
   ///
   /// This [Locale] may be not supported by the [LanguageCodes]. If you want to ensure
   /// that the code is supported by this package, use [code] or [locale] instead.
-  static Locale get rawLocale => _testLocale ?? _testCode?.locale ?? PlatformDispatcher.instance.locale;
+  static Locale get rawLocale =>
+      _testLocale ?? _testCode?.locale ?? PlatformDispatcher.instance.locale;
 
   /// Returns a string representing the locale of the device.
   ///
@@ -42,8 +49,10 @@ class LanguageCode {
   ///
   /// Use the [rawLocale] to get [LanguageCodes] first, then use [rawLocale.languageCode]
   /// if the [rawLocale] is unavailable. If there is no available [LanguageCodes], throw a [StateError].
-  static LanguageCodes get code =>
-      LanguageCodes.fromLocale(rawLocale, orElse: () => LanguageCodes.fromCode(rawLocale.languageCode));
+  static LanguageCodes get code => LanguageCodes.fromLocale(
+        rawLocale,
+        orElse: () => LanguageCodes.fromCode(rawLocale.languageCode),
+      );
 
   /// Get current language of the device as [Locale] that is supported by [LanguageCodes].
   ///

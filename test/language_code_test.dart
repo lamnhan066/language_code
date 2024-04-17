@@ -12,10 +12,26 @@ void main() {
   // TODO: This test should not be here because it's included in the other tests.
   //       But it's still here to improve the coverage.
   test('LanguageCodes.fromLocale (improve the coverage)', () {
-    expect(LanguageCodes.fromLocale(const Locale('en', 'US')), equals(LanguageCodes.en_US));
-    expect(LanguageCodes.fromLocale(const Locale('en', 'USS'), orElse: () => LanguageCodes.en), equals(LanguageCodes.en));
-    expect(() => LanguageCodes.fromLocale(const Locale('en', 'USS')), throwsStateError);
-    expect(() => LanguageCodes.fromLocale(const Locale('enn', 'USS'), orElse: () => LanguageCodes.fromCode('enn')), throwsStateError);
+    expect(
+      LanguageCodes.fromLocale(const Locale('en', 'US')),
+      equals(LanguageCodes.en_US),
+    );
+    expect(
+      LanguageCodes.fromLocale(const Locale('en', 'USS'),
+          orElse: () => LanguageCodes.en),
+      equals(LanguageCodes.en),
+    );
+    expect(
+      () => LanguageCodes.fromLocale(const Locale('en', 'USS')),
+      throwsStateError,
+    );
+    expect(
+      () => LanguageCodes.fromLocale(
+        const Locale('enn', 'USS'),
+        orElse: () => LanguageCodes.fromCode('enn'),
+      ),
+      throwsStateError,
+    );
   });
 
   test('getPlatformVersion', () async {
@@ -70,9 +86,15 @@ void main() {
 
       expect(LanguageCode.code, equals(LanguageCodes.en));
       expect(() => LanguageCodes.fromLocale(locale), throwsStateError);
-      expect(LanguageCodes.fromCode(locale.languageCode), equals(LanguageCodes.en));
       expect(
-        LanguageCodes.fromLocale(locale, orElse: () => LanguageCodes.fromCode(locale.languageCode)),
+        LanguageCodes.fromCode(locale.languageCode),
+        equals(LanguageCodes.en),
+      );
+      expect(
+        LanguageCodes.fromLocale(
+          locale,
+          orElse: () => LanguageCodes.fromCode(locale.languageCode),
+        ),
         equals(LanguageCodes.en),
       );
     });
@@ -83,10 +105,16 @@ void main() {
 
       expect(() => LanguageCode.code, throwsStateError);
       expect(() => LanguageCodes.fromLocale(locale), throwsStateError);
-      expect(() => LanguageCodes.fromCode(locale.languageCode), throwsStateError);
       expect(
-        () => LanguageCodes.fromLocale(locale, orElse: () => LanguageCodes.fromCode(locale.languageCode)),
-        throwsStateError
+        () => LanguageCodes.fromCode(locale.languageCode),
+        throwsStateError,
+      );
+      expect(
+        () => LanguageCodes.fromLocale(
+          locale,
+          orElse: () => LanguageCodes.fromCode(locale.languageCode),
+        ),
+        throwsStateError,
       );
     });
   });
