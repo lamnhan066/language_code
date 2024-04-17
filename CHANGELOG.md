@@ -1,3 +1,7 @@
+## 0.5.3+2
+
+- Run dart format to improve the score.
+
 ## 0.5.3+1
 
 - Add codecov badge.
