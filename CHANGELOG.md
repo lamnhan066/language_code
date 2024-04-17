@@ -1,3 +1,7 @@
+## 0.5.3+1
+
+- Add codecov badge.
+
 ## 0.5.3
 
 - Able to set test by Locale.

@@ -1,5 +1,7 @@
 # Language Code
 
+[![codecov](https://codecov.io/gh/lamnhan066/language_code/graph/badge.svg?token=YTTPYNAY4C)](https://codecov.io/gh/lamnhan066/language_code)
+
 This package help you get the current language code and Locale of the device. Also includes almost the language codes with English names and native names.
 
 ## Usage
