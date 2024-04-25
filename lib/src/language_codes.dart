@@ -2641,16 +2641,16 @@ enum LanguageCodes {
   /// Get the English name of this code.
   String get englishName => _englishName;
 
-  /// Language name in English
+  /// Language name in English.
   final String _englishName;
 
   /// Get the native name of this code.
   String get nativeName => _nativeName;
 
-  /// Language name in native
+  /// Language name in native.
   final String _nativeName;
 
-  /// Get current code as Locale
+  /// Get current code as Locale.
   Locale get locale {
     final localeList = code.split('_');
 
@@ -2680,7 +2680,7 @@ enum LanguageCodes {
 
   /// Get [LanguageCodes] from string [code]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
-  /// throwing a [StateError]
+  /// throwing a [StateError].
   static LanguageCodes fromCode(
     String code, {
     LanguageCodes Function()? orElse,
@@ -2691,7 +2691,7 @@ enum LanguageCodes {
 
   /// Get [LanguageCodes] from [englishName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
-  /// throwing a [StateError]
+  /// throwing a [StateError].
   static Iterable<LanguageCodes> fromEnglishName(String englishName) {
     return LanguageCodes.values
         .where((element) => element.englishName == englishName);
@@ -2699,7 +2699,7 @@ enum LanguageCodes {
 
   /// Get [LanguageCodes] from [nativeName]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
-  /// throwing a [StateError]
+  /// throwing a [StateError].
   static Iterable<LanguageCodes> fromNativeName(String nativeName) {
     return LanguageCodes.values
         .where((element) => element.nativeName == nativeName);
@@ -2707,7 +2707,7 @@ enum LanguageCodes {
 
   /// Get [LanguageCodes] from [Locale]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
-  /// throwing a [StateError]
+  /// throwing a [StateError].
   static LanguageCodes fromLocale(
     Locale locale, {
     LanguageCodes Function()? orElse,
@@ -2723,9 +2723,9 @@ enum LanguageCodes {
     return throw StateError("No element");
   }
 
-  /// LanguageCodes(code, name in English, name in native)
-  ///   - [code]: language code
-  ///   - [name]: name in English
-  ///   - [nativeName]: name in native
+  /// LanguageCodes(code, name in English, name in native).
+  ///   - [code]: language code.
+  ///   - [name]: name in English.
+  ///   - [nativeName]: name in native.
   const LanguageCodes(this.code, this._englishName, this._nativeName);
 }
