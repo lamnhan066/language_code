@@ -31,8 +31,22 @@ class LanguageCode {
   ///
   /// This [Locale] may be not supported by the [LanguageCodes]. If you want to ensure
   /// that the code is supported by this package, use [code] or [locale] instead.
-  static Locale get rawLocale =>
-      _testLocale ?? _testCode?.locale ?? PlatformDispatcher.instance.locale;
+  static Locale get rawLocale {
+    if (_testLocale != null) return _testLocale!;
+    if (_testCode?.locale != null) return _testCode!.locale;
+
+    final deviceLocale = PlatformDispatcher.instance.locale;
+
+    // Check the standard C locale.
+    final deviceLocaleString = '$deviceLocale'.toUpperCase();
+    if (deviceLocaleString == 'C' ||
+        deviceLocaleString == 'POSIX' ||
+        deviceLocaleString == '') {
+      return const Locale('en', 'US');
+    }
+
+    return deviceLocale;
+  }
 
   /// Returns a string representing the locale of the device.
   ///
