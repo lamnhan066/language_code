@@ -1,3 +1,7 @@
+## 0.5.4
+
+- Return `en_US` locale if the device's locale is the standard C locale (`C` or `POSIX`).
+
 ## 0.5.3+2
 
 - Run dart format to improve the score.
