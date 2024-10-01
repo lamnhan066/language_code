@@ -282,9 +282,6 @@ enum LanguageCodes {
   ch_MP("ch_MP", "Chamorro (Northern Mariana Islands)",
       "Chamoru (ʼSankattan Sihàn)"),
 
-  /// code: "ckb", name: "Sorani", nativeName: "کوردیی ناوەندی"
-  ckb("ckb", "Sorani", "کوردیی ناوەندی"),
-
   /// code: "co", name: "Corsican", nativeName: "corsu, lingua corsa"
   co("co", "Corsican", "corsu, lingua corsa"),
 
@@ -1232,9 +1229,6 @@ enum LanguageCodes {
   /// code: "km_KH", name: "Khmer (Cambodia)", nativeName: "ភាសាខ្មែរ (កម្ពុជា)"
   km_KH("km_KH", "Khmer (Cambodia)", "ភាសាខ្មែរ (កម្ពុជា)"),
 
-  /// code: "kmr", name: "Kurmanji", nativeName: "کورمانجی"
-  kmr("kmr", "Kurmanji", "کورمانجی"),
-
   /// code: "kn", name: "Kannada", nativeName: "ಕನ್ನಡ"
   kn("kn", "Kannada", "ಕನ್ನಡ"),
 
@@ -1310,9 +1304,6 @@ enum LanguageCodes {
   /// code: "li_BE", name: "Limburgish; Limburger; Limburgan (Belgium)", nativeName: "Limburgs (Belsch)"
   li_BE("li_BE", "Limburgish; Limburger; Limburgan (Belgium)",
       "Limburgs (Belsch)"),
-
-  /// code: "lki", name: "Laki", nativeName: "له‌کی"
-  lki("lki", "Laki", "له‌کی"),
 
   /// code: "ln", name: "Lingala", nativeName: "lingála"
   ln("ln", "Lingala", "lingála"),
@@ -1579,9 +1570,6 @@ enum LanguageCodes {
   /// code: "pl_PL", name: "Polish (Poland)", nativeName: "język polski (Polska)"
   pl_PL("pl_PL", "Polish (Poland)", "język polski (Polska)"),
 
-  /// code: "prs", name: "Dari", nativeName: "دری"
-  prs("prs", "Dari", "دری"),
-
   /// code: "ps", name: "Pashto", nativeName: "پښتو"
   ps("ps", "Pashto", "پښتو"),
 
@@ -1715,9 +1703,6 @@ enum LanguageCodes {
 
   /// code: "sd_Deva_IN", name: "Sindhi (Devanagari, India)", nativeName: "सिन्धी (भारत)"
   sd_Deva_IN("sd_Deva_IN", "Sindhi (Devanagari, India)", "सिन्धी (भारत)"),
-
-  /// code: "sdh", name: "Southern Kurdish", nativeName: "کوردی خوارین"
-  sdh("sdh", "Southern Kurdish", "کوردی خوارین"),
 
   /// code: "se", name: "Northern Sami", nativeName: "Davvisámegiella"
   se("se", "Northern Sami", "Davvisámegiella"),
@@ -2229,6 +2214,9 @@ enum LanguageCodes {
   /// code: "chr", name: "Cherokee", nativeName: "ᏣᎳᎩ"
   chr("chr", "Cherokee", "ᏣᎳᎩ"),
 
+  /// code: "ckb", name: "Sorani", nativeName: "کوردیی ناوەندی"
+  ckb("ckb", "Sorani", "کوردیی ناوەندی"),
+
   /// code: "cym", name: "Welsh", nativeName: "Cymraeg"
   cym("cym", "Welsh", "Cymraeg"),
 
@@ -2403,6 +2391,9 @@ enum LanguageCodes {
   /// code: "kir", name: "Kirghiz", nativeName: "Кыргызча"
   kir("kir", "Kirghiz", "Кыргызча"),
 
+  /// code: "kmr", name: "Kurmanji", nativeName: "کورمانجی"
+  kmr("kmr", "Kurmanji", "کورمانجی"),
+
   /// code: "kor", name: "Korean", nativeName: "한국어"
   kor("kor", "Korean", "한국어"),
 
@@ -2426,6 +2417,9 @@ enum LanguageCodes {
 
   /// code: "lit", name: "Lithuanian", nativeName: "lietuvių kalba"
   lit("lit", "Lithuanian", "lietuvių kalba"),
+
+  /// code: "lki", name: "Laki", nativeName: "له‌کی"
+  lki("lki", "Laki", "له‌کی"),
 
   /// code: "ltz", name: "Luxembourgish", nativeName: "Lëtzebuergesch"
   ltz("ltz", "Luxembourgish", "Lëtzebuergesch"),
@@ -2497,6 +2491,9 @@ enum LanguageCodes {
   /// code: "por_PT", name: "Portuguese (Portugal)", nativeName: "Português (Portugal)"
   por_PT("por_PT", "Portuguese (Portugal)", "Português (Portugal)"),
 
+  /// code: "prs", name: "Dari", nativeName: "دری"
+  prs("prs", "Dari", "دری"),
+
   /// code: "pus", name: "Pushto", nativeName: "پښتو"
   pus("pus", "Pushto", "پښتو"),
 
@@ -2517,6 +2514,9 @@ enum LanguageCodes {
 
   /// code: "sco", name: "Scots", nativeName: "Scots"
   sco("sco", "Scots", "Scots"),
+
+  /// code: "sdh", name: "Southern Kurdish", nativeName: "کوردی خوارین"
+  sdh("sdh", "Southern Kurdish", "کوردی خوارین"),
 
   /// code: "sin", name: "Sinhalese", nativeName: "සිංහල"
   sin("sin", "Sinhalese", "සිංහල"),
