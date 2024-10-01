@@ -1,3 +1,8 @@
+## 0.5.5
+
+- Update `ku` locale native name (thanks @msonntag13).
+- Add `ckb`, `kmr`, `lki`, `prs` & `sdh` locale entries (thanks @msonntag13).
+
 ## 0.5.4
 
 - Return `en_US` locale if the device's locale is the standard C locale (`C` or `POSIX`).
