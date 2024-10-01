@@ -1256,8 +1256,8 @@ enum LanguageCodes {
   /// code: "ks_IN", name: "Kashmiri (India)", nativeName: "कश्मीरी (भारत)"
   ks_IN("ks_IN", "Kashmiri (India)", "कश्मीरी (भारत)"),
 
-  /// code: "ku", name: "Kurdish", nativeName: "Kurdî"
-  ku("ku", "Kurdish", "Kurdî"),
+  /// code: "ku", name: "Kurdish", nativeName: "کوردی"
+  ku("ku", "Kurdish", "کوردی"),
 
   /// code: "ku_TR", name: "Kurdish (Turkey)", nativeName: "Kurdî (Tirkiye)"
   ku_TR("ku_TR", "Kurdish (Turkey)", "Kurdî (Tirkiye)"),
