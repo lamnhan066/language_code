@@ -1256,8 +1256,8 @@ enum LanguageCodes {
   /// code: "ks_IN", name: "Kashmiri (India)", nativeName: "कश्मीरी (भारत)"
   ks_IN("ks_IN", "Kashmiri (India)", "कश्मीरी (भारत)"),
 
-  /// code: "ku", name: "Kurdish", nativeName: "Kurdî"
-  ku("ku", "Kurdish", "Kurdî"),
+  /// code: "ku", name: "Kurdish", nativeName: "کوردی"
+  ku("ku", "Kurdish", "کوردی"),
 
   /// code: "ku_TR", name: "Kurdish (Turkey)", nativeName: "Kurdî (Tirkiye)"
   ku_TR("ku_TR", "Kurdish (Turkey)", "Kurdî (Tirkiye)"),
@@ -2214,6 +2214,9 @@ enum LanguageCodes {
   /// code: "chr", name: "Cherokee", nativeName: "ᏣᎳᎩ"
   chr("chr", "Cherokee", "ᏣᎳᎩ"),
 
+  /// code: "ckb", name: "Sorani", nativeName: "کوردیی ناوەندی"
+  ckb("ckb", "Sorani", "کوردیی ناوەندی"),
+
   /// code: "cym", name: "Welsh", nativeName: "Cymraeg"
   cym("cym", "Welsh", "Cymraeg"),
 
@@ -2388,6 +2391,9 @@ enum LanguageCodes {
   /// code: "kir", name: "Kirghiz", nativeName: "Кыргызча"
   kir("kir", "Kirghiz", "Кыргызча"),
 
+  /// code: "kmr", name: "Kurmanji", nativeName: "کورمانجی"
+  kmr("kmr", "Kurmanji", "کورمانجی"),
+
   /// code: "kor", name: "Korean", nativeName: "한국어"
   kor("kor", "Korean", "한국어"),
 
@@ -2411,6 +2417,9 @@ enum LanguageCodes {
 
   /// code: "lit", name: "Lithuanian", nativeName: "lietuvių kalba"
   lit("lit", "Lithuanian", "lietuvių kalba"),
+
+  /// code: "lki", name: "Laki", nativeName: "له‌کی"
+  lki("lki", "Laki", "له‌کی"),
 
   /// code: "ltz", name: "Luxembourgish", nativeName: "Lëtzebuergesch"
   ltz("ltz", "Luxembourgish", "Lëtzebuergesch"),
@@ -2482,6 +2491,9 @@ enum LanguageCodes {
   /// code: "por_PT", name: "Portuguese (Portugal)", nativeName: "Português (Portugal)"
   por_PT("por_PT", "Portuguese (Portugal)", "Português (Portugal)"),
 
+  /// code: "prs", name: "Dari", nativeName: "دری"
+  prs("prs", "Dari", "دری"),
+
   /// code: "pus", name: "Pushto", nativeName: "پښتو"
   pus("pus", "Pushto", "پښتو"),
 
@@ -2502,6 +2514,9 @@ enum LanguageCodes {
 
   /// code: "sco", name: "Scots", nativeName: "Scots"
   sco("sco", "Scots", "Scots"),
+
+  /// code: "sdh", name: "Southern Kurdish", nativeName: "کوردی خوارین"
+  sdh("sdh", "Southern Kurdish", "کوردی خوارین"),
 
   /// code: "sin", name: "Sinhalese", nativeName: "සිංහල"
   sin("sin", "Sinhalese", "සිංහල"),
