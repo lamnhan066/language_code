@@ -214,17 +214,17 @@ enum LanguageCodes {
   /// code: "bi_VU", name: "Bislama (Vanuatu)", nativeName: "Bislama (Vanuatu)"
   bi_VU("bi_VU", "Bislama (Vanuatu)", "Bislama (Vanuatu)"),
 
-  /// code: "bn", name: "Bengali", nativeName: "বাংলা"
-  bn("bn", "Bengali", "বাংলা"),
-
-  /// code: "bn_BD", name: "Bengali (Bangladesh)", nativeName: "বাংলা (বাংলাদেশ)"
-  bn_BD("bn_BD", "Bengali (Bangladesh)", "বাংলা (বাংলাদেশ)"),
-
   /// code: "bm", name: "Bambara", nativeName: "Bamanankan"
   bm("bm", "Bambara", "Bamanankan"),
 
   /// code: "bm_ML", name: "Bambara (Mali)", nativeName: "Bamanankan (Mali)"
   bm_ML("bm_ML", "Bambara (Mali)", "Bamanankan (Mali)"),
+
+  /// code: "bn", name: "Bengali", nativeName: "বাংলা"
+  bn("bn", "Bengali", "বাংলা"),
+
+  /// code: "bn_BD", name: "Bengali (Bangladesh)", nativeName: "বাংলা (বাংলাদেশ)"
+  bn_BD("bn_BD", "Bengali (Bangladesh)", "বাংলা (বাংলাদেশ)"),
 
   /// code: "bn_IN", name: "Bengali (India)", nativeName: "বাংলা (ভারত)"
   bn_IN("bn_IN", "Bengali (India)", "বাংলা (ভারত)"),
@@ -2226,14 +2226,14 @@ enum LanguageCodes {
   /// code: "deu", name: "German", nativeName: "Deutsch"
   deu("deu", "German", "Deutsch"),
 
-  /// code: "deu_DE", name: "German (Germany)", nativeName: "Deutsch (Deutschland)"
-  deu_DE("deu_DE", "German (Germany)", "Deutsch (Deutschland)"),
-
   /// code: "deu_AT", name: "German (Austria)", nativeName: "Deutsch (Österreich)"
   deu_AT("deu_AT", "German (Austria)", "Deutsch (Österreich)"),
 
   /// code: "deu_CH", name: "German (Switzerland)", nativeName: "Deutsch (Schweiz)"
   deu_CH("deu_CH", "German (Switzerland)", "Deutsch (Schweiz)"),
+
+  /// code: "deu_DE", name: "German (Germany)", nativeName: "Deutsch (Deutschland)"
+  deu_DE("deu_DE", "German (Germany)", "Deutsch (Deutschland)"),
 
   /// code: "ell", name: "Greek", nativeName: "Ελληνικά"
   ell("ell", "Greek", "Ελληνικά"),
@@ -2244,11 +2244,11 @@ enum LanguageCodes {
   /// code: "eng", name: "English", nativeName: "English"
   eng("eng", "English", "English"),
 
-  /// code: "eng_US", name: "English (United States)", nativeName: "English (United States)"
-  eng_US("eng_US", "English (United States)", "English (United States)"),
-
   /// code: "eng_GB", name: "English (United Kingdom)", nativeName: "English (United Kingdom)"
   eng_GB("eng_GB", "English (United Kingdom)", "English (United Kingdom)"),
+
+  /// code: "eng_US", name: "English (United States)", nativeName: "English (United States)"
+  eng_US("eng_US", "English (United States)", "English (United States)"),
 
   /// code: "epo", name: "Esperanto", nativeName: "Esperanto"
   epo("epo", "Esperanto", "Esperanto"),
@@ -2265,23 +2265,20 @@ enum LanguageCodes {
   /// code: "fas_IR", name: "Persian (Iran)", nativeName: "فارسی (ایران)"
   fas_IR("fas_IR", "Persian (Iran)", "فارسی (ایران)"),
 
-  /// code: "fin", name: "Finnish", nativeName: "suomi"
-  fin("fin", "Finnish", "suomi"),
-
-  /// code: "fin_FIN", name: "Finnish (Finland)", nativeName: "suomi (Suomi)"
-  fin_FIN("fin_FIN", "Finnish (Finland)", "suomi (Suomi)"),
-
   /// code: "fil", name: "Filipino", nativeName: "Filipino"
   fil("fil", "Filipino", "Filipino"),
 
   /// code: "fil_PH", name: "Filipino (Philippines)", nativeName: "Filipino (Philippines)"
   fil_PH("fil_PH", "Filipino (Philippines)", "Filipino (Philippines)"),
 
+  /// code: "fin", name: "Finnish", nativeName: "suomi"
+  fin("fin", "Finnish", "suomi"),
+
+  /// code: "fin_FIN", name: "Finnish (Finland)", nativeName: "suomi (Suomi)"
+  fin_FIN("fin_FIN", "Finnish (Finland)", "suomi (Suomi)"),
+
   /// code: "fra", name: "French", nativeName: "français"
   fra("fra", "French", "français"),
-
-  /// code: "fra_FRA", name: "French (France)", nativeName: "français (France)"
-  fra_FRA("fra_FRA", "French (France)", "français (France)"),
 
   /// code: "fra_BEL", name: "French (Belgium)", nativeName: "français (Belgique)"
   fra_BEL("fra_BEL", "French (Belgium)", "français (Belgique)"),
@@ -2291,6 +2288,9 @@ enum LanguageCodes {
 
   /// code: "fra_CHE", name: "French (Switzerland)", nativeName: "français (Suisse)"
   fra_CHE("fra_CHE", "French (Switzerland)", "français (Suisse)"),
+
+  /// code: "fra_FRA", name: "French (France)", nativeName: "français (France)"
+  fra_FRA("fra_FRA", "French (France)", "français (France)"),
 
   /// code: "fry", name: "Frisian", nativeName: "Frysk"
   fry("fry", "Frisian", "Frysk"),
@@ -2355,11 +2355,11 @@ enum LanguageCodes {
   /// code: "ita", name: "Italian", nativeName: "italiano"
   ita("ita", "Italian", "italiano"),
 
-  /// code: "ita_IT", name: "Italian (Italy)", nativeName: "italiano (Italia)"
-  ita_IT("ita_IT", "Italian (Italy)", "italiano (Italia)"),
-
   /// code: "ita_CH", name: "Italian (Switzerland)", nativeName: "italiano (Svizzera)"
   ita_CH("ita_CH", "Italian (Switzerland)", "italiano (Svizzera)"),
+
+  /// code: "ita_IT", name: "Italian (Italy)", nativeName: "italiano (Italia)"
+  ita_IT("ita_IT", "Italian (Italy)", "italiano (Italia)"),
 
   /// code: "jav", name: "Javanese", nativeName: "ꦧꦱꦗꦮ"
   jav("jav", "Javanese", "ꦧꦱꦗꦮ"),
