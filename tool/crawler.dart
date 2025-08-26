@@ -97,11 +97,11 @@ Future<void> main() async {
 
   // Sort: 2-letter codes first, then 3-letter
   entries.sort((a, b) {
-    final isA2Chars = a.code.length == 2 || a.code[2] == '_';
-    final isB2Chars = b.code.length == 2 || b.code[2] == '_';
+    final isA2 = _isTwoLetter(a.code);
+    final isB2 = _isTwoLetter(b.code);
 
-    if (isA2Chars && !isB2Chars) return -1;
-    if (!isA2Chars && isB2Chars) return 1;
+    if (isA2 && !isB2) return -1;
+    if (!isA2 && isB2) return 1;
     return a.code.compareTo(b.code);
   });
 
@@ -267,6 +267,9 @@ String _cleanName(String name) {
       .trim();
   return cleaned;
 }
+
+bool _isTwoLetter(String code) =>
+    code.length == 2 || (code.length > 2 && code[2] == '_');
 
 /// Detect if a string is purely Latin-based (ASCII + Latin Extended letters)
 bool _isPureLatin(String text) {
