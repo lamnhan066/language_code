@@ -4070,16 +4070,10 @@ enum LanguageCodes {
   final String code;
 
   /// Get the English name of this code.
-  String get englishName => _englishName;
-
-  /// Language name in English.
-  final String _englishName;
+  final String englishName;
 
   /// Get the native name of this code.
-  String get nativeName => _nativeName;
-
-  /// Language name in native.
-  final String _nativeName;
+  final String nativeName;
 
   /// Get current code as Locale.
   Locale get locale {
@@ -4162,5 +4156,5 @@ enum LanguageCodes {
   ///   - [code]: language code.
   ///   - [name]: name in English.
   ///   - [nativeName]: name in native.
-  const LanguageCodes(this.code, this._englishName, this._nativeName);
+  const LanguageCodes(this.code, this.englishName, this.nativeName);
 }
