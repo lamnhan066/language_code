@@ -326,8 +326,8 @@ enum LanguageCodes {
     r"čeština, český jazyk (Česká republika)",
   ),
 
-  /// code: "cu", name: "Church Slavic", nativeName: "Славе́нскїй ѧ҆зы́къ"
-  cu("cu", r"Church Slavic", r"Славе́нскїй ѧ҆зы́къ"),
+  /// code: "cu", name: "Church Slavic", nativeName: "Славе́нскїй ѧ҆зы́къ"
+  cu("cu", r"Church Slavic", r"Славе́нскїй ѧ҆зы́къ"),
 
   /// code: "cu_RU", name: "Church Slavic (Russia)", nativeName: "ѩзыкъ словѣньскъ (Россия)"
   cu_RU("cu_RU", r"Church Slavic (Russia)", r"ѩзыкъ словѣньскъ (Россия)"),
@@ -2203,8 +2203,8 @@ enum LanguageCodes {
     r"Reo Tahiti (Polynésie française)",
   ),
 
-  /// code: "ug", name: "Uighur", nativeName: "ئۇيغۇر تىلى (Uyghur tili)"
-  ug("ug", r"Uighur", r"ئۇيغۇر تىلى (Uyghur tili)"),
+  /// code: "ug", name: "Uighur", nativeName: "ئۇيغۇر تىلى (Uyghur tili)"
+  ug("ug", r"Uighur", r"ئۇيغۇر تىلى (Uyghur tili)"),
 
   /// code: "ug_CN", name: "Uighur (China)", nativeName: "Uyƣurqə (جۇڭخۇا خەلق جۇمھۇرىيىتى)"
   ug_CN("ug_CN", r"Uighur (China)", r"Uyƣurqə (جۇڭخۇا خەلق جۇمھۇرىيىتى)"),
@@ -2664,8 +2664,8 @@ enum LanguageCodes {
   /// code: "chr", name: "Cherokee", nativeName: "ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ (Tsalagi gawonihisdi)"
   chr("chr", r"Cherokee", r"ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ (Tsalagi gawonihisdi)"),
 
-  /// code: "chu", name: "Church Slavic", nativeName: "Славе́нскїй ѧ҆зы́къ"
-  chu("chu", r"Church Slavic", r"Славе́нскїй ѧ҆зы́къ"),
+  /// code: "chu", name: "Church Slavic", nativeName: "Славе́нскїй ѧ҆зы́къ"
+  chu("chu", r"Church Slavic", r"Славе́нскїй ѧ҆зы́къ"),
 
   /// code: "chv", name: "Chuvash", nativeName: "Чӑвашла"
   chv("chv", r"Chuvash", r"Чӑвашла"),
@@ -3000,8 +3000,8 @@ enum LanguageCodes {
   /// code: "hil", name: "Hiligaynon", nativeName: "Ilonggo"
   hil("hil", r"Hiligaynon", r"Ilonggo"),
 
-  /// code: "him", name: "Himachali languages", nativeName: ""
-  him("him", r"Himachali languages", r""),
+  /// code: "him", name: "Himachali", nativeName: ""
+  him("him", r"Himachali", r""),
 
   /// code: "hin", name: "Hindi", nativeName: "हिन्दी (Hindī)"
   hin("hin", r"Hindi", r"हिन्दी (Hindī)"),
@@ -3496,8 +3496,8 @@ enum LanguageCodes {
   /// code: "nub", name: "Nubian", nativeName: "لغات نوبية"
   nub("nub", r"Nubian", r"لغات نوبية"),
 
-  /// code: "nwc", name: "Classical Newari", nativeName: "पुलां भाय्"
-  nwc("nwc", r"Classical Newari", r"पुलां भाय्"),
+  /// code: "nwc", name: "Classical Newari", nativeName: "पुलां भाय्"
+  nwc("nwc", r"Classical Newari", r"पुलां भाय्"),
 
   /// code: "nya", name: "Chichewa", nativeName: "Chichewa"
   nya("nya", r"Chichewa", r"Chichewa"),
@@ -3928,8 +3928,8 @@ enum LanguageCodes {
   /// code: "uga", name: "Ugaritic", nativeName: ""
   uga("uga", r"Ugaritic", r""),
 
-  /// code: "uig", name: "Uighur", nativeName: "ئۇيغۇر تىلى (Uyghur tili)"
-  uig("uig", r"Uighur", r"ئۇيغۇر تىلى (Uyghur tili)"),
+  /// code: "uig", name: "Uighur", nativeName: "ئۇيغۇر تىلى (Uyghur tili)"
+  uig("uig", r"Uighur", r"ئۇيغۇر تىلى (Uyghur tili)"),
 
   /// code: "ukr", name: "Ukrainian", nativeName: "Українська мова"
   ukr("ukr", r"Ukrainian", r"Українська мова"),

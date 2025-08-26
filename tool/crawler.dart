@@ -263,8 +263,14 @@ String _cleanName(String name) {
       .replaceAll(RegExp(r'\([^)]*[\d–cC][^)]*\)'), '')
       // Remove qualifiers like ", Modern", ", Old", ", Middle"
       .replaceAll(RegExp(r',\s*(Modern|Old|Middle)', caseSensitive: false), '')
-      .replaceAll(' languages', '')
+      // Remove trailing " languages"
+      .replaceAll(RegExp(r'\s*languages$', caseSensitive: false), '')
+      // Collapse multiple spaces
+      .replaceAll(RegExp(r'\s+'), ' ')
+      // Remove trailing commas/semicolons
+      .replaceAll(RegExp(r'[;,]\s*$'), '')
       .trim();
+
   return cleaned;
 }
 
