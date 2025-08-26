@@ -41,20 +41,16 @@ class LanguageCode {
   /// - May not be supported by [LanguageCodes].
   /// - Use [locale] or [code] if you want guaranteed supported values.
   static Locale get rawLocale {
-    if (_testLocale != null) return _testLocale!;
-    if (_testCode != null) return _testCode!.locale;
+    final locale =
+        _testLocale ?? _testCode?.locale ?? PlatformDispatcher.instance.locale;
 
-    final deviceLocale = PlatformDispatcher.instance.locale;
-
-    // Normalize "C", "POSIX", or empty locales to English (US).
-    final deviceLocaleString = deviceLocale.toString().toUpperCase();
-    if (deviceLocaleString == 'C' ||
-        deviceLocaleString == 'POSIX' ||
-        deviceLocaleString.isEmpty) {
+    // Normalize "C" or "POSIX" locales to English (US).
+    final deviceLocaleString = locale.toString().toUpperCase();
+    if (deviceLocaleString == 'C' || deviceLocaleString == 'POSIX') {
       return const Locale('en', 'US');
     }
 
-    return deviceLocale;
+    return locale;
   }
 
   /// The device language as a [LanguageCodes] enum.
