@@ -9,12 +9,12 @@ Includes a complete set of **ISO 639-1 (2-letter)** and **ISO 639-2 (3-letter)**
 
 ## Features
 
-- ✅ Detect the device’s current language and locale  
-- ✅ Convert between `Locale` and `LanguageCodes`  
-- ✅ Look up by code, English name, or native name  
-- ✅ Includes almost all ISO 639 codes with English + native names  
-- ✅ Test-friendly (override locale or code in tests)  
-- ✅ Auto-generated from [Wikipedia’s ISO 639-2 list](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)  
+- Detect the device’s current language and locale  
+- Convert between `Locale` and `LanguageCodes`  
+- Look up by code, English name, or native name  
+- Includes almost all ISO 639 codes with English + native names  
+- Test-friendly (override locale or code in tests)  
+- Auto-generated from [Wikipedia’s ISO 639-2 list](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)  
 
 ---
 
@@ -83,12 +83,13 @@ LanguageCode.setTestLocale(const Locale('fr'));
 ```
 
 Reset with `null` to restore normal behavior.
-⚠️ You can only use one override at a time.
+
+> ⚠️ You can only use one override at a time.
 
 ---
 
 ## Contributions
 
 Missing or incorrect language?
-Please open an issue or create a PR. 🙌
+Please open an issue or create a PR.
 The codes are auto-generated via a crawler, but feedback is always welcome.
