@@ -1,3 +1,9 @@
+## 0.6.0-rc.1
+
+- Improve the `LanguageCode.rawLocale` method to be able to test.
+- Improve tests.
+- Improve README.
+
 ## 0.6.0-rc
 
 ### Added
