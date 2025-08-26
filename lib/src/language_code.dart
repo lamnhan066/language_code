@@ -2,75 +2,80 @@ import 'dart:ui';
 
 import 'package:language_code/src/language_codes.dart';
 
-/// This package help you get the current language code and locale of the device.
+/// Provides access to the device's current language and locale
+/// as [LanguageCodes] and [Locale].
+///
+/// Includes test hooks for overriding values in unit tests.
 class LanguageCode {
   LanguageCode._(); // coverage:ignore-line
 
   static LanguageCodes? _testCode;
   static Locale? _testLocale;
 
-  /// Using this method if you want to set a specific [LanguageCodes] for testing.
-  /// Just set it to `null` if you want to use the real value.
+  /// Override the detected language with a specific [LanguageCodes] for testing.
+  ///
+  /// Pass `null` to restore normal behavior.
+  /// Cannot be used at the same time as [setTestLocale].
   static void setTestCode([LanguageCodes? testCode]) {
     assert(
       testCode == null || _testLocale == null,
-      'Only `setTestCode` or `setTestLocale` can be used at the same time',
+      'Only `setTestCode` or `setTestLocale` can be used at the same time.',
     );
     _testCode = testCode;
   }
 
+  /// Override the detected locale with a specific [Locale] for testing.
+  ///
+  /// Pass `null` to restore normal behavior.
+  /// Cannot be used at the same time as [setTestCode].
   static void setTestLocale([Locale? testLocale]) {
     assert(
       testLocale == null || _testCode == null,
-      'Only `setTestCode` or `setTestLocale` can be used at the same time',
+      'Only `setTestCode` or `setTestLocale` can be used at the same time.',
     );
     _testLocale = testLocale;
   }
 
-  /// Get current language as [Locale] of the device.
+  /// The raw [Locale] reported by the device.
   ///
-  /// This [Locale] may be not supported by the [LanguageCodes]. If you want to ensure
-  /// that the code is supported by this package, use [code] or [locale] instead.
+  /// - May not be supported by [LanguageCodes].
+  /// - Use [locale] or [code] if you want guaranteed supported values.
   static Locale get rawLocale {
     if (_testLocale != null) return _testLocale!;
-    if (_testCode?.locale != null) return _testCode!.locale;
+    if (_testCode != null) return _testCode!.locale;
 
     final deviceLocale = PlatformDispatcher.instance.locale;
 
-    // Check the standard C locale.
-    final deviceLocaleString = '$deviceLocale'.toUpperCase();
+    // Normalize "C", "POSIX", or empty locales to English (US).
+    final deviceLocaleString = deviceLocale.toString().toUpperCase();
     if (deviceLocaleString == 'C' ||
         deviceLocaleString == 'POSIX' ||
-        deviceLocaleString == '') {
+        deviceLocaleString.isEmpty) {
       return const Locale('en', 'US');
     }
 
     return deviceLocale;
   }
 
-  /// Returns a string representing the locale of the device.
+  /// Deprecated: use `rawLocale.toString()` instead.
   ///
-  /// This identifier happens to be a valid Unicode Locale Identifier using
-  /// underscores as separator, however it is intended to be used for debugging
-  /// purposes only. For parsable results, use [rawLanguageTag] instead.
-  ///
-  /// If you want to ensure that the code is supported by this package,
-  /// use [code] or [locale] instead.
+  /// Returns a string representation of the raw device locale.
   @Deprecated('Use `rawLocale.toString()` instead') // coverage:ignore-line
   static String get rawCode => rawLocale.toString(); // coverage:ignore-line
 
-  /// Get the language of the device as [LanguageCodes].
+  /// The device language as a [LanguageCodes] enum.
   ///
-  /// Use the [rawLocale] to get [LanguageCodes] first, then use [rawLocale.languageCode]
-  /// if the [rawLocale] is unavailable. If there is no available [LanguageCodes], throw a [StateError].
+  /// Resolution order:
+  /// 1. Match the full [rawLocale].
+  /// 2. Fallback to `rawLocale.languageCode`.
+  /// 3. Throws [StateError] if no match is found.
   static LanguageCodes get code => LanguageCodes.fromLocale(
         rawLocale,
         orElse: () => LanguageCodes.fromCode(rawLocale.languageCode),
       );
 
-  /// Get current language of the device as [Locale] that is supported by [LanguageCodes].
+  /// The normalized [Locale] supported by [LanguageCodes].
   ///
-  /// Use the [rawLocale] to get [LanguageCodes] first, then use [rawLocale.languageCode]
-  /// if the [rawLocale] is unavailable. If there is no available [LanguageCodes], throw a [StateError].
+  /// Always corresponds to [code.locale].
   static Locale get locale => code.locale;
 }
