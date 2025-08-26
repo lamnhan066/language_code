@@ -57,12 +57,6 @@ class LanguageCode {
     return deviceLocale;
   }
 
-  /// Deprecated: use `rawLocale.toString()` instead.
-  ///
-  /// Returns a string representation of the raw device locale.
-  @Deprecated('Use `rawLocale.toString()` instead') // coverage:ignore-line
-  static String get rawCode => rawLocale.toString(); // coverage:ignore-line
-
   /// The device language as a [LanguageCodes] enum.
   ///
   /// Resolution order:
