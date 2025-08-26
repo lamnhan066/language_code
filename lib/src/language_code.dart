@@ -67,7 +67,7 @@ class LanguageCode {
   ///
   /// Resolution order:
   /// 1. Match the full [rawLocale].
-  /// 2. Fallback to `rawLocale.languageCode`.
+  /// 2. Fallback to [Locale.languageCode].
   /// 3. Throws [StateError] if no match is found.
   static LanguageCodes get code => LanguageCodes.fromLocale(
         rawLocale,
@@ -77,7 +77,7 @@ class LanguageCode {
   /// Get the device language as [LanguageCodes], with an optional [defaultCode].
   ///
   /// - First tries to match the full [rawLocale].
-  /// - If that fails, falls back to `rawLocale.languageCode`.
+  /// - If that fails, falls back to [Locale.languageCode].
   /// - If no match is found:
   ///   - Returns [defaultCode] if provided.
   ///   - Otherwise returns [LanguageCodes.und].
@@ -93,6 +93,6 @@ class LanguageCode {
 
   /// The normalized [Locale] supported by [LanguageCodes].
   ///
-  /// Always corresponds to [code.locale].
+  /// Always corresponds to [LanguageCodes.locale].
   static Locale get locale => code.locale;
 }
