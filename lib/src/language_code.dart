@@ -75,12 +75,14 @@ class LanguageCode {
   /// - If no match is found:
   ///   - Returns [defaultCode] if provided.
   ///   - Otherwise returns [LanguageCodes.und].
-  static LanguageCodes tryCode({LanguageCodes? defaultCode}) {
+  static LanguageCodes tryCode({
+    LanguageCodes defaultCode = LanguageCodes.und,
+  }) {
     return LanguageCodes.fromLocale(
       rawLocale,
       orElse: () => LanguageCodes.fromCode(
         rawLocale.languageCode,
-        orElse: () => defaultCode ?? LanguageCodes.und,
+        orElse: () => defaultCode,
       ),
     );
   }
