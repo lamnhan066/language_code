@@ -6,10 +6,11 @@ import 'package:language_code/src/language_codes.dart';
 /// as [LanguageCodes] and [Locale].
 ///
 /// Includes test hooks for overriding values in unit tests.
-class LanguageCode {
-  LanguageCode._(); // coverage:ignore-line
-
+abstract class LanguageCode {
+  /// Test code
   static LanguageCodes? _testCode;
+
+  /// Test locale
   static Locale? _testLocale;
 
   /// Override the detected language with a specific [LanguageCodes] for testing.
