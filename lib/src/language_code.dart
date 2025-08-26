@@ -74,6 +74,23 @@ class LanguageCode {
         orElse: () => LanguageCodes.fromCode(rawLocale.languageCode),
       );
 
+  /// Get the device language as [LanguageCodes], with an optional [defaultCode].
+  ///
+  /// - First tries to match the full [rawLocale].
+  /// - If that fails, falls back to `rawLocale.languageCode`.
+  /// - If no match is found:
+  ///   - Returns [defaultCode] if provided.
+  ///   - Otherwise returns [LanguageCodes.und].
+  static LanguageCodes tryCode({LanguageCodes? defaultCode}) {
+    return LanguageCodes.fromLocale(
+      rawLocale,
+      orElse: () => LanguageCodes.fromCode(
+        rawLocale.languageCode,
+        orElse: () => defaultCode ?? LanguageCodes.und,
+      ),
+    );
+  }
+
   /// The normalized [Locale] supported by [LanguageCodes].
   ///
   /// Always corresponds to [code.locale].
