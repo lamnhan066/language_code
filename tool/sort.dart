@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:io';
 
 import 'package:analyzer/dart/analysis/utilities.dart';
@@ -72,8 +74,9 @@ _EnumEdit _processEnum(EnumDeclaration node, String source) {
 
   final threeChars = members.where((e) {
     final enumName = e.constant.name.lexeme;
-    return (enumName.length == 3 && enumName[2] != '_') || (enumName.length > 3 && enumName[3] == '_');
-  }).toList(); 
+    return (enumName.length == 3 && enumName[2] != '_') ||
+        (enumName.length > 3 && enumName[3] == '_');
+  }).toList();
 
   threeChars
       .sort((a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme));
