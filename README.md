@@ -2,65 +2,93 @@
 
 [![codecov](https://codecov.io/gh/lamnhan066/language_code/graph/badge.svg?token=YTTPYNAY4C)](https://codecov.io/gh/lamnhan066/language_code)
 
-This package help you get the current language code and Locale of the device. Also includes almost the language codes with English names and native names.
+A Dart package for working with language codes and device locales.  
+Includes a complete set of **ISO 639-1 (2-letter)** and **ISO 639-2 (3-letter)** codes with **English** and **native names**.
+
+---
+
+## Features
+
+- ✅ Detect the device’s current language and locale  
+- ✅ Convert between `Locale` and `LanguageCodes`  
+- ✅ Look up by code, English name, or native name  
+- ✅ Includes almost all ISO 639 codes with English + native names  
+- ✅ Test-friendly (override locale or code in tests)  
+- ✅ Auto-generated from [Wikipedia’s ISO 639-2 list](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)  
+
+---
 
 ## Usage
 
-Get current language code as `LanguageCodes`:
+### Get the current device language
 
-``` dart
-final languageCode = LanguageCode.code;
-```
+```dart
+final languageCode = LanguageCode.code; // as LanguageCodes
+final locale = LanguageCode.locale;     // as Locale
+````
 
-Get current language as Locale:
+### Get the raw device locale
 
-``` dart
-final locale = LanguageCode.code.locale;
+May not be supported by `LanguageCodes`:
 
-// or
-
-final locale = LanguageCode.locale;
-```
-
-Get the current language of the device as Locale, it may not supported by [LanguageCodes]:
-
-``` dart
+```dart
 final rawLocale = LanguageCode.rawLocale;
 ```
 
-This package includes almost the language code, name in English and name in Native. This is how to use it:
+### Get language details
 
-``` dart
+```dart
 var language = LanguageCodes.en;
-print(language.englishName); // => 'English'
-print(language.nativeName); // => 'English'
+print(language.englishName); // 'English'
+print(language.nativeName);  // 'English'
 
 language = LanguageCodes.vi;
-print(language.englishName); // => 'Vietnamese'
-print(language.nativeName); // => 'Tiếng Việt'
+print(language.englishName); // 'Vietnamese'
+print(language.nativeName);  // 'Tiếng Việt'
 ```
 
-You can convert the language from locale, englishName or nativeName to `LanguageCodes` this way:
+### Convert values to `LanguageCodes`
 
-``` dart
-LanguageCodes.fromLocale(Locale('vi')); // Returns as `LanguageCodes`
-LanguageCodes.fromCode('vi'); // Returns as `LanguageCodes`
-LanguageCodes.fromEnglishName('Vietnamese'); // Returns as `Iterable`
-LanguageCodes.fromNativeName('Tiếng Việt'); // Returns as `Iterable`
+```dart
+LanguageCodes.fromLocale(Locale('vi'));        // → LanguageCodes.vi
+LanguageCodes.fromCode('vi');                  // → LanguageCodes.vi
+LanguageCodes.fromEnglishName('Vietnamese');   // → Iterable<LanguageCodes>
+LanguageCodes.fromNativeName('Tiếng Việt');    // → Iterable<LanguageCodes>
 ```
 
-If no matching element is found, returns the result of [orElse]. If [orElse] is omitted, it defaults to throwing a [StateError].
+> ⚠️ If no matching element is found, the methods throw a `StateError` unless an `orElse` is provided.
+
+### Optional default fallback
+
+```dart
+final code = LanguageCode.tryCode(defaultCode: LanguageCodes.en);
+```
+
+Fallback order:
+
+1. Full `rawLocale`
+2. `rawLocale.languageCode`
+3. `defaultCode` (default: `LanguageCodes.und`)
+
+---
 
 ## Testing
 
-Use this method if you want to set a test `LanguageCodes`:
+Override values in unit tests:
 
-``` dart
+```dart
 LanguageCode.setTestCode(LanguageCodes.vi);
+// or
+LanguageCode.setTestLocale(const Locale('fr'));
 ```
 
-Set it to `null` if you want to stop testing.
+Reset with `null` to restore normal behavior.
+⚠️ You can only use one override at a time.
+
+---
 
 ## Contributions
 
-If your language is missing or incorrect, or you have any issues with the package, please file an issue or create a PR. Thank you!
+Missing or incorrect language?
+Please open an issue or create a PR. 🙌
+The codes are auto-generated via a crawler, but feedback is always welcome.
