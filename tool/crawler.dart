@@ -43,9 +43,7 @@ Future<void> main() async {
         .map((e) => _cleanName(e.trim()))
         .where((e) => e.isNotEmpty)
         .toList();
-    final name = englishNames.isNotEmpty
-        ? englishNames.first.replaceAll(' languages', '')
-        : '';
+    final name = englishNames.isNotEmpty ? englishNames.first : '';
 
     // Native names: prefer script form (if comma separated: script + translit)
     final nativeCandidates = cols[7]
@@ -59,12 +57,20 @@ Future<void> main() async {
 
     String nativeName = '';
     if (nativeCandidates.isNotEmpty) {
-      // Rule: prefer first script-form (not pure Latin-only transliteration)
-      final scriptFirst = nativeCandidates.firstWhere(
+      final nonLatin = nativeCandidates.firstWhere(
         (e) => !_isPureLatin(e),
-        orElse: () => nativeCandidates.first,
+        orElse: () => '',
       );
-      nativeName = scriptFirst;
+      final latin = nativeCandidates.firstWhere(
+        (e) => _isPureLatin(e),
+        orElse: () => '',
+      );
+
+      if (nonLatin.isNotEmpty && latin.isNotEmpty) {
+        nativeName = '$nonLatin ($latin)';
+      } else {
+        nativeName = nonLatin.isNotEmpty ? nonLatin : latin;
+      }
     }
 
     if (code3Raw.isEmpty || name.isEmpty) continue;
@@ -257,6 +263,7 @@ String _cleanName(String name) {
       .replaceAll(RegExp(r'\([^)]*[\d–cC][^)]*\)'), '')
       // Remove qualifiers like ", Modern", ", Old", ", Middle"
       .replaceAll(RegExp(r',\s*(Modern|Old|Middle)', caseSensitive: false), '')
+      .replaceAll(' languages', '')
       .trim();
   return cleaned;
 }
