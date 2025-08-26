@@ -1,3 +1,24 @@
+## 0.6.0-rc
+
+### Added
+
+- **New crawler script** to fetch ISO 639-1 and ISO 639-2 codes from [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes).
+  - Extracts **2-letter** and **3-letter** codes.
+  - Includes **English names** and **native names** in `non-Latin (Latin)` format when available.
+  - Generates `enum LanguageCodes` with all codes.
+  - Adds the missing codes from the older version.
+
+- **`LanguageCode.tryCode()`**  
+  - Retrieves the device language as `LanguageCodes` with an optional `defaultCode`.  
+  - Fallback order:  
+    1. Full `rawLocale`.  
+    2. `rawLocale.languageCode`.  
+    3. Returns `defaultCode` (default: `LanguageCodes.und`).  
+
+### Deprecated
+
+- `LanguageCode.rawCode` → use `rawLocale.toString()` instead.
+
 ## 0.5.5
 
 - Update `ku` locale native name (thanks @msonntag13).
