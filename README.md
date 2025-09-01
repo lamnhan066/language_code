@@ -37,6 +37,12 @@ final rawLocale = LanguageCode.rawLocale;
 
 ### Get language details
 
+- [code]: language code.
+- [englishName]: preferred English name.
+- [nativeName]: preferred native name.
+- [nativeLatinName]: preferred native latin name (if available).
+- [nativeNonLatinName]: preferred native non-latin name (if available).
+
 ```dart
 var language = LanguageCodes.en;
 print(language.englishName); // 'English'
@@ -45,6 +51,14 @@ print(language.nativeName);  // 'English'
 language = LanguageCodes.vi;
 print(language.englishName); // 'Vietnamese'
 print(language.nativeName);  // 'Tiếng Việt'
+
+ar("ar", r"Arabic", r"العربية", r"al'Arabiyyeẗ", r"العربية")
+language = LanguageCodes.ar;
+print(language.code); // ar
+print(language.englishName); // Arabic
+print(language.nativeName); // العربية
+print(language.nativeLatinName); // al'Arabiyyeẗ
+print(language.nativeNonLatinName); // العربية
 ```
 
 ### Convert values to `LanguageCodes`
