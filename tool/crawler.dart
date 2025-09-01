@@ -55,7 +55,11 @@ Future<void> main() async {
         .where((e) => e.isNotEmpty)
         .toList();
 
-    String nativeName = '';
+    String nativeName =
+        nativeCandidates.isNotEmpty ? nativeCandidates.first : '';
+
+    String commonLatinName = '';
+    String commonNonLatinName = '';
     if (nativeCandidates.isNotEmpty) {
       final nonLatin = nativeCandidates.firstWhere(
         (e) => !_isPureLatin(e),
@@ -67,9 +71,11 @@ Future<void> main() async {
       );
 
       if (nonLatin.isNotEmpty) {
-        nativeName = nonLatin;
-      } else {
-        nativeName = latin;
+        commonNonLatinName = nonLatin;
+      }
+
+      if (latin.isNotEmpty) {
+        commonLatinName = latin;
       }
     }
 
@@ -77,21 +83,34 @@ Future<void> main() async {
 
     // Add two-letter code if available
     if (code1.isNotEmpty) {
-      entries.add(_LangEntry(code1, name, nativeName));
+      entries.add(_LangEntry(
+          code1, name, nativeName, commonLatinName, commonNonLatinName));
     }
 
     // Handle multiple 3-letter codes (bibliographic/terminologic)
     final code3List =
         code3Raw.split('/').map((c) => c.trim()).where((c) => c.isNotEmpty);
     for (final code3 in code3List) {
-      entries.add(_LangEntry(code3.replaceAll('*', ''), name, nativeName));
+      entries.add(_LangEntry(code3.replaceAll('*', ''), name, nativeName,
+          commonLatinName, commonNonLatinName));
     }
   }
 
   // Add missing codes from _OldLanguageCodes to entries
   for (final oldCode in _OldLanguageCodes.values) {
     if (!entries.any((e) => e.code == oldCode.code)) {
-      entries.add(_LangEntry(oldCode.code, oldCode.name, oldCode.nativeName));
+      final code = entries.firstWhere(
+        (e) => oldCode.code.startsWith('${e.code}_'),
+        orElse: () => _LangEntry('', '', '', '', ''),
+      );
+
+      entries.add(_LangEntry(
+        oldCode.code,
+        oldCode.name,
+        oldCode.nativeName,
+        code.latinName,
+        code.nonLatinName,
+      ));
     }
   }
 
@@ -114,9 +133,11 @@ import 'dart:ui';
 /// LanguageCodes(code, name in English, name in native).
 ///   - [code]: language code.
 ///   - [englishName]: preferred English name.
-///   - [nativeName]: preferred native name (script form if available).
-/// 
-///  @Source 
+///   - [nativeName]: preferred native name.
+///   - [latinName]: preferred latin name (if available).
+///   - [nonLatinName]: preferred non-latin name (if available).
+///
+///  @Source
 ///   - https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes
 ///   - https://stackoverflow.com/questions/3217492/list-of-language-codes-in-yaml-or-json
 /// 
@@ -135,9 +156,9 @@ import 'dart:ui';
 
     buffer
       ..writeln(
-          '  /// code: "${e.code}", name: "${e.name}", nativeName: "${e.nativeName}"')
+          '  /// code: "${e.code}", name: "${e.name}", nativeName: "${e.nativeName}", latinName: r"${e.latinName}", nonLatinName: r"${e.nonLatinName}"')
       ..writeln(
-          '  $enumName("${e.code}", r"${e.name}", r"${e.nativeName}")$comma')
+          '  $enumName("${e.code}", r"${e.name}", r"${e.nativeName}", r"${e.latinName}", r"${e.nonLatinName}")$comma')
       ..writeln();
   }
 
@@ -151,8 +172,14 @@ import 'dart:ui';
   /// Get the English name of this code.
   final String englishName;
 
-  /// Get the native name of this code.
+  /// Get the preferred native name of this code.
   final String nativeName;
+
+  /// Preferred latin native name.
+  final String latinName;
+
+  /// Preferred non-latin native name.
+  final String nonLatinName;
 
   /// Get current code as Locale.
   Locale get locale {
@@ -235,7 +262,9 @@ import 'dart:ui';
   ///   - [code]: language code.
   ///   - [name]: name in English.
   ///   - [nativeName]: name in native.
-  const LanguageCodes(this.code, this.englishName, this.nativeName);
+  ///   - [latinName]: common name in Latin.
+  ///   - [nonLatinName]: common name in non-Latin.
+  const LanguageCodes(this.code, this.englishName, this.nativeName, this.latinName, this.nonLatinName);
   ''');
 
   buffer.writeln('}');
@@ -252,7 +281,10 @@ class _LangEntry {
   final String code;
   final String name;
   final String nativeName;
-  _LangEntry(this.code, this.name, this.nativeName);
+  final String latinName;
+  final String nonLatinName;
+  _LangEntry(
+      this.code, this.name, this.nativeName, this.latinName, this.nonLatinName);
 }
 
 String _cleanName(String name) {
@@ -277,7 +309,7 @@ bool _isTwoLetter(String code) =>
 
 /// Detect if a string is purely Latin-based (ASCII + Latin Extended letters)
 bool _isPureLatin(String text) {
-  final latinRegex = RegExp(r"^[\x00-\u024F\s\'\-]+$");
+  final latinRegex = RegExp("^[\\p{Script=Latin}\\s'-]+\$", unicode: true);
   return latinRegex.hasMatch(text);
 }
 
