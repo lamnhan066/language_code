@@ -108,8 +108,8 @@ Future<void> main() async {
         oldCode.code,
         oldCode.name,
         oldCode.nativeName,
-        code.latinName,
-        code.nonLatinName,
+        code.nativeLatinName,
+        code.nativeNonLatinName,
       ));
     }
   }
@@ -134,8 +134,8 @@ import 'dart:ui';
 ///   - [code]: language code.
 ///   - [englishName]: preferred English name.
 ///   - [nativeName]: preferred native name.
-///   - [latinName]: preferred latin name (if available).
-///   - [nonLatinName]: preferred non-latin name (if available).
+///   - [nativeLatinName]: preferred native latin name (if available).
+///   - [nativeNonLatinName]: preferred native non-latin name (if available).
 ///
 ///  @Source
 ///   - https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes
@@ -156,9 +156,9 @@ import 'dart:ui';
 
     buffer
       ..writeln(
-          '  /// code: "${e.code}", name: "${e.name}", nativeName: "${e.nativeName}", latinName: r"${e.latinName}", nonLatinName: r"${e.nonLatinName}"')
+          '  /// code: "${e.code}", englishName: "${e.name}", nativeName: "${e.nativeName}", nativeLatinName: r"${e.nativeLatinName}", nativeNonLatinName: r"${e.nativeNonLatinName}"')
       ..writeln(
-          '  $enumName("${e.code}", r"${e.name}", r"${e.nativeName}", r"${e.latinName}", r"${e.nonLatinName}")$comma')
+          '  $enumName("${e.code}", r"${e.name}", r"${e.nativeName}", r"${e.nativeLatinName}", r"${e.nativeNonLatinName}")$comma')
       ..writeln();
   }
 
@@ -176,10 +176,10 @@ import 'dart:ui';
   final String nativeName;
 
   /// Preferred latin native name.
-  final String latinName;
+  final String nativeLatinName;
 
   /// Preferred non-latin native name.
-  final String nonLatinName;
+  final String nativeNonLatinName;
 
   /// Get current code as Locale.
   Locale get locale {
@@ -262,9 +262,9 @@ import 'dart:ui';
   ///   - [code]: language code.
   ///   - [name]: name in English.
   ///   - [nativeName]: name in native.
-  ///   - [latinName]: common name in Latin.
-  ///   - [nonLatinName]: common name in non-Latin.
-  const LanguageCodes(this.code, this.englishName, this.nativeName, this.latinName, this.nonLatinName);
+  ///   - [nativeLatinName]: preferred native name in Latin.
+  ///   - [nativeNonLatinName]: preferred native name in non-Latin.
+  const LanguageCodes(this.code, this.englishName, this.nativeName, this.nativeLatinName, this.nativeNonLatinName);
   ''');
 
   buffer.writeln('}');
@@ -281,10 +281,10 @@ class _LangEntry {
   final String code;
   final String name;
   final String nativeName;
-  final String latinName;
-  final String nonLatinName;
-  _LangEntry(
-      this.code, this.name, this.nativeName, this.latinName, this.nonLatinName);
+  final String nativeLatinName;
+  final String nativeNonLatinName;
+  _LangEntry(this.code, this.name, this.nativeName, this.nativeLatinName,
+      this.nativeNonLatinName);
 }
 
 String _cleanName(String name) {
