@@ -2,7 +2,7 @@
 
 import 'dart:ui';
 
-/// LanguageCodes(code, name in English, name in native).
+/// LanguageCodes
 ///   - [code]: language code.
 ///   - [englishName]: preferred English name.
 ///   - [nativeName]: preferred native name.
@@ -6033,10 +6033,10 @@ enum LanguageCodes {
   /// Get the preferred native name of this code.
   final String nativeName;
 
-  /// Preferred latin native name.
+  /// Preferred latin native name. Default is empty.
   final String nativeLatinName;
 
-  /// Preferred non-latin native name.
+  /// Preferred non-latin native name. Default is empty.
   final String nativeNonLatinName;
 
   /// Get current code as Locale.
@@ -6116,12 +6116,12 @@ enum LanguageCodes {
     return throw StateError("No element");
   }
 
-  /// LanguageCodes(code, name in English, name in native).
+  /// LanguageCodes
   ///   - [code]: language code.
-  ///   - [name]: name in English.
-  ///   - [nativeName]: name in native.
-  ///   - [nativeLatinName]: preferred native name in Latin.
-  ///   - [nativeNonLatinName]: preferred native name in non-Latin.
+  ///   - [englishName]: preferred English name.
+  ///   - [nativeName]: preferred native name.
+  ///   - [nativeLatinName]: preferred native latin name (if available).
+  ///   - [nativeNonLatinName]: preferred native non-latin name (if available).
   const LanguageCodes(
     this.code,
     this.englishName,
