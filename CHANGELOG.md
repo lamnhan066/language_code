@@ -1,3 +1,9 @@
+## 0.6.0-rc.2
+
+- Add `nativeLatinName` and `nativeNonLatinName` to `LanguageCodes`. All the old codes will use the inherit `latinName` and `nonLatinName` from it main code. Example: `aa_DJ` will use the `latinName` and `nonLatinName` from `aa`.
+- Update the `nativeName` to use the first parsed name (instead of preferred non-latin name).
+- Improve the parser.
+
 ## 0.6.0-rc.1
 
 - Improve the `LanguageCode.rawLocale` method to be able to test.
