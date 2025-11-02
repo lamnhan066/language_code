@@ -196,5 +196,257 @@ void main() {
         throwsA(isA<AssertionError>()),
       );
     });
+
+    test('code returns test code directly when setTestCode is called', () {
+      const testCode = LanguageCodes.zh;
+      LanguageCode.setTestCode(testCode);
+      
+      // Should return directly without going through locale lookup
+      expect(LanguageCode.code, equals(testCode));
+      expect(LanguageCode.locale, equals(testCode.locale));
+    });
+
+    test('code error message includes locale and languageCode', () {
+      LanguageCode.setTestLocale(const Locale('xyz', 'ABC'));
+      
+      try {
+        LanguageCode.code;
+        fail('Should have thrown StateError');
+      } on StateError catch (e) {
+        expect(e.message, contains('xyz'));
+        expect(e.message, contains('ABC'));
+        expect(e.message, contains('languageCode'));
+      }
+    });
+
+    test('rawLocale normalizes lowercase "c" locale to en_US', () {
+      LanguageCode.setTestLocale(const Locale('c'));
+      expect(LanguageCode.rawLocale, equals(const Locale('en', 'US')));
+    });
+
+    test('rawLocale normalizes lowercase "posix" locale to en_US', () {
+      LanguageCode.setTestLocale(const Locale('posix'));
+      expect(LanguageCode.rawLocale, equals(const Locale('en', 'US')));
+    });
+
+    test('rawLocale normalizes mixed case "c" locale to en_US', () {
+      LanguageCode.setTestLocale(const Locale('C'));
+      expect(LanguageCode.rawLocale, equals(const Locale('en', 'US')));
+    });
+
+    test('rawLocale returns platform locale when no test override', () {
+      LanguageCode.setTestCode(null);
+      LanguageCode.setTestLocale(null);
+      
+      final locale = LanguageCode.rawLocale;
+      expect(locale, isA<Locale>());
+      // Should not be 'C' or 'POSIX' (should be normalized)
+      expect(locale.languageCode.toUpperCase(), isNot('C'));
+      expect(locale.languageCode.toUpperCase(), isNot('POSIX'));
+    });
+
+    test('tryCode returns und by default when no match found', () {
+      LanguageCode.setTestLocale(const Locale('xxx', 'YYY'));
+      expect(LanguageCode.tryCode(), equals(LanguageCodes.und));
+    });
+
+    test('tryCode respects custom defaultCode', () {
+      LanguageCode.setTestLocale(const Locale('xxx', 'YYY'));
+      expect(
+        LanguageCode.tryCode(defaultCode: LanguageCodes.es),
+        equals(LanguageCodes.es),
+      );
+      expect(
+        LanguageCode.tryCode(defaultCode: LanguageCodes.fr),
+        equals(LanguageCodes.fr),
+      );
+    });
+  });
+
+  group('LanguageCodes error messages', () {
+    setUp(() {
+      LanguageCode.setTestCode(null);
+      LanguageCode.setTestLocale(null);
+    });
+
+    test('fromCode error message includes the code', () {
+      try {
+        LanguageCodes.fromCode('invalid_code');
+        fail('Should have thrown StateError');
+      } on StateError catch (e) {
+        expect(e.message, contains('invalid_code'));
+        expect(e.message, contains('No LanguageCodes found for code'));
+      }
+    });
+
+    test('fromLocale error message includes the locale', () {
+      try {
+        LanguageCodes.fromLocale(const Locale('xyz', 'ABC'));
+        fail('Should have thrown StateError');
+      } on StateError catch (e) {
+        expect(e.message, contains('xyz'));
+        expect(e.message, contains('No LanguageCodes found for locale'));
+      }
+    });
+
+    test('fromCode returns orElse when no match found', () {
+      const fallback = LanguageCodes.en;
+      final result = LanguageCodes.fromCode(
+        'invalid_code',
+        orElse: () => fallback,
+      );
+      expect(result, equals(fallback));
+    });
+
+    test('fromLocale returns orElse when no match found', () {
+      const fallback = LanguageCodes.fr;
+      final result = LanguageCodes.fromLocale(
+        const Locale('xyz', 'ABC'),
+        orElse: () => fallback,
+      );
+      expect(result, equals(fallback));
+    });
+  });
+
+  group('LanguageCodes properties and methods', () {
+    test('name getter returns englishName', () {
+      expect(LanguageCodes.en.name, equals(LanguageCodes.en.englishName));
+      expect(LanguageCodes.vi.name, equals(LanguageCodes.vi.englishName));
+      expect(LanguageCodes.fr.name, equals(LanguageCodes.fr.englishName));
+      
+      for (final code in LanguageCodes.values) {
+        expect(code.name, equals(code.englishName));
+      }
+    });
+
+    test('locale getter handles single language code', () {
+      final code = LanguageCodes.en;
+      final locale = code.locale;
+      expect(locale.languageCode, equals('en'));
+      expect(locale.countryCode, isNull);
+    });
+
+    test('locale getter handles language_country code', () {
+      final code = LanguageCodes.en_US;
+      final locale = code.locale;
+      expect(locale.languageCode, equals('en'));
+      expect(locale.countryCode, equals('US'));
+    });
+
+    test('locale getter handles language_script code', () {
+      // Find a code with script (non-uppercase second part)
+      final codeWithScript = LanguageCodes.values.firstWhere(
+        (c) => c.code.contains('_') && 
+               c.code.split('_').length >= 2 &&
+               c.code.split('_')[1] != c.code.split('_')[1].toUpperCase(),
+        orElse: () => LanguageCodes.en,
+      );
+      
+      if (codeWithScript != LanguageCodes.en) {
+        final locale = codeWithScript.locale;
+        expect(locale.languageCode, isNotEmpty);
+      }
+    });
+
+    test('locale getter handles language_script_country code', () {
+      // Find codes with 3+ parts if any exist
+      final codesWithThreeParts = LanguageCodes.values.where(
+        (c) => c.code.split('_').length >= 3,
+      ).take(5);
+      
+      for (final code in codesWithThreeParts) {
+        final locale = code.locale;
+        expect(locale.languageCode, isNotEmpty);
+      }
+    });
+
+    test('fromEnglishName returns empty when no match', () {
+      final result = LanguageCodes.fromEnglishName('NonExistentLanguage');
+      expect(result, isEmpty);
+    });
+
+    test('fromNativeName returns empty when no match', () {
+      final result = LanguageCodes.fromNativeName('NonExistentLanguage');
+      expect(result, isEmpty);
+    });
+
+    test('fromEnglishName can return multiple results', () {
+      // Some languages might have multiple variants with same English name
+      final result = LanguageCodes.fromEnglishName('English');
+      expect(result, isNotEmpty);
+      // Should contain at least 'en'
+      expect(result.any((c) => c.code.startsWith('en')), isTrue);
+    });
+  });
+
+  group('Edge cases and boundary conditions', () {
+    setUp(() {
+      LanguageCode.setTestCode(null);
+      LanguageCode.setTestLocale(null);
+    });
+
+    test('code handles very long invalid language code', () {
+      LanguageCode.setTestLocale(Locale('a' * 100, 'XX'));
+      
+      try {
+        LanguageCode.code;
+        fail('Should have thrown StateError');
+      } on StateError catch (e) {
+        expect(e.message, isNotEmpty);
+        expect(e.message, contains('languageCode'));
+      }
+    });
+
+    test('tryCode handles very long invalid language code gracefully', () {
+      LanguageCode.setTestLocale(Locale('a' * 100, 'XX'));
+      final result = LanguageCode.tryCode(defaultCode: LanguageCodes.en);
+      expect(result, equals(LanguageCodes.en));
+    });
+
+    test('fromCode handles empty string', () {
+      try {
+        LanguageCodes.fromCode('');
+        fail('Should have thrown StateError');
+      } on StateError catch (e) {
+        expect(e.message, contains(''));
+      }
+    });
+
+    test('fromCode with empty string and orElse', () {
+      final result = LanguageCodes.fromCode('', orElse: () => LanguageCodes.und);
+      expect(result, equals(LanguageCodes.und));
+    });
+
+    test('setTestCode can be called multiple times', () {
+      LanguageCode.setTestCode(LanguageCodes.en);
+      LanguageCode.setTestCode(LanguageCodes.fr);
+      LanguageCode.setTestCode(LanguageCodes.de);
+      expect(LanguageCode.code, equals(LanguageCodes.de));
+    });
+
+    test('setTestLocale can be called multiple times', () {
+      LanguageCode.setTestLocale(const Locale('en', 'US'));
+      LanguageCode.setTestLocale(const Locale('fr', 'FR'));
+      LanguageCode.setTestLocale(const Locale('de', 'DE'));
+      expect(LanguageCode.rawLocale, equals(const Locale('de', 'DE')));
+    });
+
+    test('setTestCode with null clears the override', () {
+      LanguageCode.setTestCode(LanguageCodes.en);
+      expect(LanguageCode.code, equals(LanguageCodes.en));
+      
+      LanguageCode.setTestCode(null);
+      // Now should use platform locale
+      expect(LanguageCode.rawLocale, isA<Locale>());
+    });
+
+    test('setTestLocale with null clears the override', () {
+      LanguageCode.setTestLocale(const Locale('fr', 'FR'));
+      expect(LanguageCode.rawLocale, equals(const Locale('fr', 'FR')));
+      
+      LanguageCode.setTestLocale(null);
+      // Now should use platform locale
+      expect(LanguageCode.rawLocale, isA<Locale>());
+    });
   });
 }
