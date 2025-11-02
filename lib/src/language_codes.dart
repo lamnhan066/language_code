@@ -6085,12 +6085,6 @@ enum LanguageCodes {
       throw StateError("No LanguageCodes found for code: $code");
     }
 
-    if (matches.length > 1) {
-      throw StateError(
-        "Multiple LanguageCodes found for code: $code",
-      );
-    }
-
     return matches.single;
   }
 
