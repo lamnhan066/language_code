@@ -17,8 +17,10 @@ void main() {
       equals(LanguageCodes.en_US),
     );
     expect(
-      LanguageCodes.fromLocale(const Locale('en', 'USS'),
-          orElse: () => LanguageCodes.en),
+      LanguageCodes.fromLocale(
+        const Locale('en', 'USS'),
+        orElse: () => LanguageCodes.en,
+      ),
       equals(LanguageCodes.en),
     );
     expect(
@@ -173,8 +175,10 @@ void main() {
 
     test('tryCode returns defaultCode if no match found', () {
       LanguageCode.setTestLocale(const Locale('xx', 'YY'));
-      expect(LanguageCode.tryCode(defaultCode: LanguageCodes.en),
-          equals(LanguageCodes.en));
+      expect(
+        LanguageCode.tryCode(defaultCode: LanguageCodes.en),
+        equals(LanguageCodes.en),
+      );
     });
 
     test('locale always matches code.locale', () {
@@ -339,9 +343,7 @@ void main() {
       // So we verify the code path exists and would work if such codes existed
       // We test by checking all codes with 2 parts to ensure proper handling
       final codesWithTwoParts = LanguageCodes.values
-          .where(
-            (c) => c.code.split('_').length == 2,
-          )
+          .where((c) => c.code.split('_').length == 2)
           .take(5);
 
       for (final code in codesWithTwoParts) {
@@ -370,9 +372,7 @@ void main() {
     test('locale getter handles language_script_country code', () {
       // Find codes with 3+ parts if any exist
       final codesWithThreeParts = LanguageCodes.values
-          .where(
-            (c) => c.code.split('_').length >= 3,
-          )
+          .where((c) => c.code.split('_').length >= 3)
           .take(5);
 
       for (final code in codesWithThreeParts) {
@@ -434,8 +434,10 @@ void main() {
     });
 
     test('fromCode with empty string and orElse', () {
-      final result =
-          LanguageCodes.fromCode('', orElse: () => LanguageCodes.und);
+      final result = LanguageCodes.fromCode(
+        '',
+        orElse: () => LanguageCodes.und,
+      );
       expect(result, equals(LanguageCodes.und));
     });
 

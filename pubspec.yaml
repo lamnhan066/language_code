@@ -1,10 +1,11 @@
 name: language_code
 description: Get the current language code and Locale of the device. Also includes almost the language codes with English names and native names.
-version: 0.6.0-rc.2
+version: 0.6.0-rc.3
 homepage: https://github.com/lamnhan066/language_code
 
 environment:
-  sdk: ">=2.18.0 <4.0.0"
+  sdk: ">=3.9.0 <4.0.0"
+  flutter: ^3.35.0
 
 dependencies:
   flutter:

@@ -32,8 +32,11 @@ Future<void> main(List<String> args) async {
   // Apply edits in reverse order so offsets stay valid
   var updatedSource = source;
   for (final edit in edits.reversed) {
-    updatedSource =
-        updatedSource.replaceRange(edit.start, edit.end, edit.replacement);
+    updatedSource = updatedSource.replaceRange(
+      edit.start,
+      edit.end,
+      edit.replacement,
+    );
   }
 
   await File(filePath).writeAsString(updatedSource);
@@ -61,16 +64,18 @@ _EnumEdit _processEnum(EnumDeclaration node, String source) {
   }
 
   // Sort alphabetically by name
-  members
-      .sort((a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme));
+  members.sort(
+    (a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme),
+  );
 
   final twoChars = members.where((e) {
     final enumName = e.constant.name.lexeme;
     return enumName.length == 2 || (enumName.length > 2 && enumName[2] == '_');
   }).toList();
 
-  twoChars
-      .sort((a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme));
+  twoChars.sort(
+    (a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme),
+  );
 
   final threeChars = members.where((e) {
     final enumName = e.constant.name.lexeme;
@@ -78,8 +83,9 @@ _EnumEdit _processEnum(EnumDeclaration node, String source) {
         (enumName.length > 3 && enumName[3] == '_');
   }).toList();
 
-  threeChars
-      .sort((a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme));
+  threeChars.sort(
+    (a, b) => a.constant.name.lexeme.compareTo(b.constant.name.lexeme),
+  );
 
   members.clear();
   members = ([...twoChars, ...threeChars]);
