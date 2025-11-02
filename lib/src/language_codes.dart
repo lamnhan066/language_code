@@ -6024,7 +6024,7 @@ enum LanguageCodes {
   /// Language code.
   ///
   /// Use [locale] if you want to get the current language as `Locale` because
-  /// this [code] may contains country code.
+  /// this [code] may contain country code.
   final String code;
 
   /// Get the English name of this code.
@@ -6074,10 +6074,24 @@ enum LanguageCodes {
     String code, {
     LanguageCodes Function()? orElse,
   }) {
-    return LanguageCodes.values.singleWhere(
+    final matches = LanguageCodes.values.where(
       (element) => element.code == code,
-      orElse: orElse,
     );
+
+    if (matches.isEmpty) {
+      if (orElse != null) {
+        return orElse();
+      }
+      throw StateError("No LanguageCodes found for code: $code");
+    }
+
+    if (matches.length > 1) {
+      throw StateError(
+        "Multiple LanguageCodes found for code: $code",
+      );
+    }
+
+    return matches.single;
   }
 
   /// Get [LanguageCodes] from [englishName]. If no matching element is found,
@@ -6113,7 +6127,7 @@ enum LanguageCodes {
     if (orElse != null) {
       return orElse();
     }
-    return throw StateError("No element");
+    throw StateError("No LanguageCodes found for locale: $locale");
   }
 
   /// LanguageCodes
