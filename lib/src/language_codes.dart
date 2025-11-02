@@ -6064,9 +6064,6 @@ enum LanguageCodes {
     }
   }
 
-  /// Get the English name.
-  String get name => englishName;
-
   /// Get [LanguageCodes] from string [code]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError].
