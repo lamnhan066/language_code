@@ -1,3 +1,7 @@
+## 0.6.0-rc.4
+
+- Update tests for the `name` breaking change.
+
 ## 0.6.0-rc.3
 
 - **[BREAKING CHANGE]** The `LanguageCodes.name` is now return enum's name (default behavior of enum).
