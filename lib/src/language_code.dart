@@ -7,10 +7,15 @@ import 'package:language_code/src/language_codes.dart';
 ///
 /// Includes test hooks for overriding values in unit tests.
 abstract class LanguageCode {
-  /// Test code
+  /// Test code override for testing purposes.
+  ///
+  /// When set, [rawLocale] will return this code's locale,
+  /// and [code] will return this value directly.
   static LanguageCodes? _testCode;
 
-  /// Test locale
+  /// Test locale override for testing purposes.
+  ///
+  /// When set, [rawLocale] will return this locale value.
   static Locale? _testLocale;
 
   /// Override the detected language with a specific [LanguageCodes] for testing.
@@ -46,8 +51,8 @@ abstract class LanguageCode {
         _testLocale ?? _testCode?.locale ?? PlatformDispatcher.instance.locale;
 
     // Normalize "C" or "POSIX" locales to English (US).
-    final deviceLocaleString = locale.toString().toUpperCase();
-    if (deviceLocaleString == 'C' || deviceLocaleString == 'POSIX') {
+    final languageCode = locale.languageCode.toUpperCase();
+    if (languageCode == 'C' || languageCode == 'POSIX') {
       return const Locale('en', 'US');
     }
 
@@ -57,13 +62,34 @@ abstract class LanguageCode {
   /// The device language as a [LanguageCodes] enum.
   ///
   /// Resolution order:
-  /// 1. Match the full [rawLocale].
-  /// 2. Fallback to [Locale.languageCode].
-  /// 3. Throws [StateError] if no match is found.
-  static LanguageCodes get code => LanguageCodes.fromLocale(
-        rawLocale,
-        orElse: () => LanguageCodes.fromCode(rawLocale.languageCode),
-      );
+  /// 1. If [setTestCode] was called, return the test code directly.
+  /// 2. Match the full [rawLocale].
+  /// 3. Fallback to [Locale.languageCode].
+  /// 4. Throws [StateError] if no match is found.
+  static LanguageCodes get code {
+    // If test code is set, return it directly
+    if (_testCode != null) {
+      return _testCode!;
+    }
+
+    final locale = rawLocale;
+
+    // First, try to match the full locale (including country code, script, etc.)
+    try {
+      return LanguageCodes.fromLocale(locale);
+    } catch (_) {
+      // If full locale match fails, fallback to language code only
+      try {
+        return LanguageCodes.fromCode(locale.languageCode);
+      } catch (_) {
+        // Provide a comprehensive error message
+        throw StateError(
+          'No LanguageCodes found for locale: $locale '
+          '(languageCode: ${locale.languageCode})',
+        );
+      }
+    }
+  }
 
   /// Get the device language as [LanguageCodes], with an optional [defaultCode].
   ///
