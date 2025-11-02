@@ -1,3 +1,9 @@
+## 0.6.0-rc.3
+
+- **[BREAKING CHANGE]** The `LanguageCodes.name` is now return enum's name (default behavior of enum).
+- **[BREAKING CHANGE]** Bump dart sdk to >= 3.9.0 and flutter to ^3.35.0.
+- Add more tests.
+
 ## 0.6.0-rc.2
 
 - Add `nativeLatinName` and `nativeNonLatinName` to `LanguageCodes`. All the old codes will use the inherit `latinName` and `nonLatinName` from it main code. Example: `aa_DJ` will use the `latinName` and `nonLatinName` from `aa`.
