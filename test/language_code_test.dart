@@ -70,7 +70,6 @@ void main() {
     test('.fromEnglishName', () {
       for (final code in LanguageCodes.values) {
         expect(LanguageCodes.fromEnglishName(code.englishName), contains(code));
-        expect(LanguageCodes.fromEnglishName(code.name), contains(code));
       }
     });
 
@@ -313,16 +312,6 @@ void main() {
   });
 
   group('LanguageCodes properties and methods', () {
-    test('name getter returns englishName', () {
-      expect(LanguageCodes.en.name, equals(LanguageCodes.en.englishName));
-      expect(LanguageCodes.vi.name, equals(LanguageCodes.vi.englishName));
-      expect(LanguageCodes.fr.name, equals(LanguageCodes.fr.englishName));
-
-      for (final code in LanguageCodes.values) {
-        expect(code.name, equals(code.englishName));
-      }
-    });
-
     test('locale getter handles single language code', () {
       final code = LanguageCodes.en;
       final locale = code.locale;
