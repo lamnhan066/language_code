@@ -6118,9 +6118,11 @@ enum LanguageCodes {
         return value;
       }
     }
+
     if (orElse != null) {
       return orElse();
     }
+
     throw StateError("No LanguageCodes found for locale: $locale");
   }
 
