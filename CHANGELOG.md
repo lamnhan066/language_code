@@ -1,3 +1,8 @@
+## 0.6.0-rc.5
+
+- Update the crawler for the `name` breaking change.
+- Use `englishName` for `nativeName` if there is no native names.
+
 ## 0.6.0-rc.4
 
 - Update tests for the `name` breaking change.
