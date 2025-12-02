@@ -66,11 +66,17 @@ enum LanguageCodes {
     r"Аҧсуа бызшәа Aƥsua bızšwa",
   ),
 
-  /// code: "ae", englishName: "Avestan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ae("ae", r"Avestan", r"", r"", r""),
+  /// code: "ae", englishName: "Avestan", nativeName: "Avestan", nativeLatinName: r"Avestan", nativeNonLatinName: r""
+  ae("ae", r"Avestan", r"Avestan", r"Avestan", r""),
 
-  /// code: "ae_AF", englishName: "Avestan (Afghanistan)", nativeName: "Avesta (Afghanistan)", nativeLatinName: r"", nativeNonLatinName: r""
-  ae_AF("ae_AF", r"Avestan (Afghanistan)", r"Avesta (Afghanistan)", r"", r""),
+  /// code: "ae_AF", englishName: "Avestan (Afghanistan)", nativeName: "Avesta (Afghanistan)", nativeLatinName: r"Avestan", nativeNonLatinName: r""
+  ae_AF(
+    "ae_AF",
+    r"Avestan (Afghanistan)",
+    r"Avesta (Afghanistan)",
+    r"Avestan",
+    r"",
+  ),
 
   /// code: "af", englishName: "Afrikaans", nativeName: "Afrikaans", nativeLatinName: r"Afrikaans", nativeNonLatinName: r""
   af("af", r"Afrikaans", r"Afrikaans", r"Afrikaans", r""),
@@ -2076,11 +2082,17 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "ia", englishName: "Interlingua", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ia("ia", r"Interlingua", r"", r"", r""),
+  /// code: "ia", englishName: "Interlingua", nativeName: "Interlingua", nativeLatinName: r"Interlingua", nativeNonLatinName: r""
+  ia("ia", r"Interlingua", r"Interlingua", r"Interlingua", r""),
 
-  /// code: "ia_001", englishName: "Interlingua (World)", nativeName: "Interlingua (Mundo)", nativeLatinName: r"", nativeNonLatinName: r""
-  ia_001("ia_001", r"Interlingua (World)", r"Interlingua (Mundo)", r"", r""),
+  /// code: "ia_001", englishName: "Interlingua (World)", nativeName: "Interlingua (Mundo)", nativeLatinName: r"Interlingua", nativeNonLatinName: r""
+  ia_001(
+    "ia_001",
+    r"Interlingua (World)",
+    r"Interlingua (Mundo)",
+    r"Interlingua",
+    r"",
+  ),
 
   /// code: "id", englishName: "Indonesian", nativeName: "bahasa Indonesia", nativeLatinName: r"bahasa Indonesia", nativeNonLatinName: r""
   id("id", r"Indonesian", r"bahasa Indonesia", r"bahasa Indonesia", r""),
@@ -2094,15 +2106,15 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "ie", englishName: "Interlingue", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ie("ie", r"Interlingue", r"", r"", r""),
+  /// code: "ie", englishName: "Interlingue", nativeName: "Interlingue", nativeLatinName: r"Interlingue", nativeNonLatinName: r""
+  ie("ie", r"Interlingue", r"Interlingue", r"Interlingue", r""),
 
-  /// code: "ie_World", englishName: "Interlingue; Occidental (World)", nativeName: "Interlingue (Mondo)", nativeLatinName: r"", nativeNonLatinName: r""
+  /// code: "ie_World", englishName: "Interlingue; Occidental (World)", nativeName: "Interlingue (Mondo)", nativeLatinName: r"Interlingue", nativeNonLatinName: r""
   ie_World(
     "ie_World",
     r"Interlingue; Occidental (World)",
     r"Interlingue (Mondo)",
-    r"",
+    r"Interlingue",
     r"",
   ),
 
@@ -2136,11 +2148,11 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "io", englishName: "Ido", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  io("io", r"Ido", r"", r"", r""),
+  /// code: "io", englishName: "Ido", nativeName: "Ido", nativeLatinName: r"Ido", nativeNonLatinName: r""
+  io("io", r"Ido", r"Ido", r"Ido", r""),
 
-  /// code: "io_NL", englishName: "Ido (Netherlands)", nativeName: "Ido (Nederlands)", nativeLatinName: r"", nativeNonLatinName: r""
-  io_NL("io_NL", r"Ido (Netherlands)", r"Ido (Nederlands)", r"", r""),
+  /// code: "io_NL", englishName: "Ido (Netherlands)", nativeName: "Ido (Nederlands)", nativeLatinName: r"Ido", nativeNonLatinName: r""
+  io_NL("io_NL", r"Ido (Netherlands)", r"Ido (Nederlands)", r"Ido", r""),
 
   /// code: "is", englishName: "Icelandic", nativeName: "Íslenska", nativeLatinName: r"Íslenska", nativeNonLatinName: r""
   is_("is", r"Icelandic", r"Íslenska", r"Íslenska", r""),
@@ -3885,8 +3897,8 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "vo", englishName: "Volapük", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  vo("vo", r"Volapük", r"", r"", r""),
+  /// code: "vo", englishName: "Volapük", nativeName: "Volapük", nativeLatinName: r"Volapük", nativeNonLatinName: r""
+  vo("vo", r"Volapük", r"Volapük", r"Volapük", r""),
 
   /// code: "wa", englishName: "Walloon", nativeName: "Walon", nativeLatinName: r"Walon", nativeNonLatinName: r""
   wa("wa", r"Walloon", r"Walon", r"Walon", r""),
@@ -4074,8 +4086,8 @@ enum LanguageCodes {
   /// code: "ady", englishName: "Adyghe", nativeName: "Адыгабзэ", nativeLatinName: r"", nativeNonLatinName: r"Адыгабзэ"
   ady("ady", r"Adyghe", r"Адыгабзэ", r"", r"Адыгабзэ"),
 
-  /// code: "afa", englishName: "Afro-Asiatic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  afa("afa", r"Afro-Asiatic", r"", r"", r""),
+  /// code: "afa", englishName: "Afro-Asiatic", nativeName: "Afro-Asiatic", nativeLatinName: r"Afro-Asiatic", nativeNonLatinName: r""
+  afa("afa", r"Afro-Asiatic", r"Afro-Asiatic", r"Afro-Asiatic", r""),
 
   /// code: "afh", englishName: "Afrihili", nativeName: "El-Afrihili", nativeLatinName: r"El-Afrihili", nativeNonLatinName: r""
   afh("afh", r"Afrihili", r"El-Afrihili", r"El-Afrihili", r""),
@@ -4098,8 +4110,8 @@ enum LanguageCodes {
   /// code: "ale", englishName: "Aleut", nativeName: "Уна́ӈам тунуу́", nativeLatinName: r"", nativeNonLatinName: r"Уна́ӈам тунуу́"
   ale("ale", r"Aleut", r"Уна́ӈам тунуу́", r"", r"Уна́ӈам тунуу́"),
 
-  /// code: "alg", englishName: "Algonquian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  alg("alg", r"Algonquian", r"", r"", r""),
+  /// code: "alg", englishName: "Algonquian", nativeName: "Algonquian", nativeLatinName: r"Algonquian", nativeNonLatinName: r""
+  alg("alg", r"Algonquian", r"Algonquian", r"Algonquian", r""),
 
   /// code: "alt", englishName: "Southern Altai", nativeName: "Алтай тили", nativeLatinName: r"", nativeNonLatinName: r"Алтай тили"
   alt("alt", r"Southern Altai", r"Алтай тили", r"", r"Алтай тили"),
@@ -4113,8 +4125,8 @@ enum LanguageCodes {
   /// code: "anp", englishName: "Angika", nativeName: "अंगिका", nativeLatinName: r"", nativeNonLatinName: r"अंगिका"
   anp("anp", r"Angika", r"अंगिका", r"", r"अंगिका"),
 
-  /// code: "apa", englishName: "Apache", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  apa("apa", r"Apache", r"", r"", r""),
+  /// code: "apa", englishName: "Apache", nativeName: "Apache", nativeLatinName: r"Apache", nativeNonLatinName: r""
+  apa("apa", r"Apache", r"Apache", r"Apache", r""),
 
   /// code: "ara", englishName: "Arabic", nativeName: "العربية", nativeLatinName: r"al'Arabiyyeẗ", nativeNonLatinName: r"العربية"
   ara("ara", r"Arabic", r"العربية", r"al'Arabiyyeẗ", r"العربية"),
@@ -4137,8 +4149,14 @@ enum LanguageCodes {
     r"العربية",
   ),
 
-  /// code: "arc", englishName: "Official Aramaic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  arc("arc", r"Official Aramaic", r"", r"", r""),
+  /// code: "arc", englishName: "Official Aramaic", nativeName: "Official Aramaic", nativeLatinName: r"Official Aramaic", nativeNonLatinName: r""
+  arc(
+    "arc",
+    r"Official Aramaic",
+    r"Official Aramaic",
+    r"Official Aramaic",
+    r"",
+  ),
 
   /// code: "arg", englishName: "Aragonese", nativeName: "Aragonés", nativeLatinName: r"Aragonés", nativeNonLatinName: r""
   arg("arg", r"Aragonese", r"Aragonés", r"Aragonés", r""),
@@ -4152,8 +4170,8 @@ enum LanguageCodes {
   /// code: "arp", englishName: "Arapaho", nativeName: "Hinónoʼeitíít", nativeLatinName: r"", nativeNonLatinName: r"Hinónoʼeitíít"
   arp("arp", r"Arapaho", r"Hinónoʼeitíít", r"", r"Hinónoʼeitíít"),
 
-  /// code: "art", englishName: "Artificial", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  art("art", r"Artificial", r"", r"", r""),
+  /// code: "art", englishName: "Artificial", nativeName: "Artificial", nativeLatinName: r"Artificial", nativeNonLatinName: r""
+  art("art", r"Artificial", r"Artificial", r"Artificial", r""),
 
   /// code: "arw", englishName: "Arawak", nativeName: "Lokono", nativeLatinName: r"Lokono", nativeNonLatinName: r""
   arw("arw", r"Arawak", r"Lokono", r"Lokono", r""),
@@ -4164,17 +4182,17 @@ enum LanguageCodes {
   /// code: "ast", englishName: "Asturian", nativeName: "Asturianu", nativeLatinName: r"Asturianu", nativeNonLatinName: r""
   ast("ast", r"Asturian", r"Asturianu", r"Asturianu", r""),
 
-  /// code: "ath", englishName: "Athapascan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ath("ath", r"Athapascan", r"", r"", r""),
+  /// code: "ath", englishName: "Athapascan", nativeName: "Athapascan", nativeLatinName: r"Athapascan", nativeNonLatinName: r""
+  ath("ath", r"Athapascan", r"Athapascan", r"Athapascan", r""),
 
-  /// code: "aus", englishName: "Australian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  aus("aus", r"Australian", r"", r"", r""),
+  /// code: "aus", englishName: "Australian", nativeName: "Australian", nativeLatinName: r"Australian", nativeNonLatinName: r""
+  aus("aus", r"Australian", r"Australian", r"Australian", r""),
 
   /// code: "ava", englishName: "Avaric", nativeName: "Авар мацӏ", nativeLatinName: r"", nativeNonLatinName: r"Авар мацӏ"
   ava("ava", r"Avaric", r"Авар мацӏ", r"", r"Авар мацӏ"),
 
-  /// code: "ave", englishName: "Avestan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ave("ave", r"Avestan", r"", r"", r""),
+  /// code: "ave", englishName: "Avestan", nativeName: "Avestan", nativeLatinName: r"Avestan", nativeNonLatinName: r""
+  ave("ave", r"Avestan", r"Avestan", r"Avestan", r""),
 
   /// code: "awa", englishName: "Awadhi", nativeName: "अवधी", nativeLatinName: r"Avadhī", nativeNonLatinName: r"अवधी"
   awa("awa", r"Awadhi", r"अवधी", r"Avadhī", r"अवधी"),
@@ -4191,8 +4209,8 @@ enum LanguageCodes {
     r"آذربایجان دیلی",
   ),
 
-  /// code: "bad", englishName: "Banda", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  bad("bad", r"Banda", r"", r"", r""),
+  /// code: "bad", englishName: "Banda", nativeName: "Banda", nativeLatinName: r"Banda", nativeNonLatinName: r""
+  bad("bad", r"Banda", r"Banda", r"Banda", r""),
 
   /// code: "bai", englishName: "Bamileke", nativeName: "Bamiléké", nativeLatinName: r"Bamiléké", nativeNonLatinName: r""
   bai("bai", r"Bamileke", r"Bamiléké", r"Bamiléké", r""),
@@ -4215,8 +4233,8 @@ enum LanguageCodes {
   /// code: "bas", englishName: "Basa", nativeName: "Mbene", nativeLatinName: r"Mbene", nativeNonLatinName: r""
   bas("bas", r"Basa", r"Mbene", r"Mbene", r""),
 
-  /// code: "bat", englishName: "Baltic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  bat("bat", r"Baltic", r"", r"", r""),
+  /// code: "bat", englishName: "Baltic", nativeName: "Baltic", nativeLatinName: r"Baltic", nativeNonLatinName: r""
+  bat("bat", r"Baltic", r"Baltic", r"Baltic", r""),
 
   /// code: "bej", englishName: "Beja", nativeName: "Bidhaawyeet", nativeLatinName: r"Bidhaawyeet", nativeNonLatinName: r""
   bej("bej", r"Beja", r"Bidhaawyeet", r"Bidhaawyeet", r""),
@@ -4242,8 +4260,8 @@ enum LanguageCodes {
   /// code: "bho", englishName: "Bhojpuri", nativeName: "भोजपुरी", nativeLatinName: r"", nativeNonLatinName: r"भोजपुरी"
   bho("bho", r"Bhojpuri", r"भोजपुरी", r"", r"भोजपुरी"),
 
-  /// code: "bih", englishName: "Bihari", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  bih("bih", r"Bihari", r"", r"", r""),
+  /// code: "bih", englishName: "Bihari", nativeName: "Bihari", nativeLatinName: r"Bihari", nativeNonLatinName: r""
+  bih("bih", r"Bihari", r"Bihari", r"Bihari", r""),
 
   /// code: "bik", englishName: "Bikol", nativeName: "Bikol", nativeLatinName: r"Bikol", nativeNonLatinName: r""
   bik("bik", r"Bikol", r"Bikol", r"Bikol", r""),
@@ -4257,8 +4275,8 @@ enum LanguageCodes {
   /// code: "bla", englishName: "Siksika", nativeName: "ᓱᖽᐧᖿ", nativeLatinName: r"", nativeNonLatinName: r"ᓱᖽᐧᖿ"
   bla("bla", r"Siksika", r"ᓱᖽᐧᖿ", r"", r"ᓱᖽᐧᖿ"),
 
-  /// code: "bnt", englishName: "Bantu", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  bnt("bnt", r"Bantu", r"", r"", r""),
+  /// code: "bnt", englishName: "Bantu", nativeName: "Bantu", nativeLatinName: r"Bantu", nativeNonLatinName: r""
+  bnt("bnt", r"Bantu", r"Bantu", r"Bantu", r""),
 
   /// code: "bod", englishName: "Tibetan", nativeName: "བོད་སྐད་", nativeLatinName: r"Bodskad", nativeNonLatinName: r"བོད་སྐད་"
   bod("bod", r"Tibetan", r"བོད་སྐད་", r"Bodskad", r"བོད་སྐད་"),
@@ -4272,8 +4290,8 @@ enum LanguageCodes {
   /// code: "bre", englishName: "Breton", nativeName: "Brezhoneg", nativeLatinName: r"Brezhoneg", nativeNonLatinName: r""
   bre("bre", r"Breton", r"Brezhoneg", r"Brezhoneg", r""),
 
-  /// code: "btk", englishName: "Batak", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  btk("btk", r"Batak", r"", r"", r""),
+  /// code: "btk", englishName: "Batak", nativeName: "Batak", nativeLatinName: r"Batak", nativeNonLatinName: r""
+  btk("btk", r"Batak", r"Batak", r"Batak", r""),
 
   /// code: "bua", englishName: "Buriat", nativeName: "буряад хэлэн", nativeLatinName: r"", nativeNonLatinName: r"буряад хэлэн"
   bua("bua", r"Buriat", r"буряад хэлэн", r"", r"буряад хэлэн"),
@@ -4299,8 +4317,14 @@ enum LanguageCodes {
   /// code: "cad", englishName: "Caddo", nativeName: "Hasí:nay", nativeLatinName: r"", nativeNonLatinName: r"Hasí:nay"
   cad("cad", r"Caddo", r"Hasí:nay", r"", r"Hasí:nay"),
 
-  /// code: "cai", englishName: "Central American Indian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cai("cai", r"Central American Indian", r"", r"", r""),
+  /// code: "cai", englishName: "Central American Indian", nativeName: "Central American Indian", nativeLatinName: r"Central American Indian", nativeNonLatinName: r""
+  cai(
+    "cai",
+    r"Central American Indian",
+    r"Central American Indian",
+    r"Central American Indian",
+    r"",
+  ),
 
   /// code: "car", englishName: "Galibi Carib", nativeName: "Kari'nja", nativeLatinName: r"Kari'nja", nativeNonLatinName: r""
   car("car", r"Galibi Carib", r"Kari'nja", r"Kari'nja", r""),
@@ -4308,8 +4332,8 @@ enum LanguageCodes {
   /// code: "cat", englishName: "Catalan", nativeName: "Català", nativeLatinName: r"Català", nativeNonLatinName: r""
   cat("cat", r"Catalan", r"Català", r"Català", r""),
 
-  /// code: "cau", englishName: "Caucasian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cau("cau", r"Caucasian", r"", r"", r""),
+  /// code: "cau", englishName: "Caucasian", nativeName: "Caucasian", nativeLatinName: r"Caucasian", nativeNonLatinName: r""
+  cau("cau", r"Caucasian", r"Caucasian", r"Caucasian", r""),
 
   /// code: "ceb", englishName: "Cebuano", nativeName: "Sinugbuanong Binisayâ", nativeLatinName: r"Sinugbuanong Binisayâ", nativeNonLatinName: r""
   ceb(
@@ -4320,8 +4344,8 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "cel", englishName: "Celtic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cel("cel", r"Celtic", r"", r"", r""),
+  /// code: "cel", englishName: "Celtic", nativeName: "Celtic", nativeLatinName: r"Celtic", nativeNonLatinName: r""
+  cel("cel", r"Celtic", r"Celtic", r"Celtic", r""),
 
   /// code: "ces", englishName: "Czech", nativeName: "Čeština", nativeLatinName: r"Čeština", nativeNonLatinName: r""
   ces("ces", r"Czech", r"Čeština", r"Čeština", r""),
@@ -4386,8 +4410,8 @@ enum LanguageCodes {
   /// code: "ckb", englishName: "Sorani", nativeName: "کوردیی ناوەندی", nativeLatinName: r"", nativeNonLatinName: r""
   ckb("ckb", r"Sorani", r"کوردیی ناوەندی", r"", r""),
 
-  /// code: "cmc", englishName: "Chamic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cmc("cmc", r"Chamic", r"", r"", r""),
+  /// code: "cmc", englishName: "Chamic", nativeName: "Chamic", nativeLatinName: r"Chamic", nativeNonLatinName: r""
+  cmc("cmc", r"Chamic", r"Chamic", r"Chamic", r""),
 
   /// code: "cnr", englishName: "Montenegrin", nativeName: "Црногорски", nativeLatinName: r"Crnogorski", nativeNonLatinName: r"Црногорски"
   cnr("cnr", r"Montenegrin", r"Црногорски", r"Crnogorski", r"Црногорски"),
@@ -4401,14 +4425,32 @@ enum LanguageCodes {
   /// code: "cos", englishName: "Corsican", nativeName: "Corsu", nativeLatinName: r"Corsu", nativeNonLatinName: r""
   cos("cos", r"Corsican", r"Corsu", r"Corsu", r""),
 
-  /// code: "cpe", englishName: "Creoles and pidgins, English based", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cpe("cpe", r"Creoles and pidgins, English based", r"", r"", r""),
+  /// code: "cpe", englishName: "Creoles and pidgins, English based", nativeName: "Creoles and pidgins, English based", nativeLatinName: r"", nativeNonLatinName: r"Creoles and pidgins, English based"
+  cpe(
+    "cpe",
+    r"Creoles and pidgins, English based",
+    r"Creoles and pidgins, English based",
+    r"",
+    r"Creoles and pidgins, English based",
+  ),
 
-  /// code: "cpf", englishName: "Creoles and pidgins, French-based", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cpf("cpf", r"Creoles and pidgins, French-based", r"", r"", r""),
+  /// code: "cpf", englishName: "Creoles and pidgins, French-based", nativeName: "Creoles and pidgins, French-based", nativeLatinName: r"", nativeNonLatinName: r"Creoles and pidgins, French-based"
+  cpf(
+    "cpf",
+    r"Creoles and pidgins, French-based",
+    r"Creoles and pidgins, French-based",
+    r"",
+    r"Creoles and pidgins, French-based",
+  ),
 
-  /// code: "cpp", englishName: "Creoles and pidgins, Portuguese-based", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cpp("cpp", r"Creoles and pidgins, Portuguese-based", r"", r"", r""),
+  /// code: "cpp", englishName: "Creoles and pidgins, Portuguese-based", nativeName: "Creoles and pidgins, Portuguese-based", nativeLatinName: r"", nativeNonLatinName: r"Creoles and pidgins, Portuguese-based"
+  cpp(
+    "cpp",
+    r"Creoles and pidgins, Portuguese-based",
+    r"Creoles and pidgins, Portuguese-based",
+    r"",
+    r"Creoles and pidgins, Portuguese-based",
+  ),
 
   /// code: "cre", englishName: "Cree", nativeName: "ᓀᐦᐃᔭᐍᐏᐣ", nativeLatinName: r"", nativeNonLatinName: r"ᓀᐦᐃᔭᐍᐏᐣ"
   cre("cre", r"Cree", r"ᓀᐦᐃᔭᐍᐏᐣ", r"", r"ᓀᐦᐃᔭᐍᐏᐣ"),
@@ -4422,14 +4464,20 @@ enum LanguageCodes {
     r"Къырымтатарджа",
   ),
 
-  /// code: "crp", englishName: "Creoles and pidgins", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  crp("crp", r"Creoles and pidgins", r"", r"", r""),
+  /// code: "crp", englishName: "Creoles and pidgins", nativeName: "Creoles and pidgins", nativeLatinName: r"Creoles and pidgins", nativeNonLatinName: r""
+  crp(
+    "crp",
+    r"Creoles and pidgins",
+    r"Creoles and pidgins",
+    r"Creoles and pidgins",
+    r"",
+  ),
 
   /// code: "csb", englishName: "Kashubian", nativeName: "Kaszëbsczi jãzëk", nativeLatinName: r"Kaszëbsczi jãzëk", nativeNonLatinName: r""
   csb("csb", r"Kashubian", r"Kaszëbsczi jãzëk", r"Kaszëbsczi jãzëk", r""),
 
-  /// code: "cus", englishName: "Cushitic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  cus("cus", r"Cushitic", r"", r"", r""),
+  /// code: "cus", englishName: "Cushitic", nativeName: "Cushitic", nativeLatinName: r"Cushitic", nativeNonLatinName: r""
+  cus("cus", r"Cushitic", r"Cushitic", r"Cushitic", r""),
 
   /// code: "cym", englishName: "Welsh", nativeName: "Cymraeg", nativeLatinName: r"Cymraeg", nativeNonLatinName: r""
   cym("cym", r"Welsh", r"Cymraeg", r"Cymraeg", r""),
@@ -4446,8 +4494,8 @@ enum LanguageCodes {
   /// code: "dar", englishName: "Dargwa", nativeName: "Дарган мез", nativeLatinName: r"", nativeNonLatinName: r"Дарган мез"
   dar("dar", r"Dargwa", r"Дарган мез", r"", r"Дарган мез"),
 
-  /// code: "day", englishName: "Land Dayak", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  day("day", r"Land Dayak", r"", r"", r""),
+  /// code: "day", englishName: "Land Dayak", nativeName: "Land Dayak", nativeLatinName: r"Land Dayak", nativeNonLatinName: r""
+  day("day", r"Land Dayak", r"Land Dayak", r"Land Dayak", r""),
 
   /// code: "del", englishName: "Delaware", nativeName: "Lënapei èlixsuwakàn", nativeLatinName: r"Lënapei èlixsuwakàn", nativeNonLatinName: r""
   del("del", r"Delaware", r"Lënapei èlixsuwakàn", r"Lënapei èlixsuwakàn", r""),
@@ -4497,8 +4545,8 @@ enum LanguageCodes {
   /// code: "doi", englishName: "Dogri", nativeName: "𑠖𑠵𑠌𑠤𑠮", nativeLatinName: r"", nativeNonLatinName: r"𑠖𑠵𑠌𑠤𑠮"
   doi("doi", r"Dogri", r"𑠖𑠵𑠌𑠤𑠮", r"", r"𑠖𑠵𑠌𑠤𑠮"),
 
-  /// code: "dra", englishName: "Dravidian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  dra("dra", r"Dravidian", r"", r"", r""),
+  /// code: "dra", englishName: "Dravidian", nativeName: "Dravidian", nativeLatinName: r"Dravidian", nativeNonLatinName: r""
+  dra("dra", r"Dravidian", r"Dravidian", r"Dravidian", r""),
 
   /// code: "dsb", englishName: "Lower Sorbian", nativeName: "Dolnoserbski", nativeLatinName: r"Dolnoserbski", nativeNonLatinName: r""
   dsb("dsb", r"Lower Sorbian", r"Dolnoserbski", r"Dolnoserbski", r""),
@@ -4506,8 +4554,8 @@ enum LanguageCodes {
   /// code: "dua", englishName: "Duala", nativeName: "Duálá", nativeLatinName: r"Duálá", nativeNonLatinName: r""
   dua("dua", r"Duala", r"Duálá", r"Duálá", r""),
 
-  /// code: "dum", englishName: "Dutch", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  dum("dum", r"Dutch", r"", r"", r""),
+  /// code: "dum", englishName: "Dutch", nativeName: "Dutch", nativeLatinName: r"Dutch", nativeNonLatinName: r""
+  dum("dum", r"Dutch", r"Dutch", r"Dutch", r""),
 
   /// code: "dut", englishName: "Dutch", nativeName: "Nederlands", nativeLatinName: r"Nederlands", nativeNonLatinName: r""
   dut("dut", r"Dutch", r"Nederlands", r"Nederlands", r""),
@@ -4521,8 +4569,8 @@ enum LanguageCodes {
   /// code: "efi", englishName: "Efik", nativeName: "Usem Efịk", nativeLatinName: r"Usem Efịk", nativeNonLatinName: r""
   efi("efi", r"Efik", r"Usem Efịk", r"Usem Efịk", r""),
 
-  /// code: "egy", englishName: "Egyptian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  egy("egy", r"Egyptian", r"", r"", r""),
+  /// code: "egy", englishName: "Egyptian", nativeName: "Egyptian", nativeLatinName: r"Egyptian", nativeNonLatinName: r""
+  egy("egy", r"Egyptian", r"Egyptian", r"Egyptian", r""),
 
   /// code: "eka", englishName: "Ekajuk", nativeName: "Ekajuk", nativeLatinName: r"Ekajuk", nativeNonLatinName: r""
   eka("eka", r"Ekajuk", r"Ekajuk", r"Ekajuk", r""),
@@ -4539,8 +4587,8 @@ enum LanguageCodes {
     r"Νέα Ελληνικά",
   ),
 
-  /// code: "elx", englishName: "Elamite", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  elx("elx", r"Elamite", r"", r"", r""),
+  /// code: "elx", englishName: "Elamite", nativeName: "Elamite", nativeLatinName: r"Elamite", nativeNonLatinName: r""
+  elx("elx", r"Elamite", r"Elamite", r"Elamite", r""),
 
   /// code: "eng", englishName: "English", nativeName: "English", nativeLatinName: r"English", nativeNonLatinName: r""
   eng("eng", r"English", r"English", r"English", r""),
@@ -4563,8 +4611,8 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "enm", englishName: "English", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  enm("enm", r"English", r"", r"", r""),
+  /// code: "enm", englishName: "English", nativeName: "English", nativeLatinName: r"English", nativeNonLatinName: r""
+  enm("enm", r"English", r"English", r"English", r""),
 
   /// code: "epo", englishName: "Esperanto", nativeName: "Esperanto", nativeLatinName: r"Esperanto", nativeNonLatinName: r""
   epo("epo", r"Esperanto", r"Esperanto", r"Esperanto", r""),
@@ -4623,8 +4671,8 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "fiu", englishName: "Finno-Ugrian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  fiu("fiu", r"Finno-Ugrian", r"", r"", r""),
+  /// code: "fiu", englishName: "Finno-Ugrian", nativeName: "Finno-Ugrian", nativeLatinName: r"Finno-Ugrian", nativeNonLatinName: r""
+  fiu("fiu", r"Finno-Ugrian", r"Finno-Ugrian", r"Finno-Ugrian", r""),
 
   /// code: "fon", englishName: "Fon", nativeName: "Fon gbè", nativeLatinName: r"Fon gbè", nativeNonLatinName: r""
   fon("fon", r"Fon", r"Fon gbè", r"Fon gbè", r""),
@@ -4701,8 +4749,8 @@ enum LanguageCodes {
   /// code: "gba", englishName: "Gbaya", nativeName: "Gbaya", nativeLatinName: r"Gbaya", nativeNonLatinName: r""
   gba("gba", r"Gbaya", r"Gbaya", r"Gbaya", r""),
 
-  /// code: "gem", englishName: "Germanic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  gem("gem", r"Germanic", r"", r"", r""),
+  /// code: "gem", englishName: "Germanic", nativeName: "Germanic", nativeLatinName: r"Germanic", nativeNonLatinName: r""
+  gem("gem", r"Germanic", r"Germanic", r"Germanic", r""),
 
   /// code: "geo", englishName: "Georgian", nativeName: "ქართული", nativeLatinName: r"Kharthuli", nativeNonLatinName: r"ქართული"
   geo("geo", r"Georgian", r"ქართული", r"Kharthuli", r"ქართული"),
@@ -4788,8 +4836,8 @@ enum LanguageCodes {
   /// code: "hil", englishName: "Hiligaynon", nativeName: "Ilonggo", nativeLatinName: r"Ilonggo", nativeNonLatinName: r""
   hil("hil", r"Hiligaynon", r"Ilonggo", r"Ilonggo", r""),
 
-  /// code: "him", englishName: "Himachali", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  him("him", r"Himachali", r"", r"", r""),
+  /// code: "him", englishName: "Himachali", nativeName: "Himachali", nativeLatinName: r"Himachali", nativeNonLatinName: r""
+  him("him", r"Himachali", r"Himachali", r"Himachali", r""),
 
   /// code: "hin", englishName: "Hindi", nativeName: "हिन्दी", nativeLatinName: r"Hindī", nativeNonLatinName: r"हिन्दी"
   hin("hin", r"Hindi", r"हिन्दी", r"Hindī", r"हिन्दी"),
@@ -4845,8 +4893,8 @@ enum LanguageCodes {
   /// code: "ice", englishName: "Icelandic", nativeName: "Íslenska", nativeLatinName: r"Íslenska", nativeNonLatinName: r""
   ice("ice", r"Icelandic", r"Íslenska", r"Íslenska", r""),
 
-  /// code: "ido", englishName: "Ido", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ido("ido", r"Ido", r"", r"", r""),
+  /// code: "ido", englishName: "Ido", nativeName: "Ido", nativeLatinName: r"Ido", nativeNonLatinName: r""
+  ido("ido", r"Ido", r"Ido", r"Ido", r""),
 
   /// code: "iii", englishName: "Sichuan Yi", nativeName: "ꆈꌠꉙ", nativeLatinName: r"Nuosuhxop", nativeNonLatinName: r"ꆈꌠꉙ"
   iii("iii", r"Sichuan Yi", r"ꆈꌠꉙ", r"Nuosuhxop", r"ꆈꌠꉙ"),
@@ -4857,23 +4905,23 @@ enum LanguageCodes {
   /// code: "iku", englishName: "Inuktitut", nativeName: "ᐃᓄᒃᑎᑐᑦ", nativeLatinName: r"Inuktitut", nativeNonLatinName: r"ᐃᓄᒃᑎᑐᑦ"
   iku("iku", r"Inuktitut", r"ᐃᓄᒃᑎᑐᑦ", r"Inuktitut", r"ᐃᓄᒃᑎᑐᑦ"),
 
-  /// code: "ile", englishName: "Interlingue", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ile("ile", r"Interlingue", r"", r"", r""),
+  /// code: "ile", englishName: "Interlingue", nativeName: "Interlingue", nativeLatinName: r"Interlingue", nativeNonLatinName: r""
+  ile("ile", r"Interlingue", r"Interlingue", r"Interlingue", r""),
 
   /// code: "ilo", englishName: "Iloko", nativeName: "Pagsasao nga Ilokano", nativeLatinName: r"Pagsasao nga Ilokano", nativeNonLatinName: r""
   ilo("ilo", r"Iloko", r"Pagsasao nga Ilokano", r"Pagsasao nga Ilokano", r""),
 
-  /// code: "ina", englishName: "Interlingua", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ina("ina", r"Interlingua", r"", r"", r""),
+  /// code: "ina", englishName: "Interlingua", nativeName: "Interlingua", nativeLatinName: r"Interlingua", nativeNonLatinName: r""
+  ina("ina", r"Interlingua", r"Interlingua", r"Interlingua", r""),
 
-  /// code: "inc", englishName: "Indic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  inc("inc", r"Indic", r"", r"", r""),
+  /// code: "inc", englishName: "Indic", nativeName: "Indic", nativeLatinName: r"Indic", nativeNonLatinName: r""
+  inc("inc", r"Indic", r"Indic", r"Indic", r""),
 
   /// code: "ind", englishName: "Indonesian", nativeName: "bahasa Indonesia", nativeLatinName: r"bahasa Indonesia", nativeNonLatinName: r""
   ind("ind", r"Indonesian", r"bahasa Indonesia", r"bahasa Indonesia", r""),
 
-  /// code: "ine", englishName: "Indo-European", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ine("ine", r"Indo-European", r"", r"", r""),
+  /// code: "ine", englishName: "Indo-European", nativeName: "Indo-European", nativeLatinName: r"Indo-European", nativeNonLatinName: r""
+  ine("ine", r"Indo-European", r"Indo-European", r"Indo-European", r""),
 
   /// code: "inh", englishName: "Ingush", nativeName: "ГӀалгӀай мотт", nativeLatinName: r"", nativeNonLatinName: r"ГӀалгӀай мотт"
   inh("inh", r"Ingush", r"ГӀалгӀай мотт", r"", r"ГӀалгӀай мотт"),
@@ -4881,11 +4929,11 @@ enum LanguageCodes {
   /// code: "ipk", englishName: "Inupiaq", nativeName: "Iñupiaq", nativeLatinName: r"Iñupiaq", nativeNonLatinName: r""
   ipk("ipk", r"Inupiaq", r"Iñupiaq", r"Iñupiaq", r""),
 
-  /// code: "ira", englishName: "Iranian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ira("ira", r"Iranian", r"", r"", r""),
+  /// code: "ira", englishName: "Iranian", nativeName: "Iranian", nativeLatinName: r"Iranian", nativeNonLatinName: r""
+  ira("ira", r"Iranian", r"Iranian", r"Iranian", r""),
 
-  /// code: "iro", englishName: "Iroquoian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  iro("iro", r"Iroquoian", r"", r"", r""),
+  /// code: "iro", englishName: "Iroquoian", nativeName: "Iroquoian", nativeLatinName: r"Iroquoian", nativeNonLatinName: r""
+  iro("iro", r"Iroquoian", r"Iroquoian", r"Iroquoian", r""),
 
   /// code: "isl", englishName: "Icelandic", nativeName: "Íslenska", nativeLatinName: r"Íslenska", nativeNonLatinName: r""
   isl("isl", r"Icelandic", r"Íslenska", r"Íslenska", r""),
@@ -4947,8 +4995,8 @@ enum LanguageCodes {
   /// code: "kan", englishName: "Kannada", nativeName: "ಕನ್ನಡ", nativeLatinName: r"Kannađa", nativeNonLatinName: r"ಕನ್ನಡ"
   kan("kan", r"Kannada", r"ಕನ್ನಡ", r"Kannađa", r"ಕನ್ನಡ"),
 
-  /// code: "kar", englishName: "Karen", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  kar("kar", r"Karen", r"", r"", r""),
+  /// code: "kar", englishName: "Karen", nativeName: "Karen", nativeLatinName: r"Karen", nativeNonLatinName: r""
+  kar("kar", r"Karen", r"Karen", r"Karen", r""),
 
   /// code: "kas", englishName: "Kashmiri", nativeName: "कॉशुर", nativeLatinName: r"", nativeNonLatinName: r"कॉशुर"
   kas("kas", r"Kashmiri", r"कॉशुर", r"", r"कॉशुर"),
@@ -4992,14 +5040,14 @@ enum LanguageCodes {
     r"কা কতিয়েন খাশি",
   ),
 
-  /// code: "khi", englishName: "Khoisan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  khi("khi", r"Khoisan", r"", r"", r""),
+  /// code: "khi", englishName: "Khoisan", nativeName: "Khoisan", nativeLatinName: r"Khoisan", nativeNonLatinName: r""
+  khi("khi", r"Khoisan", r"Khoisan", r"Khoisan", r""),
 
   /// code: "khm", englishName: "Central Khmer", nativeName: "ភាសាខ្មែរ", nativeLatinName: r"Phiəsaakhmær", nativeNonLatinName: r"ភាសាខ្មែរ"
   khm("khm", r"Central Khmer", r"ភាសាខ្មែរ", r"Phiəsaakhmær", r"ភាសាខ្មែរ"),
 
-  /// code: "kho", englishName: "Khotanese", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  kho("kho", r"Khotanese", r"", r"", r""),
+  /// code: "kho", englishName: "Khotanese", nativeName: "Khotanese", nativeLatinName: r"Khotanese", nativeNonLatinName: r""
+  kho("kho", r"Khotanese", r"Khotanese", r"Khotanese", r""),
 
   /// code: "kik", englishName: "Kikuyu", nativeName: "Gĩkũyũ", nativeLatinName: r"Gĩkũyũ", nativeNonLatinName: r""
   kik("kik", r"Kikuyu", r"Gĩkũyũ", r"Gĩkũyũ", r""),
@@ -5049,8 +5097,8 @@ enum LanguageCodes {
   /// code: "krl", englishName: "Karelian", nativeName: "Kard'al", nativeLatinName: r"Kard'al", nativeNonLatinName: r""
   krl("krl", r"Karelian", r"Kard'al", r"Kard'al", r""),
 
-  /// code: "kro", englishName: "Kru", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  kro("kro", r"Kru", r"", r"", r""),
+  /// code: "kro", englishName: "Kru", nativeName: "Kru", nativeLatinName: r"Kru", nativeNonLatinName: r""
+  kro("kro", r"Kru", r"Kru", r"Kru", r""),
 
   /// code: "kru", englishName: "Kurukh", nativeName: "कुड़ुख़", nativeLatinName: r"", nativeNonLatinName: r"कुड़ुख़"
   kru("kru", r"Kurukh", r"कुड़ुख़", r"", r"कुड़ुख़"),
@@ -5178,8 +5226,8 @@ enum LanguageCodes {
   /// code: "mao", englishName: "Maori", nativeName: "Te Reo Māori", nativeLatinName: r"Te Reo Māori", nativeNonLatinName: r""
   mao("mao", r"Maori", r"Te Reo Māori", r"Te Reo Māori", r""),
 
-  /// code: "map", englishName: "Austronesian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  map("map", r"Austronesian", r"", r"", r""),
+  /// code: "map", englishName: "Austronesian", nativeName: "Austronesian", nativeLatinName: r"Austronesian", nativeNonLatinName: r""
+  map("map", r"Austronesian", r"Austronesian", r"Austronesian", r""),
 
   /// code: "mar", englishName: "Marathi", nativeName: "मराठी", nativeLatinName: r"Marāţhī", nativeNonLatinName: r"मराठी"
   mar("mar", r"Marathi", r"मराठी", r"Marāţhī", r"मराठी"),
@@ -5208,8 +5256,8 @@ enum LanguageCodes {
   /// code: "min", englishName: "Minangkabau", nativeName: "Baso Minang", nativeLatinName: r"Baso Minang", nativeNonLatinName: r""
   min("min", r"Minangkabau", r"Baso Minang", r"Baso Minang", r""),
 
-  /// code: "mis", englishName: "Uncoded", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  mis("mis", r"Uncoded", r"", r"", r""),
+  /// code: "mis", englishName: "Uncoded", nativeName: "Uncoded", nativeLatinName: r"Uncoded", nativeNonLatinName: r""
+  mis("mis", r"Uncoded", r"Uncoded", r"Uncoded", r""),
 
   /// code: "mkd", englishName: "Macedonian", nativeName: "Македонски јазик", nativeLatinName: r"Makedonski jazik", nativeNonLatinName: r"Македонски јазик"
   mkd(
@@ -5220,8 +5268,8 @@ enum LanguageCodes {
     r"Македонски јазик",
   ),
 
-  /// code: "mkh", englishName: "Mon-Khmer", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  mkh("mkh", r"Mon-Khmer", r"", r"", r""),
+  /// code: "mkh", englishName: "Mon-Khmer", nativeName: "Mon-Khmer", nativeLatinName: r"Mon-Khmer", nativeNonLatinName: r""
+  mkh("mkh", r"Mon-Khmer", r"Mon-Khmer", r"Mon-Khmer", r""),
 
   /// code: "mlg", englishName: "Malagasy", nativeName: "مَلَغَسِ", nativeLatinName: r"", nativeNonLatinName: r"مَلَغَسِ"
   mlg("mlg", r"Malagasy", r"مَلَغَسِ", r"", r"مَلَغَسِ"),
@@ -5235,8 +5283,8 @@ enum LanguageCodes {
   /// code: "mni", englishName: "Manipuri", nativeName: "মৈতৈলোন", nativeLatinName: r"Meiteilon", nativeNonLatinName: r"মৈতৈলোন"
   mni("mni", r"Manipuri", r"মৈতৈলোন", r"Meiteilon", r"মৈতৈলোন"),
 
-  /// code: "mno", englishName: "Manobo", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  mno("mno", r"Manobo", r"", r"", r""),
+  /// code: "mno", englishName: "Manobo", nativeName: "Manobo", nativeLatinName: r"Manobo", nativeNonLatinName: r""
+  mno("mno", r"Manobo", r"Manobo", r"Manobo", r""),
 
   /// code: "moh", englishName: "Mohawk", nativeName: "Kanien’kéha", nativeLatinName: r"", nativeNonLatinName: r"Kanien’kéha"
   moh("moh", r"Mohawk", r"Kanien’kéha", r"", r"Kanien’kéha"),
@@ -5253,11 +5301,11 @@ enum LanguageCodes {
   /// code: "msa", englishName: "Malay", nativeName: "Bahasa Melayu", nativeLatinName: r"Bahasa Melayu", nativeNonLatinName: r""
   msa("msa", r"Malay", r"Bahasa Melayu", r"Bahasa Melayu", r""),
 
-  /// code: "mul", englishName: "Multiple", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  mul("mul", r"Multiple", r"", r"", r""),
+  /// code: "mul", englishName: "Multiple", nativeName: "Multiple", nativeLatinName: r"Multiple", nativeNonLatinName: r""
+  mul("mul", r"Multiple", r"Multiple", r"Multiple", r""),
 
-  /// code: "mun", englishName: "Munda", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  mun("mun", r"Munda", r"", r"", r""),
+  /// code: "mun", englishName: "Munda", nativeName: "Munda", nativeLatinName: r"Munda", nativeNonLatinName: r""
+  mun("mun", r"Munda", r"Munda", r"Munda", r""),
 
   /// code: "mus", englishName: "Creek", nativeName: "Mvskoke", nativeLatinName: r"Mvskoke", nativeNonLatinName: r""
   mus("mus", r"Creek", r"Mvskoke", r"Mvskoke", r""),
@@ -5271,17 +5319,23 @@ enum LanguageCodes {
   /// code: "mya", englishName: "Burmese", nativeName: "မြန်မာစာ", nativeLatinName: r"Mrãmācā", nativeNonLatinName: r"မြန်မာစာ"
   mya("mya", r"Burmese", r"မြန်မာစာ", r"Mrãmācā", r"မြန်မာစာ"),
 
-  /// code: "myn", englishName: "Mayan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  myn("myn", r"Mayan", r"", r"", r""),
+  /// code: "myn", englishName: "Mayan", nativeName: "Mayan", nativeLatinName: r"Mayan", nativeNonLatinName: r""
+  myn("myn", r"Mayan", r"Mayan", r"Mayan", r""),
 
   /// code: "myv", englishName: "Erzya", nativeName: "Ерзянь кель", nativeLatinName: r"", nativeNonLatinName: r"Ерзянь кель"
   myv("myv", r"Erzya", r"Ерзянь кель", r"", r"Ерзянь кель"),
 
-  /// code: "nah", englishName: "Nahuatl", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  nah("nah", r"Nahuatl", r"", r"", r""),
+  /// code: "nah", englishName: "Nahuatl", nativeName: "Nahuatl", nativeLatinName: r"Nahuatl", nativeNonLatinName: r""
+  nah("nah", r"Nahuatl", r"Nahuatl", r"Nahuatl", r""),
 
-  /// code: "nai", englishName: "North American Indian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  nai("nai", r"North American Indian", r"", r"", r""),
+  /// code: "nai", englishName: "North American Indian", nativeName: "North American Indian", nativeLatinName: r"North American Indian", nativeNonLatinName: r""
+  nai(
+    "nai",
+    r"North American Indian",
+    r"North American Indian",
+    r"North American Indian",
+    r"",
+  ),
 
   /// code: "nap", englishName: "Neapolitan", nativeName: "Napulitano", nativeLatinName: r"Napulitano", nativeNonLatinName: r""
   nap("nap", r"Neapolitan", r"Napulitano", r"Napulitano", r""),
@@ -5325,8 +5379,14 @@ enum LanguageCodes {
   /// code: "nia", englishName: "Nias", nativeName: "Li Niha", nativeLatinName: r"Li Niha", nativeNonLatinName: r""
   nia("nia", r"Nias", r"Li Niha", r"Li Niha", r""),
 
-  /// code: "nic", englishName: "Niger-Kordofanian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  nic("nic", r"Niger-Kordofanian", r"", r"", r""),
+  /// code: "nic", englishName: "Niger-Kordofanian", nativeName: "Niger-Kordofanian", nativeLatinName: r"Niger-Kordofanian", nativeNonLatinName: r""
+  nic(
+    "nic",
+    r"Niger-Kordofanian",
+    r"Niger-Kordofanian",
+    r"Niger-Kordofanian",
+    r"",
+  ),
 
   /// code: "niu", englishName: "Niuean", nativeName: "ko e vagahau Niuē", nativeLatinName: r"ko e vagahau Niuē", nativeNonLatinName: r""
   niu("niu", r"Niuean", r"ko e vagahau Niuē", r"ko e vagahau Niuē", r""),
@@ -5427,11 +5487,11 @@ enum LanguageCodes {
     r"لسان عثمانى",
   ),
 
-  /// code: "oto", englishName: "Otomian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  oto("oto", r"Otomian", r"", r"", r""),
+  /// code: "oto", englishName: "Otomian", nativeName: "Otomian", nativeLatinName: r"Otomian", nativeNonLatinName: r""
+  oto("oto", r"Otomian", r"Otomian", r"Otomian", r""),
 
-  /// code: "paa", englishName: "Papuan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  paa("paa", r"Papuan", r"", r"", r""),
+  /// code: "paa", englishName: "Papuan", nativeName: "Papuan", nativeLatinName: r"Papuan", nativeNonLatinName: r""
+  paa("paa", r"Papuan", r"Papuan", r"Papuan", r""),
 
   /// code: "pag", englishName: "Pangasinan", nativeName: "Salitan Pangasinan", nativeLatinName: r"Salitan Pangasinan", nativeNonLatinName: r""
   pag("pag", r"Pangasinan", r"Salitan Pangasinan", r"Salitan Pangasinan", r""),
@@ -5451,14 +5511,14 @@ enum LanguageCodes {
   /// code: "pau", englishName: "Palauan", nativeName: "a tekoi er a Belau", nativeLatinName: r"a tekoi er a Belau", nativeNonLatinName: r""
   pau("pau", r"Palauan", r"a tekoi er a Belau", r"a tekoi er a Belau", r""),
 
-  /// code: "peo", englishName: "Persian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  peo("peo", r"Persian", r"", r"", r""),
+  /// code: "peo", englishName: "Persian", nativeName: "Persian", nativeLatinName: r"Persian", nativeNonLatinName: r""
+  peo("peo", r"Persian", r"Persian", r"Persian", r""),
 
   /// code: "per", englishName: "Persian", nativeName: "فارسی", nativeLatinName: r"Fārsī", nativeNonLatinName: r"فارسی"
   per("per", r"Persian", r"فارسی", r"Fārsī", r"فارسی"),
 
-  /// code: "phi", englishName: "Philippine", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  phi("phi", r"Philippine", r"", r"", r""),
+  /// code: "phi", englishName: "Philippine", nativeName: "Philippine", nativeLatinName: r"Philippine", nativeNonLatinName: r""
+  phi("phi", r"Philippine", r"Philippine", r"Philippine", r""),
 
   /// code: "phn", englishName: "Phoenician", nativeName: "𐤃𐤁𐤓𐤉𐤌 𐤊𐤍𐤏𐤍𐤉𐤌", nativeLatinName: r"Dabariym Kana'aniym", nativeNonLatinName: r"𐤃𐤁𐤓𐤉𐤌 𐤊𐤍𐤏𐤍𐤉𐤌"
   phn(
@@ -5499,11 +5559,11 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "pra", englishName: "Prakrit", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  pra("pra", r"Prakrit", r"", r"", r""),
+  /// code: "pra", englishName: "Prakrit", nativeName: "Prakrit", nativeLatinName: r"Prakrit", nativeNonLatinName: r""
+  pra("pra", r"Prakrit", r"Prakrit", r"Prakrit", r""),
 
-  /// code: "pro", englishName: "Provençal", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  pro("pro", r"Provençal", r"", r"", r""),
+  /// code: "pro", englishName: "Provençal", nativeName: "Provençal", nativeLatinName: r"Provençal", nativeNonLatinName: r""
+  pro("pro", r"Provençal", r"Provençal", r"Provençal", r""),
 
   /// code: "prs", englishName: "Dari", nativeName: "دری", nativeLatinName: r"", nativeNonLatinName: r""
   prs("prs", r"Dari", r"دری", r"", r""),
@@ -5511,8 +5571,14 @@ enum LanguageCodes {
   /// code: "pus", englishName: "Pushto", nativeName: "پښتو", nativeLatinName: r"", nativeNonLatinName: r"پښتو"
   pus("pus", r"Pushto", r"پښتو", r"", r"پښتو"),
 
-  /// code: "qaa-qtz", englishName: "Reserved for local use", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  qaa_qtz("qaa-qtz", r"Reserved for local use", r"", r"", r""),
+  /// code: "qaa-qtz", englishName: "Reserved for local use", nativeName: "Reserved for local use", nativeLatinName: r"Reserved for local use", nativeNonLatinName: r""
+  qaa_qtz(
+    "qaa-qtz",
+    r"Reserved for local use",
+    r"Reserved for local use",
+    r"Reserved for local use",
+    r"",
+  ),
 
   /// code: "que", englishName: "Quechua", nativeName: "Runa simi", nativeLatinName: r"Runa simi", nativeNonLatinName: r""
   que("que", r"Quechua", r"Runa simi", r"Runa simi", r""),
@@ -5526,8 +5592,8 @@ enum LanguageCodes {
   /// code: "rar", englishName: "Rarotongan", nativeName: "Māori Kūki 'Āirani", nativeLatinName: r"Māori Kūki 'Āirani", nativeNonLatinName: r""
   rar("rar", r"Rarotongan", r"Māori Kūki 'Āirani", r"Māori Kūki 'Āirani", r""),
 
-  /// code: "roa", englishName: "Romance", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  roa("roa", r"Romance", r"", r"", r""),
+  /// code: "roa", englishName: "Romance", nativeName: "Romance", nativeLatinName: r"Romance", nativeNonLatinName: r""
+  roa("roa", r"Romance", r"Romance", r"Romance", r""),
 
   /// code: "roh", englishName: "Romansh", nativeName: "Rumantsch", nativeLatinName: r"Rumantsch", nativeNonLatinName: r""
   roh("roh", r"Romansh", r"Rumantsch", r"Rumantsch", r""),
@@ -5577,11 +5643,17 @@ enum LanguageCodes {
   /// code: "sah", englishName: "Yakut", nativeName: "Сахалыы", nativeLatinName: r"", nativeNonLatinName: r"Сахалыы"
   sah("sah", r"Yakut", r"Сахалыы", r"", r"Сахалыы"),
 
-  /// code: "sai", englishName: "South American Indian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sai("sai", r"South American Indian", r"", r"", r""),
+  /// code: "sai", englishName: "South American Indian", nativeName: "South American Indian", nativeLatinName: r"South American Indian", nativeNonLatinName: r""
+  sai(
+    "sai",
+    r"South American Indian",
+    r"South American Indian",
+    r"South American Indian",
+    r"",
+  ),
 
-  /// code: "sal", englishName: "Salishan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sal("sal", r"Salishan", r"", r"", r""),
+  /// code: "sal", englishName: "Salishan", nativeName: "Salishan", nativeLatinName: r"Salishan", nativeNonLatinName: r""
+  sal("sal", r"Salishan", r"Salishan", r"Salishan", r""),
 
   /// code: "sam", englishName: "Samaritan Aramaic", nativeName: "ארמית", nativeLatinName: r"", nativeNonLatinName: r"ארמית"
   sam("sam", r"Samaritan Aramaic", r"ארמית", r"", r"ארמית"),
@@ -5607,14 +5679,14 @@ enum LanguageCodes {
   /// code: "sel", englishName: "Selkup", nativeName: "Чу́мэл шэ", nativeLatinName: r"", nativeNonLatinName: r"Чу́мэл шэ"
   sel("sel", r"Selkup", r"Чу́мэл шэ", r"", r"Чу́мэл шэ"),
 
-  /// code: "sem", englishName: "Semitic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sem("sem", r"Semitic", r"", r"", r""),
+  /// code: "sem", englishName: "Semitic", nativeName: "Semitic", nativeLatinName: r"Semitic", nativeNonLatinName: r""
+  sem("sem", r"Semitic", r"Semitic", r"Semitic", r""),
 
   /// code: "sga", englishName: "Irish", nativeName: "Goídelc", nativeLatinName: r"Goídelc", nativeNonLatinName: r""
   sga("sga", r"Irish", r"Goídelc", r"Goídelc", r""),
 
-  /// code: "sgn", englishName: "Sign", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sgn("sgn", r"Sign", r"", r"", r""),
+  /// code: "sgn", englishName: "Sign", nativeName: "Sign", nativeLatinName: r"Sign", nativeNonLatinName: r""
+  sgn("sgn", r"Sign", r"Sign", r"Sign", r""),
 
   /// code: "shn", englishName: "Shan", nativeName: "ၵႂၢမ်းတႆးယႂ်", nativeLatinName: r"Kwam Tai Yai", nativeNonLatinName: r"ၵႂၢမ်းတႆးယႂ်"
   shn("shn", r"Shan", r"ၵႂၢမ်းတႆးယႂ်", r"Kwam Tai Yai", r"ၵႂၢမ်းတႆးယႂ်"),
@@ -5625,14 +5697,14 @@ enum LanguageCodes {
   /// code: "sin", englishName: "Sinhala", nativeName: "සිංහල", nativeLatinName: r"Sĩhala", nativeNonLatinName: r"සිංහල"
   sin("sin", r"Sinhala", r"සිංහල", r"Sĩhala", r"සිංහල"),
 
-  /// code: "sio", englishName: "Siouan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sio("sio", r"Siouan", r"", r"", r""),
+  /// code: "sio", englishName: "Siouan", nativeName: "Siouan", nativeLatinName: r"Siouan", nativeNonLatinName: r""
+  sio("sio", r"Siouan", r"Siouan", r"Siouan", r""),
 
-  /// code: "sit", englishName: "Sino-Tibetan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sit("sit", r"Sino-Tibetan", r"", r"", r""),
+  /// code: "sit", englishName: "Sino-Tibetan", nativeName: "Sino-Tibetan", nativeLatinName: r"Sino-Tibetan", nativeNonLatinName: r""
+  sit("sit", r"Sino-Tibetan", r"Sino-Tibetan", r"Sino-Tibetan", r""),
 
-  /// code: "sla", englishName: "Slavic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sla("sla", r"Slavic", r"", r"", r""),
+  /// code: "sla", englishName: "Slavic", nativeName: "Slavic", nativeLatinName: r"Slavic", nativeNonLatinName: r""
+  sla("sla", r"Slavic", r"Slavic", r"Slavic", r""),
 
   /// code: "slk", englishName: "Slovak", nativeName: "Slovenčina", nativeLatinName: r"Slovenčina", nativeNonLatinName: r""
   slk("slk", r"Slovak", r"Slovenčina", r"Slovenčina", r""),
@@ -5655,8 +5727,8 @@ enum LanguageCodes {
   /// code: "sme", englishName: "Northern Sami", nativeName: "Davvisámegiella", nativeLatinName: r"Davvisámegiella", nativeNonLatinName: r""
   sme("sme", r"Northern Sami", r"Davvisámegiella", r"Davvisámegiella", r""),
 
-  /// code: "smi", englishName: "Sami", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  smi("smi", r"Sami", r"", r"", r""),
+  /// code: "smi", englishName: "Sami", nativeName: "Sami", nativeLatinName: r"Sami", nativeNonLatinName: r""
+  smi("smi", r"Sami", r"Sami", r"Sami", r""),
 
   /// code: "smj", englishName: "Lule Sami", nativeName: "Julevsámegiella", nativeLatinName: r"Julevsámegiella", nativeNonLatinName: r""
   smj("smj", r"Lule Sami", r"Julevsámegiella", r"Julevsámegiella", r""),
@@ -5679,14 +5751,14 @@ enum LanguageCodes {
   /// code: "snk", englishName: "Soninke", nativeName: "Sooninkanxanne", nativeLatinName: r"Sooninkanxanne", nativeNonLatinName: r""
   snk("snk", r"Soninke", r"Sooninkanxanne", r"Sooninkanxanne", r""),
 
-  /// code: "sog", englishName: "Sogdian", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  sog("sog", r"Sogdian", r"", r"", r""),
+  /// code: "sog", englishName: "Sogdian", nativeName: "Sogdian", nativeLatinName: r"Sogdian", nativeNonLatinName: r""
+  sog("sog", r"Sogdian", r"Sogdian", r"Sogdian", r""),
 
   /// code: "som", englishName: "Somali", nativeName: "af Soomaali", nativeLatinName: r"af Soomaali", nativeNonLatinName: r""
   som("som", r"Somali", r"af Soomaali", r"af Soomaali", r""),
 
-  /// code: "son", englishName: "Songhai", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  son("son", r"Songhai", r"", r"", r""),
+  /// code: "son", englishName: "Songhai", nativeName: "Songhai", nativeLatinName: r"Songhai", nativeNonLatinName: r""
+  son("son", r"Songhai", r"Songhai", r"Songhai", r""),
 
   /// code: "sot", englishName: "Sotho, Southern", nativeName: "Sesotho", nativeLatinName: r"Sesotho", nativeNonLatinName: r""
   sot("sot", r"Sotho, Southern", r"Sesotho", r"Sesotho", r""),
@@ -5715,8 +5787,8 @@ enum LanguageCodes {
   /// code: "srr", englishName: "Serer", nativeName: "Seereer", nativeLatinName: r"Seereer", nativeNonLatinName: r""
   srr("srr", r"Serer", r"Seereer", r"Seereer", r""),
 
-  /// code: "ssa", englishName: "Nilo-Saharan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ssa("ssa", r"Nilo-Saharan", r"", r"", r""),
+  /// code: "ssa", englishName: "Nilo-Saharan", nativeName: "Nilo-Saharan", nativeLatinName: r"Nilo-Saharan", nativeNonLatinName: r""
+  ssa("ssa", r"Nilo-Saharan", r"Nilo-Saharan", r"Nilo-Saharan", r""),
 
   /// code: "ssw", englishName: "Swati", nativeName: "siSwati", nativeLatinName: r"siSwati", nativeNonLatinName: r""
   ssw("ssw", r"Swati", r"siSwati", r"siSwati", r""),
@@ -5739,8 +5811,14 @@ enum LanguageCodes {
   /// code: "swe", englishName: "Swedish", nativeName: "Svenska", nativeLatinName: r"Svenska", nativeNonLatinName: r""
   swe("swe", r"Swedish", r"Svenska", r"Svenska", r""),
 
-  /// code: "syc", englishName: "Classical Syriac", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  syc("syc", r"Classical Syriac", r"", r"", r""),
+  /// code: "syc", englishName: "Classical Syriac", nativeName: "Classical Syriac", nativeLatinName: r"Classical Syriac", nativeNonLatinName: r""
+  syc(
+    "syc",
+    r"Classical Syriac",
+    r"Classical Syriac",
+    r"Classical Syriac",
+    r"",
+  ),
 
   /// code: "syr", englishName: "Syriac", nativeName: "ܠܫܢܐ ܣܘܪܝܝܐ", nativeLatinName: r"Lešānā Suryāyā", nativeNonLatinName: r"ܠܫܢܐ ܣܘܪܝܝܐ"
   syr("syr", r"Syriac", r"ܠܫܢܐ ܣܘܪܝܝܐ", r"Lešānā Suryāyā", r"ܠܫܢܐ ܣܘܪܝܝܐ"),
@@ -5802,14 +5880,14 @@ enum LanguageCodes {
   /// code: "tkl", englishName: "Tokelau", nativeName: "gagana Tokelau", nativeLatinName: r"gagana Tokelau", nativeNonLatinName: r""
   tkl("tkl", r"Tokelau", r"gagana Tokelau", r"gagana Tokelau", r""),
 
-  /// code: "tlh", englishName: "Klingon", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  tlh("tlh", r"Klingon", r"", r"", r""),
+  /// code: "tlh", englishName: "Klingon", nativeName: "Klingon", nativeLatinName: r"Klingon", nativeNonLatinName: r""
+  tlh("tlh", r"Klingon", r"Klingon", r"Klingon", r""),
 
   /// code: "tli", englishName: "Tlingit", nativeName: "Lingít", nativeLatinName: r"Lingít", nativeNonLatinName: r""
   tli("tli", r"Tlingit", r"Lingít", r"Lingít", r""),
 
-  /// code: "tmh", englishName: "Tamashek", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  tmh("tmh", r"Tamashek", r"", r"", r""),
+  /// code: "tmh", englishName: "Tamashek", nativeName: "Tamashek", nativeLatinName: r"Tamashek", nativeNonLatinName: r""
+  tmh("tmh", r"Tamashek", r"Tamashek", r"Tamashek", r""),
 
   /// code: "tog", englishName: "Tonga (Nyasa)", nativeName: "chiTonga", nativeLatinName: r"chiTonga", nativeNonLatinName: r""
   tog("tog", r"Tonga (Nyasa)", r"chiTonga", r"chiTonga", r""),
@@ -5841,8 +5919,8 @@ enum LanguageCodes {
   /// code: "tum", englishName: "Tumbuka", nativeName: "chiTumbuka", nativeLatinName: r"chiTumbuka", nativeNonLatinName: r""
   tum("tum", r"Tumbuka", r"chiTumbuka", r"chiTumbuka", r""),
 
-  /// code: "tup", englishName: "Tupi", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  tup("tup", r"Tupi", r"", r"", r""),
+  /// code: "tup", englishName: "Tupi", nativeName: "Tupi", nativeLatinName: r"Tupi", nativeNonLatinName: r""
+  tup("tup", r"Tupi", r"Tupi", r"Tupi", r""),
 
   /// code: "tur", englishName: "Turkish", nativeName: "Türkçe", nativeLatinName: r"Türkçe", nativeNonLatinName: r""
   tur("tur", r"Turkish", r"Türkçe", r"Türkçe", r""),
@@ -5850,8 +5928,8 @@ enum LanguageCodes {
   /// code: "tur_TR", englishName: "Turkish (Turkey)", nativeName: "Türkçe (Türkiye)", nativeLatinName: r"Türkçe", nativeNonLatinName: r""
   tur_TR("tur_TR", r"Turkish (Turkey)", r"Türkçe (Türkiye)", r"Türkçe", r""),
 
-  /// code: "tut", englishName: "Altaic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  tut("tut", r"Altaic", r"", r"", r""),
+  /// code: "tut", englishName: "Altaic", nativeName: "Altaic", nativeLatinName: r"Altaic", nativeNonLatinName: r""
+  tut("tut", r"Altaic", r"Altaic", r"Altaic", r""),
 
   /// code: "tvl", englishName: "Tuvalu", nativeName: "Te Ggana Tuuvalu", nativeLatinName: r"Te Ggana Tuuvalu", nativeNonLatinName: r""
   tvl("tvl", r"Tuvalu", r"Te Ggana Tuuvalu", r"Te Ggana Tuuvalu", r""),
@@ -5865,8 +5943,8 @@ enum LanguageCodes {
   /// code: "udm", englishName: "Udmurt", nativeName: "Удмурт кыл", nativeLatinName: r"", nativeNonLatinName: r"Удмурт кыл"
   udm("udm", r"Udmurt", r"Удмурт кыл", r"", r"Удмурт кыл"),
 
-  /// code: "uga", englishName: "Ugaritic", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  uga("uga", r"Ugaritic", r"", r"", r""),
+  /// code: "uga", englishName: "Ugaritic", nativeName: "Ugaritic", nativeLatinName: r"Ugaritic", nativeNonLatinName: r""
+  uga("uga", r"Ugaritic", r"Ugaritic", r"Ugaritic", r""),
 
   /// code: "uig", englishName: "Uighur", nativeName: "ئۇيغۇر تىلى", nativeLatinName: r"Uyghur tili", nativeNonLatinName: r"ئۇيغۇر تىلى"
   uig("uig", r"Uighur", r"ئۇيغۇر تىلى", r"Uyghur tili", r"ئۇيغۇر تىلى"),
@@ -5877,8 +5955,8 @@ enum LanguageCodes {
   /// code: "umb", englishName: "Umbundu", nativeName: "Úmbúndú", nativeLatinName: r"Úmbúndú", nativeNonLatinName: r""
   umb("umb", r"Umbundu", r"Úmbúndú", r"Úmbúndú", r""),
 
-  /// code: "und", englishName: "Undetermined", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  und("und", r"Undetermined", r"", r"", r""),
+  /// code: "und", englishName: "Undetermined", nativeName: "Undetermined", nativeLatinName: r"Undetermined", nativeNonLatinName: r""
+  und("und", r"Undetermined", r"Undetermined", r"Undetermined", r""),
 
   /// code: "urd", englishName: "Urdu", nativeName: "اُردُو Urduw", nativeLatinName: r"", nativeNonLatinName: r"اُردُو Urduw"
   urd("urd", r"Urdu", r"اُردُو Urduw", r"", r"اُردُو Urduw"),
@@ -5916,14 +5994,14 @@ enum LanguageCodes {
     r"",
   ),
 
-  /// code: "vol", englishName: "Volapük", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  vol("vol", r"Volapük", r"", r"", r""),
+  /// code: "vol", englishName: "Volapük", nativeName: "Volapük", nativeLatinName: r"Volapük", nativeNonLatinName: r""
+  vol("vol", r"Volapük", r"Volapük", r"Volapük", r""),
 
   /// code: "vot", englishName: "Votic", nativeName: "Vaďďa tšeeli", nativeLatinName: r"Vaďďa tšeeli", nativeNonLatinName: r""
   vot("vot", r"Votic", r"Vaďďa tšeeli", r"Vaďďa tšeeli", r""),
 
-  /// code: "wak", englishName: "Wakashan", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  wak("wak", r"Wakashan", r"", r"", r""),
+  /// code: "wak", englishName: "Wakashan", nativeName: "Wakashan", nativeLatinName: r"Wakashan", nativeNonLatinName: r""
+  wak("wak", r"Wakashan", r"Wakashan", r"Wakashan", r""),
 
   /// code: "wal", englishName: "Wolaitta", nativeName: "Wolayttatto Doonaa", nativeLatinName: r"Wolayttatto Doonaa", nativeNonLatinName: r""
   wal("wal", r"Wolaitta", r"Wolayttatto Doonaa", r"Wolayttatto Doonaa", r""),
@@ -5964,8 +6042,8 @@ enum LanguageCodes {
   /// code: "yor", englishName: "Yoruba", nativeName: "èdè Yorùbá", nativeLatinName: r"èdè Yorùbá", nativeNonLatinName: r""
   yor("yor", r"Yoruba", r"èdè Yorùbá", r"èdè Yorùbá", r""),
 
-  /// code: "ypk", englishName: "Yupik", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  ypk("ypk", r"Yupik", r"", r"", r""),
+  /// code: "ypk", englishName: "Yupik", nativeName: "Yupik", nativeLatinName: r"Yupik", nativeNonLatinName: r""
+  ypk("ypk", r"Yupik", r"Yupik", r"Yupik", r""),
 
   /// code: "yue", englishName: "Cantonese", nativeName: "粤语", nativeLatinName: r"", nativeNonLatinName: r""
   yue("yue", r"Cantonese", r"粤语", r"", r""),
@@ -5976,8 +6054,8 @@ enum LanguageCodes {
   /// code: "zap", englishName: "Zapotec", nativeName: "Diidxazá", nativeLatinName: r"Diidxazá", nativeNonLatinName: r""
   zap("zap", r"Zapotec", r"Diidxazá", r"Diidxazá", r""),
 
-  /// code: "zbl", englishName: "Blissymbols", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  zbl("zbl", r"Blissymbols", r"", r"", r""),
+  /// code: "zbl", englishName: "Blissymbols", nativeName: "Blissymbols", nativeLatinName: r"Blissymbols", nativeNonLatinName: r""
+  zbl("zbl", r"Blissymbols", r"Blissymbols", r"Blissymbols", r""),
 
   /// code: "zen", englishName: "Zenaga", nativeName: "Tuẓẓungiyya", nativeLatinName: r"Tuẓẓungiyya", nativeNonLatinName: r""
   zen("zen", r"Zenaga", r"Tuẓẓungiyya", r"Tuẓẓungiyya", r""),
@@ -6006,8 +6084,8 @@ enum LanguageCodes {
   /// code: "zho_TW", englishName: "Chinese (Taiwan)", nativeName: "中文(台灣)", nativeLatinName: r"Zhōngwén", nativeNonLatinName: r"中文"
   zho_TW("zho_TW", r"Chinese (Taiwan)", r"中文(台灣)", r"Zhōngwén", r"中文"),
 
-  /// code: "znd", englishName: "Zande", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  znd("znd", r"Zande", r"", r"", r""),
+  /// code: "znd", englishName: "Zande", nativeName: "Zande", nativeLatinName: r"Zande", nativeNonLatinName: r""
+  znd("znd", r"Zande", r"Zande", r"Zande", r""),
 
   /// code: "zul", englishName: "Zulu", nativeName: "isiZulu", nativeLatinName: r"isiZulu", nativeNonLatinName: r""
   zul("zul", r"Zulu", r"isiZulu", r"isiZulu", r""),
@@ -6015,8 +6093,14 @@ enum LanguageCodes {
   /// code: "zun", englishName: "Zuni", nativeName: "Shiwi'ma", nativeLatinName: r"Shiwi'ma", nativeNonLatinName: r""
   zun("zun", r"Zuni", r"Shiwi'ma", r"Shiwi'ma", r""),
 
-  /// code: "zxx", englishName: "No linguistic content", nativeName: "", nativeLatinName: r"", nativeNonLatinName: r""
-  zxx("zxx", r"No linguistic content", r"", r"", r""),
+  /// code: "zxx", englishName: "No linguistic content", nativeName: "No linguistic content", nativeLatinName: r"No linguistic content", nativeNonLatinName: r""
+  zxx(
+    "zxx",
+    r"No linguistic content",
+    r"No linguistic content",
+    r"No linguistic content",
+    r"",
+  ),
 
   /// code: "zza", englishName: "Zaza", nativeName: "Kirmanckî", nativeLatinName: r"Kirmanckî", nativeNonLatinName: r""
   zza("zza", r"Zaza", r"Kirmanckî", r"Kirmanckî", r"");

@@ -53,9 +53,11 @@ Future<void> main() async {
         .where((e) => e.isNotEmpty)
         .toList();
 
-    String nativeName = nativeCandidates.isNotEmpty
-        ? nativeCandidates.first
-        : '';
+    if (nativeCandidates.isEmpty) {
+      nativeCandidates.add(name);
+    }
+
+    String nativeName = nativeCandidates.first;
 
     String commonLatinName = '';
     String commonNonLatinName = '';
