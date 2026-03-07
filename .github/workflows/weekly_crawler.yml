@@ -1,0 +1,53 @@
+name: Weekly Crawler Update
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * 1" # Runs at 00:00 every Monday
+
+jobs:
+  update-database:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - name: Get Dart Dependencies
+        run: dart pub get
+
+      - name: Run Crawler
+        run: dart run tool/crawler.dart
+
+      - name: Check for Changes and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update the database by the crawler ($(date +'%d/%m/%Y'))"
+            git push -u origin HEAD:crawler-update
+          else
+            echo "No changes detected"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: crawler-update
+          base: main
+          title: "Automated Database Update"
+          body: |
+            This pull request contains the latest updates from the crawler.
+            Automated run by GitHub Actions.
+          labels: update, automated
