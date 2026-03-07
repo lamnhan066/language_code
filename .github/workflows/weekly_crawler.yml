@@ -30,12 +30,12 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add .
+          if [ -n "$(git status --porcelain lib/src/language_codes.dart)" ]; then
+            git add lib/src/language_codes.dart
             git commit -m "Update the database by the crawler ($(date +'%d/%m/%Y'))"
             git push -u origin HEAD:crawler-update
           else
-            echo "No changes detected"
+            echo "No changes detected in lib/src/language_codes.dart"
           fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
