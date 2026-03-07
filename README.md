@@ -40,8 +40,8 @@ final rawLocale = LanguageCode.rawLocale;
 - [code]: language code.
 - [englishName]: preferred English name.
 - [nativeName]: preferred native name.
-- [nativeLatinName]: preferred native latin name (if available).
-- [nativeNonLatinName]: preferred native non-latin name (if available).
+- [nativeLatinName]: preferred native latin name (if available; empty string if unavailable).
+- [nativeNonLatinName]: preferred native non-latin name (if available; empty string if unavailable).
 
 ```dart
 var language = LanguageCodes.en;
