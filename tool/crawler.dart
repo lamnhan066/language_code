@@ -329,6 +329,8 @@ String _cleanName(String name) {
       .replaceAll(RegExp(r',\s*(Modern|Old|Middle)', caseSensitive: false), '')
       // Remove trailing " languages"
       .replaceAll(RegExp(r'\s*languages$', caseSensitive: false), '')
+      // Remove trailing " jezik"
+      .replaceAll(RegExp(r'\s*jezik$', caseSensitive: false), '')
       // Collapse multiple spaces
       .replaceAll(RegExp(r'\s+'), ' ')
       // Remove trailing commas/semicolons

@@ -4410,6 +4410,9 @@ enum LanguageCodes {
   /// code: "ckb", englishName: "Sorani", nativeName: "کوردیی ناوەندی", nativeLatinName: r"", nativeNonLatinName: r""
   ckb("ckb", r"Sorani", r"کوردیی ناوەندی", r"", r""),
 
+  /// code: "ckm", englishName: "Croatian", nativeName: "Hrvatski (Čakavski)", nativeLatinName: r"", nativeNonLatinName: r"Hrvatski (Čakavski)"
+  ckm("ckm", r"Croatian", r"Hrvatski (Čakavski)", r"", r"Hrvatski (Čakavski)"),
+
   /// code: "cmc", englishName: "Chamic", nativeName: "Chamic", nativeLatinName: r"Chamic", nativeNonLatinName: r""
   cmc("cmc", r"Chamic", r"Chamic", r"Chamic", r""),
 
@@ -5057,6 +5060,15 @@ enum LanguageCodes {
 
   /// code: "kir", englishName: "Kirghiz", nativeName: "Кыргызча", nativeLatinName: r"Kırgızça", nativeNonLatinName: r"Кыргызча"
   kir("kir", r"Kirghiz", r"Кыргызча", r"Kırgızça", r"Кыргызча"),
+
+  /// code: "kjv", englishName: "Croatian (Kajkavian)", nativeName: "Hrvatski (Kajkavski)", nativeLatinName: r"", nativeNonLatinName: r"Hrvatski (Kajkavski)"
+  kjv(
+    "kjv",
+    r"Croatian (Kajkavian)",
+    r"Hrvatski (Kajkavski)",
+    r"",
+    r"Hrvatski (Kajkavski)",
+  ),
 
   /// code: "kmb", englishName: "Kimbundu", nativeName: "Kimbundu", nativeLatinName: r"Kimbundu", nativeNonLatinName: r""
   kmb("kmb", r"Kimbundu", r"Kimbundu", r"Kimbundu", r""),
