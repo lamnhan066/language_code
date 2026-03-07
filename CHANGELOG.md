@@ -1,3 +1,10 @@
+## 0.6.0
+
+- Add Croatian language codes.
+- Update docs.
+- Add a weekly crawler to update the database.
+- Release to stable.
+
 ## 0.6.0-rc.5
 
 - Update the crawler for the `name` breaking change.
