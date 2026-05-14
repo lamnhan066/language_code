@@ -6236,46 +6236,61 @@ enum LanguageCodes {
     Locale locale, {
     LanguageCodes Function()? orElse,
   }) {
-    // 1. Exact Match (Language + Script + Country)
-    try {
-      return fromLocale(locale);
-    } on StateError {
-      // Continue to next matching strategy if exact match is not found.
+    // Normalize components to handle non-canonical casing and empty strings.
+    final language = locale.languageCode.toLowerCase();
+    String? normalizedScript() {
+      final s = locale.scriptCode;
+      if (s == null || s.isEmpty) return null;
+      return s[0].toUpperCase() + s.substring(1).toLowerCase();
     }
 
-    // 2. Priority: Script Match (Language + Script)
-    if (locale.scriptCode != null) {
+    String? normalizedCountry() {
+      final c = locale.countryCode;
+      if (c == null || c.isEmpty) return null;
+      return c.toUpperCase();
+    }
+
+    final script = normalizedScript();
+    final country = normalizedCountry();
+
+    final candidates = <Locale>[];
+
+    // Exact (language + script + country)
+    if (script != null && country != null) {
+      candidates.add(
+        Locale.fromSubtags(
+          languageCode: language,
+          scriptCode: script,
+          countryCode: country,
+        ),
+      );
+    }
+
+    // Script (language + script)
+    if (script != null) {
+      candidates.add(
+        Locale.fromSubtags(languageCode: language, scriptCode: script),
+      );
+    }
+
+    // Country (language + country)
+    if (country != null) {
+      candidates.add(
+        Locale.fromSubtags(languageCode: language, countryCode: country),
+      );
+    }
+
+    // Language only
+    if (language.isNotEmpty) {
+      candidates.add(Locale(language));
+    }
+
+    for (final candidate in candidates) {
       try {
-        return fromLocale(
-          Locale.fromSubtags(
-            languageCode: locale.languageCode,
-            scriptCode: locale.scriptCode,
-          ),
-        );
+        return fromLocale(candidate);
       } on StateError {
-        // Continue to next matching strategy if script match is not found.
+        // try next candidate
       }
-    }
-
-    // 3. Secondary: Country Match (Language + Country)
-    if (locale.countryCode != null) {
-      try {
-        return fromLocale(
-          Locale.fromSubtags(
-            languageCode: locale.languageCode,
-            countryCode: locale.countryCode,
-          ),
-        );
-      } on StateError {
-        // Continue to next matching strategy if country match is not found.
-      }
-    }
-
-    // 4. Final: Language only
-    try {
-      return fromLocale(Locale(locale.languageCode));
-    } on StateError {
-      // Continue to next matching strategy if language only match is not found.
     }
 
     return orElse?.call() ??
