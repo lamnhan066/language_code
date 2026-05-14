@@ -1,3 +1,10 @@
+## 0.7.0
+
+- Add `resolveFromLocale` and `tryResolveFromLocale` methods for flexible LanguageCodes retrieval from Locale.
+- **[BREAKING CHANGE]:** Update `LanguageCode.code` to use `resolveFromLocale`.
+- Add tests.
+- Update docs.
+
 ## 0.6.0
 
 - Add Croatian language codes.
