@@ -51,14 +51,12 @@ print(language.nativeName);  // 'English'
 language = LanguageCodes.vi;
 print(language.englishName); // 'Vietnamese'
 print(language.nativeName);  // 'Tiếng Việt'
-
-ar("ar", r"Arabic", r"العربية", r"al'Arabiyyeẗ", r"العربية")
 language = LanguageCodes.ar;
-print(language.code); // ar
-print(language.englishName); // Arabic
-print(language.nativeName); // العربية
-print(language.nativeLatinName); // al'Arabiyyeẗ
-print(language.nativeNonLatinName); // العربية
+print(language.code); // 'ar'
+print(language.englishName); // 'Arabic'
+print(language.nativeName); // 'العربية'
+print(language.nativeLatinName); // "al'Arabiyyeẗ"
+print(language.nativeNonLatinName); // 'العربية'
 ```
 
 ### Convert values to `LanguageCodes`
@@ -99,6 +97,24 @@ LanguageCode.setTestLocale(const Locale('fr'));
 Reset with `null` to restore normal behavior.
 
 > ⚠️ You can only use one override at a time.
+
+## Locale matching
+
+Use `LanguageCodes.resolveFromLocale` or `LanguageCodes.tryResolveFromLocale` when you want robust matching across variants. Matching is attempted in this order:
+
+1. Exact match (language + script + country)
+2. Script match (language + script)
+3. Country match (language + country)
+4. Language-only
+
+Example:
+
+```dart
+final code = LanguageCodes.resolveFromLocale(
+	Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
+);
+// → LanguageCodes.zh_Hans_CN
+```
 
 ---
 
