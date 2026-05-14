@@ -6202,6 +6202,9 @@ enum LanguageCodes {
   /// Get [LanguageCodes] from [Locale]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError].
+  ///
+  /// If you want to get [LanguageCodes] from [Locale] with multiple matching
+  /// strategies, use [resolveFromLocale] instead.
   static LanguageCodes fromLocale(
     Locale locale, {
     LanguageCodes Function()? orElse,
@@ -6217,6 +6220,59 @@ enum LanguageCodes {
     }
 
     throw StateError("No LanguageCodes found for locale: $locale");
+  }
+
+  /// Get [LanguageCodes] from [Locale] with multiple matching strategies. The
+  /// matching strategies are applied in the following order:
+  ///
+  /// 1. Exact Match (Language + Script + Country)
+  /// 2. Priority: Script Match (Language + Script)
+  /// 3. Secondary: Country Match (Language + Country)
+  /// 4. Final: Language only
+  static LanguageCodes? resolveFromLocale(
+    Locale locale, {
+    LanguageCodes Function()? orElse,
+  }) {
+    // 1. Exact Match (Language + Script + Country)
+    try {
+      return fromLocale(locale);
+    } on StateError {
+      // Continue to next matching strategy if exact match is not found.
+    }
+
+    // 2. Priority: Script Match (Language + Script)
+    try {
+      return fromLocale(
+        Locale.fromSubtags(
+          languageCode: locale.languageCode,
+          scriptCode: locale.scriptCode,
+        ),
+      );
+    } on StateError {
+      // Continue to next matching strategy if script match is not found.
+    }
+
+    // 3. Secondary: Country Match (Language + Country)
+    try {
+      return fromLocale(
+        Locale.fromSubtags(
+          languageCode: locale.languageCode,
+          countryCode: locale.countryCode,
+        ),
+      );
+    } on StateError {
+      // Continue to next matching strategy if country match is not found.
+    }
+
+    // 4. Final: Language only
+    try {
+      return fromLocale(Locale(locale.languageCode));
+    } on StateError {
+      // Continue to next matching strategy if language only match is not found.
+    }
+
+    return orElse?.call() ??
+        (throw StateError("No LanguageCodes found for locale: $locale"));
   }
 
   /// LanguageCodes
