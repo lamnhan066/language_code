@@ -6244,27 +6244,31 @@ enum LanguageCodes {
     }
 
     // 2. Priority: Script Match (Language + Script)
-    try {
-      return fromLocale(
-        Locale.fromSubtags(
-          languageCode: locale.languageCode,
-          scriptCode: locale.scriptCode,
-        ),
-      );
-    } on StateError {
-      // Continue to next matching strategy if script match is not found.
+    if (locale.scriptCode != null) {
+      try {
+        return fromLocale(
+          Locale.fromSubtags(
+            languageCode: locale.languageCode,
+            scriptCode: locale.scriptCode,
+          ),
+        );
+      } on StateError {
+        // Continue to next matching strategy if script match is not found.
+      }
     }
 
     // 3. Secondary: Country Match (Language + Country)
-    try {
-      return fromLocale(
-        Locale.fromSubtags(
-          languageCode: locale.languageCode,
-          countryCode: locale.countryCode,
-        ),
-      );
-    } on StateError {
-      // Continue to next matching strategy if country match is not found.
+    if (locale.countryCode != null) {
+      try {
+        return fromLocale(
+          Locale.fromSubtags(
+            languageCode: locale.languageCode,
+            countryCode: locale.countryCode,
+          ),
+        );
+      } on StateError {
+        // Continue to next matching strategy if country match is not found.
+      }
     }
 
     // 4. Final: Language only
