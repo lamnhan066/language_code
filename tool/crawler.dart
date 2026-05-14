@@ -269,6 +269,9 @@ import 'dart:ui';
   /// Get [LanguageCodes] from [Locale]. If no matching element is found,
   /// returns the result of [orElse]. If [orElse] is omitted, it defaults to
   /// throwing a [StateError].
+  ///
+  /// If you want to get [LanguageCodes] from [Locale] with multiple matching
+  /// strategies, use [resolveFromLocale] instead.
   static LanguageCodes fromLocale(
     Locale locale, {
     LanguageCodes Function()? orElse,
@@ -286,13 +289,115 @@ import 'dart:ui';
     throw StateError("No LanguageCodes found for locale: $locale");
   }
 
+  /// Get [LanguageCodes] from [Locale] with multiple matching strategies. The
+  /// matching strategies are applied in the following order:
+  ///
+  /// 1. Exact Match (Language + Script + Country)
+  /// 2. Priority: Script Match (Language + Script)
+  /// 3. Secondary: Country Match (Language + Country)
+  /// 4. Final: Language only
+  ///
+  /// The same as [tryResolveFromLocale] but throws a [StateError] if no
+  /// matching element is found instead of returning `null`.
+  static LanguageCodes resolveFromLocale(
+    Locale locale, {
+    LanguageCodes Function()? orElse,
+  }) {
+    // Normalize components to handle non-canonical casing and empty strings.
+    final language = locale.languageCode.toLowerCase();
+    String? normalizedScript() {
+      final s = locale.scriptCode;
+      if (s == null || s.isEmpty) return null;
+      return s[0].toUpperCase() + s.substring(1).toLowerCase();
+    }
+
+    String? normalizedCountry() {
+      final c = locale.countryCode;
+      if (c == null || c.isEmpty) return null;
+      return c.toUpperCase();
+    }
+
+    final script = normalizedScript();
+    final country = normalizedCountry();
+
+    final candidates = <Locale>[];
+
+    // Exact (language + script + country)
+    if (script != null && country != null) {
+      candidates.add(
+        Locale.fromSubtags(
+          languageCode: language,
+          scriptCode: script,
+          countryCode: country,
+        ),
+      );
+    }
+
+    // Script (language + script)
+    if (script != null) {
+      candidates.add(
+        Locale.fromSubtags(languageCode: language, scriptCode: script),
+      );
+    }
+
+    // Country (language + country)
+    if (country != null) {
+      candidates.add(
+        Locale.fromSubtags(languageCode: language, countryCode: country),
+      );
+    }
+
+    // Language only
+    if (language.isNotEmpty) {
+      candidates.add(Locale(language));
+    }
+
+    for (final candidate in candidates) {
+      try {
+        return fromLocale(candidate);
+      } on StateError {
+        // try next candidate
+      }
+    }
+
+    return orElse?.call() ??
+        (throw StateError("No LanguageCodes found for locale: $locale"));
+  }
+
+  /// Get [LanguageCodes] from [Locale] with multiple matching strategies. The
+  /// matching strategies are applied in the following order:
+  ///
+  /// 1. Exact Match (Language + Script + Country)
+  /// 2. Priority: Script Match (Language + Script)
+  /// 3. Secondary: Country Match (Language + Country)
+  /// 4. Final: Language only
+  ///
+  /// The same as [resolveFromLocale] but returns `null` if no matching element
+  /// is found instead of throwing a [StateError].
+  static LanguageCodes? tryResolveFromLocale(
+    Locale locale, {
+    LanguageCodes Function()? orElse,
+  }) {
+    try {
+      return resolveFromLocale(locale, orElse: orElse);
+    } on StateError {
+      return null;
+    }
+  }
+
   /// LanguageCodes
   ///   - [code]: language code.
   ///   - [englishName]: preferred English name.
   ///   - [nativeName]: preferred native name.
   ///   - [nativeLatinName]: preferred native latin name (if available).
   ///   - [nativeNonLatinName]: preferred native non-latin name (if available).
-  const LanguageCodes(this.code, this.englishName, this.nativeName, this.nativeLatinName, this.nativeNonLatinName);
+  const LanguageCodes(
+    this.code,
+    this.englishName,
+    this.nativeName,
+    this.nativeLatinName,
+    this.nativeNonLatinName,
+  );
   ''');
 
   buffer.writeln('}');
