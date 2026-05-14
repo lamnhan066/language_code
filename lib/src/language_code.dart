@@ -74,20 +74,14 @@ abstract class LanguageCode {
 
     final locale = rawLocale;
 
-    // First, try to match the full locale (including country code, script, etc.)
     try {
-      return LanguageCodes.fromLocale(locale);
+      return LanguageCodes.resolveFromLocale(locale);
     } catch (_) {
-      // If full locale match fails, fallback to language code only
-      try {
-        return LanguageCodes.fromCode(locale.languageCode);
-      } catch (_) {
-        // Provide a comprehensive error message
-        throw StateError(
-          'No LanguageCodes found for locale: $locale '
-          '(languageCode: ${locale.languageCode})',
-        );
-      }
+      // Provide a comprehensive error message
+      throw StateError(
+        'No LanguageCodes found for locale: $locale '
+        '(languageCode: ${locale.languageCode})',
+      );
     }
   }
 
