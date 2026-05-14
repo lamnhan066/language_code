@@ -522,4 +522,67 @@ void main() {
       expect(() => LanguageCodes.resolveFromLocale(locale), throwsStateError);
     });
   });
+
+  group('LanguageCodes.tryResolveFromLocale', () {
+    test('exact match (language + script + country)', () {
+      final locale = Locale.fromSubtags(
+        languageCode: 'zh',
+        scriptCode: 'Hans',
+        countryCode: 'CN',
+      );
+
+      expect(
+        LanguageCodes.tryResolveFromLocale(locale),
+        equals(LanguageCodes.zh_Hans_CN),
+      );
+    });
+
+    test('script match (language + script)', () {
+      final locale = Locale.fromSubtags(
+        languageCode: 'zh',
+        scriptCode: 'Hans',
+        countryCode: 'ZZ', // non-existent country for this script
+      );
+
+      expect(
+        LanguageCodes.tryResolveFromLocale(locale),
+        equals(LanguageCodes.zh_Hans),
+      );
+    });
+
+    test('country match (language + country) when script not matched', () {
+      final locale = Locale.fromSubtags(
+        languageCode: 'en',
+        scriptCode: 'Latn', // not present as separate script entry
+        countryCode: 'US',
+      );
+
+      expect(
+        LanguageCodes.tryResolveFromLocale(locale),
+        equals(LanguageCodes.en_US),
+      );
+    });
+
+    test('language only match when no variant found', () {
+      final locale = const Locale('es', 'ZZ');
+      expect(
+        LanguageCodes.tryResolveFromLocale(locale),
+        equals(LanguageCodes.es),
+      );
+    });
+
+    test('orElse used when no match found', () {
+      final locale = const Locale('xxx', 'YYY');
+      final result = LanguageCodes.tryResolveFromLocale(
+        locale,
+        orElse: () => LanguageCodes.und,
+      );
+      expect(result, equals(LanguageCodes.und));
+    });
+
+    test('returns null when no match found and no orElse provided', () {
+      final locale = const Locale('xxx', 'YYY');
+      expect(LanguageCodes.tryResolveFromLocale(locale), isNull);
+    });
+  });
 }

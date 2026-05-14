@@ -6229,7 +6229,10 @@ enum LanguageCodes {
   /// 2. Priority: Script Match (Language + Script)
   /// 3. Secondary: Country Match (Language + Country)
   /// 4. Final: Language only
-  static LanguageCodes? resolveFromLocale(
+  ///
+  /// The same as [tryResolveFromLocale] but throws a [StateError] if no
+  /// matching element is found instead of returning `null`.
+  static LanguageCodes resolveFromLocale(
     Locale locale, {
     LanguageCodes Function()? orElse,
   }) {
@@ -6273,6 +6276,27 @@ enum LanguageCodes {
 
     return orElse?.call() ??
         (throw StateError("No LanguageCodes found for locale: $locale"));
+  }
+
+  /// Get [LanguageCodes] from [Locale] with multiple matching strategies. The
+  /// matching strategies are applied in the following order:
+  ///
+  /// 1. Exact Match (Language + Script + Country)
+  /// 2. Priority: Script Match (Language + Script)
+  /// 3. Secondary: Country Match (Language + Country)
+  /// 4. Final: Language only
+  ///
+  /// The same as [resolveFromLocale] but returns `null` if no matching element
+  /// is found instead of throwing a [StateError].
+  static LanguageCodes? tryResolveFromLocale(
+    Locale locale, {
+    LanguageCodes Function()? orElse,
+  }) {
+    try {
+      return resolveFromLocale(locale, orElse: orElse);
+    } on StateError {
+      return null;
+    }
   }
 
   /// LanguageCodes
