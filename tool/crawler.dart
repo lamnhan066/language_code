@@ -133,6 +133,20 @@ Future<void> main() async {
     }
   }
 
+  for (final deprecated in _MaybeDeprecatedLanguages.values) {
+    if (!entries.any((e) => e.code == deprecated.code)) {
+      entries.add(
+        _LangEntry(
+          deprecated.code,
+          deprecated.englishName,
+          deprecated.nativeName,
+          deprecated.nativeLatinName,
+          deprecated.nativeNonLatinName,
+        ),
+      );
+    }
+  }
+
   // Sort: 2-letter codes first, then 3-letter
   entries.sort((a, b) {
     final isA2 = _isTwoLetter(a.code);
@@ -452,6 +466,55 @@ bool _isTwoLetter(String code) =>
 bool _isPureLatin(String text) {
   final latinRegex = RegExp("^[\\p{Script=Latin}\\s'-]+\$", unicode: true);
   return latinRegex.hasMatch(text);
+}
+
+/// List of the deprecated language codes that are not in the Wikipedia table
+/// but may be used in the old versions of this package. This is to ensure that
+/// we don't lose any existing codes when we update the list from Wikipedia.
+enum _MaybeDeprecatedLanguages {
+  /// code: "ckm", englishName: "Croatian", nativeName: "Hrvatski (Čakavski)", nativeLatinName: r"", nativeNonLatinName: r"Hrvatski (Čakavski)"
+  ckm("ckm", r"Croatian", r"Hrvatski (Čakavski)", r"", r"Hrvatski (Čakavski)"),
+
+  /// code: "kjv", englishName: "Croatian (Kajkavian)", nativeName: "Hrvatski (Kajkavski)", nativeLatinName: r"", nativeNonLatinName: r"Hrvatski (Kajkavski)"
+  kjv(
+    "kjv",
+    r"Croatian (Kajkavian)",
+    r"Hrvatski (Kajkavski)",
+    r"",
+    r"Hrvatski (Kajkavski)",
+  );
+
+  /// Language code.
+  ///
+  /// Use [locale] if you want to get the current language as `Locale` because
+  /// this [code] may contain country code.
+  final String code;
+
+  /// Get the English name of this code.
+  final String englishName;
+
+  /// Get the preferred native name of this code.
+  final String nativeName;
+
+  /// Preferred latin native name. Default is empty.
+  final String nativeLatinName;
+
+  /// Preferred non-latin native name. Default is empty.
+  final String nativeNonLatinName;
+
+  /// LanguageCodes
+  ///   - [code]: language code.
+  ///   - [englishName]: preferred English name.
+  ///   - [nativeName]: preferred native name.
+  ///   - [nativeLatinName]: preferred native latin name (if available).
+  ///   - [nativeNonLatinName]: preferred native non-latin name (if available).
+  const _MaybeDeprecatedLanguages(
+    this.code,
+    this.englishName,
+    this.nativeName,
+    this.nativeLatinName,
+    this.nativeNonLatinName,
+  );
 }
 
 /// LanguageCodes(code, name in English, name in native).
