@@ -1,14 +1,14 @@
 import 'package:language_code/src/language_codes.dart';
 
-class PlatformCode {
+class StoreCode {
   final LanguageCodes playStore;
   final LanguageCodes appStore;
 
-  const PlatformCode(this.playStore, this.appStore);
+  const StoreCode(this.playStore, this.appStore);
 
   @override
   bool operator ==(Object other) {
-    return other is PlatformCode &&
+    return other is StoreCode &&
         other.playStore == playStore &&
         other.appStore == appStore;
   }
