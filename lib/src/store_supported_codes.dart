@@ -153,8 +153,8 @@ class StoreSupportedCodes {
   /// supported store-specific variants for that language.
   static final Map<LanguageCodes, Set<StoreCode>> bothStores = {
     LanguageCodes.ar: {StoreCode(LanguageCodes.ar, LanguageCodes.ar_SA)},
-    LanguageCodes.ca: {StoreCode(LanguageCodes.ca, LanguageCodes.ca)},
     LanguageCodes.bn: {StoreCode(LanguageCodes.bn_BD, LanguageCodes.bn_BD)},
+    LanguageCodes.ca: {StoreCode(LanguageCodes.ca, LanguageCodes.ca)},
     LanguageCodes.cs: {StoreCode(LanguageCodes.cs_CZ, LanguageCodes.cs)},
     LanguageCodes.da: {StoreCode(LanguageCodes.da_DK, LanguageCodes.da)},
     LanguageCodes.de: {StoreCode(LanguageCodes.de_DE, LanguageCodes.de_DE)},
@@ -164,6 +164,11 @@ class StoreSupportedCodes {
       StoreCode(LanguageCodes.en_CA, LanguageCodes.en_CA),
       StoreCode(LanguageCodes.en_GB, LanguageCodes.en_GB),
       StoreCode(LanguageCodes.en_US, LanguageCodes.en_US),
+    },
+    LanguageCodes.es: {
+      StoreCode(LanguageCodes.es_ES, LanguageCodes.es_ES),
+      StoreCode(LanguageCodes.es_419, LanguageCodes.es_MX),
+      StoreCode(LanguageCodes.es_US, LanguageCodes.es_MX),
     },
     LanguageCodes.fi: {StoreCode(LanguageCodes.fi_FI, LanguageCodes.fi)},
     LanguageCodes.fr: {
@@ -193,11 +198,6 @@ class StoreSupportedCodes {
     LanguageCodes.ru: {StoreCode(LanguageCodes.ru_RU, LanguageCodes.ru)},
     LanguageCodes.sk: {StoreCode(LanguageCodes.sk, LanguageCodes.sk)},
     LanguageCodes.sl: {StoreCode(LanguageCodes.sl, LanguageCodes.sl_SI)},
-    LanguageCodes.es: {
-      StoreCode(LanguageCodes.es_ES, LanguageCodes.es_ES),
-      StoreCode(LanguageCodes.es_419, LanguageCodes.es_MX),
-      StoreCode(LanguageCodes.es_US, LanguageCodes.es_MX),
-    },
     LanguageCodes.sv: {StoreCode(LanguageCodes.sv_SE, LanguageCodes.sv)},
     LanguageCodes.ta: {StoreCode(LanguageCodes.ta_IN, LanguageCodes.ta_IN)},
     LanguageCodes.te: {StoreCode(LanguageCodes.te_IN, LanguageCodes.te_IN)},
