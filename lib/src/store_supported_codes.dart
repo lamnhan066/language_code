@@ -2,9 +2,17 @@ import 'package:language_code/src/store_code.dart';
 
 import 'language_codes.dart';
 
+/// Supported language codes for Google Play and Apple App Store metadata.
+///
+/// Use [playStore] and [appStore] when you only need the supported code sets,
+/// or [bothStores] when you need to translate a base language into the exact
+/// store-specific codes.
 class StoreSupportedCodes {
   StoreSupportedCodes._();
 
+  /// Language codes supported by Google Play.
+  ///
+  /// Legacy Hebrew locale codes were renamed from `iw_IL` to `he_IL`.
   static const Set<LanguageCodes> playStore = {
     LanguageCodes.af,
     LanguageCodes.am,
@@ -85,6 +93,7 @@ class StoreSupportedCodes {
     LanguageCodes.zu,
   };
 
+  /// Language codes supported by the Apple App Store.
   static const Set<LanguageCodes> appStore = {
     LanguageCodes.ar_SA,
     LanguageCodes.bn_BD,
@@ -138,7 +147,11 @@ class StoreSupportedCodes {
     LanguageCodes.zh_Hant,
   };
 
-  static final bothStores = {
+  /// Base language codes mapped to the matching Play Store and App Store codes.
+  ///
+  /// The keys are normalized two-letter language codes. Each value contains the
+  /// supported store-specific variants for that language.
+  static final Map<LanguageCodes, Set<StoreCode>> bothStores = {
     LanguageCodes.ar: {StoreCode(LanguageCodes.ar, LanguageCodes.ar_SA)},
     LanguageCodes.ca: {StoreCode(LanguageCodes.ca, LanguageCodes.ca)},
     LanguageCodes.bn: {StoreCode(LanguageCodes.bn_BD, LanguageCodes.bn_BD)},
