@@ -482,7 +482,25 @@ enum _MaybeDeprecatedLanguages {
     r"Hrvatski (Kajkavski)",
     r"",
     r"Hrvatski (Kajkavski)",
-  );
+  ),
+
+  /// code: "es_419", englishName: "Spanish (Latin America)", nativeName: "español (Latinoamérica)", nativeLatinName: r"Español", nativeNonLatinName: r""
+  es_419(
+    "es_419",
+    r"Spanish (Latin America)",
+    r"español (Latinoamérica)",
+    r"Español",
+    r"",
+  ),
+
+  /// code: "iw_IL", englishName: "Hebrew", nativeName: "עברית", nativeLatinName: r"'Ivriyþ", nativeNonLatinName: r"עברית"
+  iw("iw", r"Hebrew", r"עברית", r"'Ivriyþ", r"עברית"),
+
+  /// code: "iw_IL", englishName: "Hebrew (Israel)", nativeName: "עברית (ישראל)", nativeLatinName: r"'Ivriyþ", nativeNonLatinName: r"עברית"
+  iw_IL("iw_IL", r"Hebrew (Israel)", r"עברית (ישראל)", r"'Ivriyþ", r"עברית"),
+
+  /// code: "pa_IN", englishName: "Punjabi (India)", nativeName: "ਪੰਜਾਬੀ (ਭਾਰਤ)", nativeLatinName: r"Pãjābī", nativeNonLatinName: r"ਪੰਜਾਬੀ"
+  pa_IN("pa_IN", r"Punjabi (India)", r"ਪੰਜਾਬੀ (ਭਾਰਤ)", r"Pãjābī", r"ਪੰਜਾਬੀ");
 
   /// Language code.
   ///

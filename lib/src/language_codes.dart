@@ -1395,6 +1395,15 @@ enum LanguageCodes {
   /// code: "es", englishName: "Spanish", nativeName: "Español", nativeLatinName: r"Español", nativeNonLatinName: r""
   es("es", r"Spanish", r"Español", r"Español", r""),
 
+  /// code: "es_419", englishName: "Spanish (Latin America)", nativeName: "español (Latinoamérica)", nativeLatinName: r"Español", nativeNonLatinName: r""
+  es_419(
+    "es_419",
+    r"Spanish (Latin America)",
+    r"español (Latinoamérica)",
+    r"Español",
+    r"",
+  ),
+
   /// code: "es_AR", englishName: "Spanish (Argentina)", nativeName: "español (Argentina)", nativeLatinName: r"Español", nativeNonLatinName: r""
   es_AR(
     "es_AR",
@@ -2211,6 +2220,12 @@ enum LanguageCodes {
     r"ᐃᓄᒃᑎᑐᑦ",
   ),
 
+  /// code: "iw", englishName: "Hebrew", nativeName: "עברית", nativeLatinName: r"'Ivriyþ", nativeNonLatinName: r"עברית"
+  iw("iw", r"Hebrew", r"עברית", r"'Ivriyþ", r"עברית"),
+
+  /// code: "iw_IL", englishName: "Hebrew (Israel)", nativeName: "עברית (ישראל)", nativeLatinName: r"'Ivriyþ", nativeNonLatinName: r"עברית"
+  iw_IL("iw_IL", r"Hebrew (Israel)", r"עברית (ישראל)", r"'Ivriyþ", r"עברית"),
+
   /// code: "ja", englishName: "Japanese", nativeName: "日本語", nativeLatinName: r"Nihongo", nativeNonLatinName: r"日本語"
   ja("ja", r"Japanese", r"日本語", r"Nihongo", r"日本語"),
 
@@ -2882,6 +2897,9 @@ enum LanguageCodes {
     r"Pãjābī",
     r"ਪੰਜਾਬੀ",
   ),
+
+  /// code: "pa_IN", englishName: "Punjabi (India)", nativeName: "ਪੰਜਾਬੀ (ਭਾਰਤ)", nativeLatinName: r"Pãjābī", nativeNonLatinName: r"ਪੰਜਾਬੀ"
+  pa_IN("pa_IN", r"Punjabi (India)", r"ਪੰਜਾਬੀ (ਭਾਰਤ)", r"Pãjābī", r"ਪੰਜਾਬੀ"),
 
   /// code: "pa_PK", englishName: "Punjabi (Pakistan)", nativeName: "ਪੰਜਾਬੀ (پاکستان)", nativeLatinName: r"Pãjābī", nativeNonLatinName: r"ਪੰਜਾਬੀ"
   pa_PK(
