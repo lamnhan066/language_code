@@ -2220,12 +2220,6 @@ enum LanguageCodes {
     r"ᐃᓄᒃᑎᑐᑦ",
   ),
 
-  /// code: "iw", englishName: "Hebrew", nativeName: "עברית", nativeLatinName: r"'Ivriyþ", nativeNonLatinName: r"עברית"
-  iw("iw", r"Hebrew", r"עברית", r"'Ivriyþ", r"עברית"),
-
-  /// code: "iw_IL", englishName: "Hebrew (Israel)", nativeName: "עברית (ישראל)", nativeLatinName: r"'Ivriyþ", nativeNonLatinName: r"עברית"
-  iw_IL("iw_IL", r"Hebrew (Israel)", r"עברית (ישראל)", r"'Ivriyþ", r"עברית"),
-
   /// code: "ja", englishName: "Japanese", nativeName: "日本語", nativeLatinName: r"Nihongo", nativeNonLatinName: r"日本語"
   ja("ja", r"Japanese", r"日本語", r"Nihongo", r"日本語"),
 
