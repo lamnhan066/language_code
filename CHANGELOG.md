@@ -1,3 +1,9 @@
+## 0.7.1
+
+- Add support for additional language codes including Spanish (Latin America) and Punjabi (India).
+- Add `StoreCode` and `StoreSupportedCodes` for enhanced store language support.
+- Update docs.
+
 ## 0.7.0
 
 - Add `resolveFromLocale` and `tryResolveFromLocale` methods for flexible LanguageCodes retrieval from Locale.
