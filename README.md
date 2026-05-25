@@ -59,6 +59,26 @@ print(language.nativeLatinName); // "al'Arabiyyeẗ"
 print(language.nativeNonLatinName); // 'العربية'
 ```
 
+### Store-supported language codes
+
+The package also includes the language codes supported by each app store:
+
+```dart
+StoreSupportedCodes.playStore;
+StoreSupportedCodes.appStore;
+```
+
+Use `bothStores` when you need to map a base language to the exact store-specific codes:
+
+```dart
+final variants = StoreSupportedCodes.bothStores[LanguageCodes.en];
+```
+
+`playStore` and `appStore` are the raw supported code sets, while `bothStores` groups
+the matching Play Store and App Store values by normalized two-letter language code.
+
+For Hebrew, the legacy Play Store locale `iw_IL` is now represented as `he_IL`.
+
 ### Convert values to `LanguageCodes`
 
 ```dart
