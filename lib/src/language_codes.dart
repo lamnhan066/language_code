@@ -3396,143 +3396,131 @@ enum LanguageCodes {
   /// code: "sq_AL", englishName: "Albanian (Albania)", nativeName: "Shqip (Shqipëri)", nativeLatinName: r"Shqip", nativeNonLatinName: r""
   sq_AL("sq_AL", r"Albanian (Albania)", r"Shqip (Shqipëri)", r"Shqip", r""),
 
-  /// code: "sr", englishName: "Serbian", nativeName: "Ссрпски", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
-  sr("sr", r"Serbian", r"Ссрпски", r"Srpski", r"Ссрпски"),
+  /// code: "sr", englishName: "Serbian", nativeName: "Српски", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
+  sr("sr", r"Serbian", r"Српски", r"Srpski", r"Српски"),
 
-  /// code: "sr_BA", englishName: "Serbian (Bosnia and Herzegovina)", nativeName: "српски језик (Босна и Херцеговина)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_BA", englishName: "Serbian (Bosnia and Herzegovina)", nativeName: "српски језик (Босна и Херцеговина)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_BA(
     "sr_BA",
     r"Serbian (Bosnia and Herzegovina)",
     r"српски језик (Босна и Херцеговина)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_CS", englishName: "Serbian (Serbia and Montenegro)", nativeName: "српски језик (Србија и Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_CS", englishName: "Serbian (Serbia and Montenegro)", nativeName: "српски језик (Србија и Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_CS(
     "sr_CS",
     r"Serbian (Serbia and Montenegro)",
     r"српски језик (Србија и Црна Гора)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Cyrl", englishName: "Serbian (Cyrillic)", nativeName: "српски језик", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Cyrl", englishName: "Serbian (Cyrillic)", nativeName: "српски језик", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Cyrl(
     "sr_Cyrl",
     r"Serbian (Cyrillic)",
     r"српски језик",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Cyrl_BA", englishName: "Serbian (Cyrillic, Bosnia and Herzegovina)", nativeName: "српски језик (ћирилица, Босна и Херцеговина)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Cyrl_BA", englishName: "Serbian (Cyrillic, Bosnia and Herzegovina)", nativeName: "српски језик (ћирилица, Босна и Херцеговина)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Cyrl_BA(
     "sr_Cyrl_BA",
     r"Serbian (Cyrillic, Bosnia and Herzegovina)",
     r"српски језик (ћирилица, Босна и Херцеговина)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Cyrl_CS", englishName: "Serbian (Cyrillic, Serbia and Montenegro)", nativeName: "српски језик (ћирилица, Србија и Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Cyrl_CS", englishName: "Serbian (Cyrillic, Serbia and Montenegro)", nativeName: "српски језик (ћирилица, Србија и Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Cyrl_CS(
     "sr_Cyrl_CS",
     r"Serbian (Cyrillic, Serbia and Montenegro)",
     r"српски језик (ћирилица, Србија и Црна Гора)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Cyrl_ME", englishName: "Serbian (Cyrillic, Montenegro)", nativeName: "српски језик (ћирилица, Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Cyrl_ME", englishName: "Serbian (Cyrillic, Montenegro)", nativeName: "српски језик (ћирилица, Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Cyrl_ME(
     "sr_Cyrl_ME",
     r"Serbian (Cyrillic, Montenegro)",
     r"српски језик (ћирилица, Црна Гора)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Cyrl_RS", englishName: "Serbian (Cyrillic, Serbia)", nativeName: "српски језик (ћирилица, Србија)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Cyrl_RS", englishName: "Serbian (Cyrillic, Serbia)", nativeName: "српски језик (ћирилица, Србија)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Cyrl_RS(
     "sr_Cyrl_RS",
     r"Serbian (Cyrillic, Serbia)",
     r"српски језик (ћирилица, Србија)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Latn", englishName: "Serbian (Latin)", nativeName: "srpski jezik", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
-  sr_Latn(
-    "sr_Latn",
-    r"Serbian (Latin)",
-    r"srpski jezik",
-    r"Srpski",
-    r"Ссрпски",
-  ),
+  /// code: "sr_Latn", englishName: "Serbian (Latin)", nativeName: "srpski jezik", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
+  sr_Latn("sr_Latn", r"Serbian (Latin)", r"srpski jezik", r"Srpski", r"Српски"),
 
-  /// code: "sr_Latn_BA", englishName: "Serbian (Latin, Bosnia and Herzegovina)", nativeName: "srpski jezik (Bosna i Hercegovina)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Latn_BA", englishName: "Serbian (Latin, Bosnia and Herzegovina)", nativeName: "srpski jezik (Bosna i Hercegovina)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Latn_BA(
     "sr_Latn_BA",
     r"Serbian (Latin, Bosnia and Herzegovina)",
     r"srpski jezik (Bosna i Hercegovina)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Latn_CS", englishName: "Serbian (Latin, Serbia and Montenegro)", nativeName: "srpski jezik (Srbija i Crna Gora)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Latn_CS", englishName: "Serbian (Latin, Serbia and Montenegro)", nativeName: "srpski jezik (Srbija i Crna Gora)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Latn_CS(
     "sr_Latn_CS",
     r"Serbian (Latin, Serbia and Montenegro)",
     r"srpski jezik (Srbija i Crna Gora)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Latn_ME", englishName: "Serbian (Latin, Montenegro)", nativeName: "srpski jezik (Crna Gora)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Latn_ME", englishName: "Serbian (Latin, Montenegro)", nativeName: "srpski jezik (Crna Gora)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Latn_ME(
     "sr_Latn_ME",
     r"Serbian (Latin, Montenegro)",
     r"srpski jezik (Crna Gora)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_Latn_RS", englishName: "Serbian (Latin, Serbia)", nativeName: "srpski jezik (Srbija)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_Latn_RS", englishName: "Serbian (Latin, Serbia)", nativeName: "srpski jezik (Srbija)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_Latn_RS(
     "sr_Latn_RS",
     r"Serbian (Latin, Serbia)",
     r"srpski jezik (Srbija)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_ME", englishName: "Serbian (Montenegro)", nativeName: "српски језик (Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_ME", englishName: "Serbian (Montenegro)", nativeName: "српски језик (Црна Гора)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_ME(
     "sr_ME",
     r"Serbian (Montenegro)",
     r"српски језик (Црна Гора)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_RS", englishName: "Serbian (Serbia)", nativeName: "српски језик (Србија)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
+  /// code: "sr_RS", englishName: "Serbian (Serbia)", nativeName: "српски језик (Србија)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
   sr_RS(
     "sr_RS",
     r"Serbian (Serbia)",
     r"српски језик (Србија)",
     r"Srpski",
-    r"Ссрпски",
+    r"Српски",
   ),
 
-  /// code: "sr_SP", englishName: "Serbian (Serbia)", nativeName: "српски (Србија)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
-  sr_SP(
-    "sr_SP",
-    r"Serbian (Serbia)",
-    r"српски (Србија)",
-    r"Srpski",
-    r"Ссрпски",
-  ),
+  /// code: "sr_SP", englishName: "Serbian (Serbia)", nativeName: "српски (Србија)", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
+  sr_SP("sr_SP", r"Serbian (Serbia)", r"српски (Србија)", r"Srpski", r"Српски"),
 
   /// code: "ss", englishName: "Swati", nativeName: "siSwati", nativeLatinName: r"siSwati", nativeNonLatinName: r""
   ss("ss", r"Swati", r"siSwati", r"siSwati", r""),
@@ -5721,8 +5709,8 @@ enum LanguageCodes {
   /// code: "sin", englishName: "Sinhala", nativeName: "සිංහල", nativeLatinName: r"Sĩhala", nativeNonLatinName: r"සිංහල"
   sin("sin", r"Sinhala", r"සිංහල", r"Sĩhala", r"සිංහල"),
 
-  /// code: "sio", englishName: "Siouan", nativeName: "Siouan", nativeLatinName: r"Siouan", nativeNonLatinName: r""
-  sio("sio", r"Siouan", r"Siouan", r"Siouan", r""),
+  /// code: "sio", englishName: "Siouan-Catawban", nativeName: "Siouan-Catawban", nativeLatinName: r"Siouan-Catawban", nativeNonLatinName: r""
+  sio("sio", r"Siouan-Catawban", r"Siouan-Catawban", r"Siouan-Catawban", r""),
 
   /// code: "sit", englishName: "Sino-Tibetan", nativeName: "Sino-Tibetan", nativeLatinName: r"Sino-Tibetan", nativeNonLatinName: r""
   sit("sit", r"Sino-Tibetan", r"Sino-Tibetan", r"Sino-Tibetan", r""),
@@ -5805,8 +5793,8 @@ enum LanguageCodes {
   /// code: "srn", englishName: "Sranan Tongo", nativeName: "Sranan Tongo", nativeLatinName: r"Sranan Tongo", nativeNonLatinName: r""
   srn("srn", r"Sranan Tongo", r"Sranan Tongo", r"Sranan Tongo", r""),
 
-  /// code: "srp", englishName: "Serbian", nativeName: "Ссрпски", nativeLatinName: r"Srpski", nativeNonLatinName: r"Ссрпски"
-  srp("srp", r"Serbian", r"Ссрпски", r"Srpski", r"Ссрпски"),
+  /// code: "srp", englishName: "Serbian", nativeName: "Српски", nativeLatinName: r"Srpski", nativeNonLatinName: r"Српски"
+  srp("srp", r"Serbian", r"Српски", r"Srpski", r"Српски"),
 
   /// code: "srr", englishName: "Serer", nativeName: "Seereer", nativeLatinName: r"Seereer", nativeNonLatinName: r""
   srr("srr", r"Serer", r"Seereer", r"Seereer", r""),
